@@ -1,0 +1,11 @@
+cache/
+*/cache/
+
+.htaccess
+style.css
+.DS_Store
+
+coda_backups/
+timthumb-config.php
+thumbs/
+site/config/config.php
