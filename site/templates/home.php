@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?php snippet('s-header') ?>
 
   <main class="main" role="main">
 
@@ -9,8 +9,8 @@
 
     <hr>
 
-    <?php snippet('projects') ?>
+    <!--?php snippet('projects') ?-->
 
   </main>
 
-<?php snippet('footer') ?>
+<?php snippet('s-footer') ?>
