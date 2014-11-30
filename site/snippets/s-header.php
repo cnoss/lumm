@@ -10,30 +10,30 @@
 <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
 <style>
+
 <?php
 require "assets/lib/less.php/Less.php";
 
-$parser = new Less_Parser();
-$options = array( 
-	'compress'=>true,
-	'sourceMap'         => true,
-    'sourceMapWriteTo'  => 'assets/css/sourcemaps/lumm-above-the-fold.map',
-    'sourceMapURL'      => '/assets/css/sourcemaps/lumm-above-the-fold.map',
-);
-$parser = new Less_Parser( $options );
-$parser->parseFile( 'assets/css/above-the-fold.less' );
-echo $parser->getCss();
+try{
+	$parser = new Less_Parser();
+	
+	$less_files = array( 'assets/css/less/above-the-fold.less' => '/' );
+	$options = array( 
+		'compress'=>true,
+		'sourceMap'         => true,
+	    'sourceMapWriteTo'  => 'assets/css/sourcemaps/lumm-above-the-fold.map',
+	    'sourceMapURL'      => 'assets/css/sourcemaps/lumm-above-the-fold.map',
+		'cache_dir' => 'assets/css/cached/'
+	);
 
-#$less = new lessc;
-#$less->setFormatter("compressed");
-#$less->checkedCompile($path.$file.".less", $path.$file.".css");
-//$less->compileFile($path.$file.".less", $path.$file.".css");
-#echo $less->compileFile("assets/css/above-the-fold.less");
+	$css_file_name = Less_Cache::Get( $less_files, $options );
+	echo file_get_contents( 'assets/css/cached/'.$css_file_name );
+
+}catch(Exception $e){
+    echo $e->getMessage();
+}
+
 ?>
-
-
-	
-	
 
 </style>
 
