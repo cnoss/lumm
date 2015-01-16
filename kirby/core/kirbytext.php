@@ -21,9 +21,7 @@ abstract class KirbytextAbstract {
 
     if(empty($field) or is_string($field)) {
       $value = $field;
-      $field = new Field();
-      $field->value = $value;
-      $field->page  = page();
+      $field = new Field(page(), null, $value);
     }
 
     $this->field = $field;
@@ -46,7 +44,7 @@ abstract class KirbytextAbstract {
     }
 
     // tags
-    $text = preg_replace_callback('!(?=[^\]])\([a-z0-9]+:.*?\)!i', array($this, 'tag'), $text);
+    $text = preg_replace_callback('!(?=[^\]])\([a-z0-9]+:.*?\)!is', array($this, 'tag'), $text);
 
     // markdownify
     $text = markdown($text);

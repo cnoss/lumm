@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Kann für bestimmte Bereiche die Parameter fuer das TimThumb anpassen, z.B. um ein bestimmtes Seitenverhaeltnis herzustellen.
  * 
@@ -66,11 +65,22 @@ function tt_params( $page, $src, $w, $q=80 ){
  */
 
 function get_snip($uid, $default){
-	$template = strtolower($uid);
 	
-	if(!file_exists(c::get('basispfad'). '/site/snippets/'.$template.'.php')){
-		$template = $default;
-	}
+	$default = preg_replace("=.*/=", "", $default);
+	
+	$template_core_container = strtolower($uid);
+	$template_core_content = strtolower($uid);
+	$template_custom = strtolower($uid);	
+	$template = $uid;
+
+	if(!file_exists('site/snippets/core/container/'.$template.'.php')){ 	$template_core_container = false; }
+	if(!file_exists('site/snippets/core/content/'.$template.'.php')){ 	$template_core_content = false; }
+	if(!file_exists('site/snippets/custom/'.$template.'.php')){	$template_custom = false; }
+
+	if($template_custom){ 				$template = "custom/". $template; }
+	elseif($template_core_container){ 	$template = "core/container/". $template; }
+	elseif($template_core_content){ 	$template = "core/content/". $template; }
+	else{								$template = "core/content/" . $default; }
 
 	return $template;
 }

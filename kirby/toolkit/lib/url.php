@@ -18,8 +18,20 @@ class Url {
   static public $current = null;
 
   static public function scheme($url = null) {
-    if(is_null($url)) return 'http' . ((empty($_SERVER['HTTPS']) or $_SERVER['HTTPS'] == 'off') ? '' : 's' );
+    if(is_null($url)) {      
+      if(
+        (isset($_SERVER['HTTPS']) and strtolower($_SERVER['HTTPS']) != 'off') or
+        server::get('SERVER_PORT')            == '443' or 
+        server::get('HTTP_X_FORWARDED_PORT')  == '443' or 
+        server::get('HTTP_X_FORWARDED_PROTO') == 'https'
+      ) {
+        return 'https';
+      } else {
+        return 'http';
+      }
+    }
     return parse_url($url, PHP_URL_SCHEME);
+
   }
 
   /**
@@ -29,7 +41,7 @@ class Url {
    */
   static public function current() {
     if(!is_null(static::$current)) return static::$current;
-    return static::$current = static::scheme() . '://' . server::get('HTTP_HOST') . server::get('REQUEST_URI');
+    return static::$current = static::base() . server::get('REQUEST_URI');
   }
 
   /**
@@ -215,7 +227,7 @@ class Url {
    */
   static public function isAbsolute($url) {
     // don't convert absolute urls
-    return (str::startsWith($url, 'http://') or str::startsWith($url, 'https://'));
+    return (str::startsWith($url, 'http://') or str::startsWith($url, 'https://') or str::startsWith($url, '//'));
   }
 
   /**
@@ -284,8 +296,14 @@ class Url {
    * @return string
    */
   static public function base($url = null) {
-    if(is_null($url)) $url = static::current();
-    return static::scheme($url) . '://' . static::host($url);
+    if(is_null($url)) {
+      $port = server::get('SERVER_PORT');
+      $port = in_array($port, array(80, 443)) ? null : $port;
+      return static::scheme() . '://' . server::get('SERVER_NAME') . r($port, ':' . $port);
+    } else {
+      $port = static::port($url);
+      return static::scheme($url) . '://' . static::host($url) . r($port, ':' . $port);      
+    }
   }
 
   /**

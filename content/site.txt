@@ -1,17 +1,14 @@
-Title: Kirby Starterkit
+Title: Lumm
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: Sahrah El ghammaz & Christian Noss
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: OOCSS + Kirby + gute Typographie
+
 
 ----
 
-Keywords: Kirby, CMS, file-based
-
-----
-
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
+Copyright: © 2014-(date: Year) (link: http://lumm.org text: Lumm)

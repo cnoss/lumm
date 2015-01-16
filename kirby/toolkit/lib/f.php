@@ -46,11 +46,10 @@ class F {
     'dvi'   => 'application/x-dvi',
     'gtar'  => 'application/x-gtar',
     'gz'    => 'application/x-gzip',
-    'php'   => array('application/x-httpd-php', 'text/x-php'),
-    'php4'  => 'application/x-httpd-php',
-    'php3'  => 'application/x-httpd-php',
-    'phtml' => 'application/x-httpd-php',
-    'phps'  => 'application/x-httpd-php-source',
+    'php'   => array('text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'),
+    'php3'  => array('text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'),
+    'phtml' => array('text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'),
+    'phps'  => array('text/php', 'text/x-php', 'application/x-httpd-php', 'application/php', 'application/x-php', 'application/x-httpd-php-source'),
     'js'    => 'application/x-javascript',
     'swf'   => 'application/x-shockwave-flash',
     'sit'   => 'application/x-stuffit',
@@ -683,7 +682,7 @@ class F {
     $name      = static::name($string);
     $extension = static::extension($string);
     $end       = !empty($extension) ? '.' . str::slug($extension) : '';
-    return str::slug($name) . $end;
+    return str::slug($name, '-', 'a-z0-9@._-') . $end;
   }
 
   /**
