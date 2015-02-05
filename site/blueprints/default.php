@@ -1,18 +1,21 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Page
-pages: true
+pages: 
+  template:
+    - content-head
+    - content-body
 files: true
 fields:
   title:
     label: Title
     type:  text
-  headline:
-    label: Headline
+  keywords:
+    label: Meta-Keywords
     type:  text
-  subheadline:
-    label: Subheadline
-    type:  text  
-  text:
-    label: Text
-    type:  textarea
+  desc:
+    label: Meta-Description
+    type:  text
+  tags:
+    label: Tags
+    type: tags

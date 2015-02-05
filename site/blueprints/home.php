@@ -16,3 +16,6 @@ fields:
     label: Text
     type:  textarea
     size:  large
+tags:
+    label: Tags
+    type: tags

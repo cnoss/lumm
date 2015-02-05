@@ -1,0 +1,1 @@
+<h1<?php if(isset($class)){ echo ' class="'.$class.'" '; } ?>><?php echo $text; ?></h1>

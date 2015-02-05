@@ -30,3 +30,15 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 c::set('debug', true);
+
+
+c::set('languages', array(
+  array(
+    'code'    => 'de',
+    'name'    => 'Deutsch',
+    'default' => true,
+    'locale'  => 'de_DE',
+    'url'     => '/de',
+  ),
+));
+c::set('language.detect', true);

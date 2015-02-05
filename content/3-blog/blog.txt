@@ -1,0 +1,13 @@
+Title: Blog
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry-1row

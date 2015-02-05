@@ -1,14 +1,25 @@
-Title: Lumm
+Title: Christian Noss
 
 ----
 
-Author: Sahrah El ghammaz & Christian Noss
+Headline: Christian Noss
 
 ----
 
-Description: OOCSS + Kirby + gute Typographie
-
+Subheadline: Kommunikationsdesign in der Medieninformatik
 
 ----
 
-Copyright: © 2014-(date: Year) (link: http://lumm.org text: Lumm)
+Author: Christian Noss
+
+----
+
+Description: This is Kirby's Starterkit.
+
+----
+
+Keywords: Kirby, CMS, file-based
+
+----
+
+Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)

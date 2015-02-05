@@ -3,9 +3,11 @@
 username: c-noss
 email: c.noss@mac.com
 password: >
-  $2a$10$v3CW2EAzjlKiL/V7zVCuQemrZtP3FD2HakmHF0A4Hv.tPZOe/LgNq
+  $2a$10$UUzV1767OBmSu5gJ2QBIBuoHovI4RWGoN4x4ZEIE29DOuF1uqdXDe
 language: de
 role: admin
-token: 9ab5fc22b85d397795030167ce013918dc2b687d
+token: 3c22355f812af7c9143145c306324db40dc27821
 history:
-  - home/starting-lumm
+  - blog
+firstname: Christian
+lastname: Noss

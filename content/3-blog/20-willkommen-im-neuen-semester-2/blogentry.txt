@@ -1,0 +1,19 @@
+title: Willkommen im neuen Semester
+
+----
+
+date: 2011-03-13 13:58
+
+----
+
+text: 
+
+Dieses Semester biete ich leider kein WPF an :( sondern nur GdvK. Mehr Infos dazu gibt es im GdvK Blog
+
+----
+
+tags: 
+
+----
+
+categories: Neues
