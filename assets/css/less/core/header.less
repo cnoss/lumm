@@ -4,12 +4,15 @@
 .logo{
 	
 	background-color: #fff;
-	padding: @custom-basefontsize;
 	@logofont: @custom-basefontsize *2.4;
+	padding-top: @custom-basefontsize;
+	padding-bottom: @custom-basefontsize *2;
+	
 	@media (max-width: @screen-sm-min) {  @logofont: @custom-basefontsize *0.9; }
 	
 	h1, h2{ 
 		color: #000;
+		line-height: 100%;
 	}
 	
 	h1{	

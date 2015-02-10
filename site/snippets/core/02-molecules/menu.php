@@ -1,6 +1,6 @@
 <!-- Molecule: menu -->
-<nav <?php if(isset($class)){ echo "class='".$class."'";} ?>>
+<nav class="menu">
 <?php 
-	snippet("core/01-atoms/list-unordered", array("items" => $items, "class" => $class ."_list" )); 
+	snippet(get_atom("list-unordered"), array("items" => $items, "class" => "menu_list" )); 
 ?>
 </nav>

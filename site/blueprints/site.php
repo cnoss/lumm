@@ -1,7 +1,11 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Site
-pages: default
+pages: 
+	template: 
+		container-rows
+		container-main-sidebar
+		container-blog
 fields:
   title:
     label: Title

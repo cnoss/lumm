@@ -11,7 +11,7 @@
 function get_container($site, $pages, $page) {
 
 	// get all articles and add pagination
-	$containers = $page->children(); // visible();
+	$containers = $page->children()->visible();
 
 	// pass $articles and $pagination to the template
 	//return compact('containers');
@@ -26,24 +26,31 @@ function get_container($site, $pages, $page) {
  * @return Name des Templates 
  */
 
-function get_snip($uid, $default){
-
+function get_snip($uid, $default, $level = false){
+	
+	if(!$level){ $level = "03-organisms"; }
+	$level = $level . "/";
+	
 	$default = preg_replace("=.*/=", "", $default);
 	
-	$tpl_core_organism = strtolower($uid);
-	$tpl_custom_organism = strtolower($uid);
+	$tpl_core	= strtolower($uid);
+	$tpl_custom = strtolower($uid);
 	
 	$tpl = $uid;
 
-	if(!file_exists('site/snippets/core/03-organisms/'.$tpl.'.php')){ 		$tpl_core_organism = false; }
-	if(!file_exists('site/snippets/custom/03-organisms/'.$tpl.'.php')){ 	$tpl_custom_organism = false; }
+	if(!file_exists('site/snippets/core/'.$level.$tpl.'.php')){ 	$tpl_core 	= false; }
+	if(!file_exists('site/snippets/custom/'.$level.$tpl.'.php')){ 	$tpl_custom = false; }
 	
-	if($tpl_custom_organism){ 	$template = "custom/03-organisms/". $tpl; }
-	elseif($tpl_core_organism){ $template = "core/03-organisms/". $tpl; }
-	else{						$template = "core/03-organisms/" . $default; }
+	if($tpl_custom){ 	$template = "custom/".$level. $tpl; }
+	elseif($tpl_core){ 	$template = "core/".$level. $tpl; }
+	else{				$template = "core/".$level. $default; }
 
 	return $template;
 }
+
+function get_atom($uid){		return get_snip( $uid, false, "01-atoms");}
+function get_molecule($uid){	return get_snip( $uid, false, "02-molecules");}
+function get_organism($uid){	return get_snip( $uid, false, "03-organisms");}
 
 
 /**
@@ -54,7 +61,7 @@ function get_snip($uid, $default){
  */
  
  
-function make_menu_items($pages, $class) {
+function make_menu_items($pages) {
 			
 	// alle Seiten holen
 	$p = $pages->visible();
@@ -75,7 +82,7 @@ function make_menu_items($pages, $class) {
 			// Markup erzeugen
 			$item = array();
 			$item["content"] = '<a '. $data["active"] .' href="'.$data["url"].'">'.$data["content"].'</a>';
-			$item["class"] = $class."__item";
+			$item["class"] = "menu__item";
 			array_push($menu, $item);
 		}
 
@@ -85,5 +92,53 @@ function make_menu_items($pages, $class) {
 
 };
 
+/**
+ * Liefert die Bilder eines Artikels kategorisiert nach Typ
+ * 
+ * @author c.noss@klickmeister.de
+ * @return multidimensionales array mit bildern 
+ */
+ 
+function get_images_from_article( $article, $prop = false ){
+	
+	$bilder = array();
+	$bilder["all"] = array();
+	$bilder["svgs"] = array(); // Ehemals SVGs, wurden dann aber in PNGs konvertiert wegen Darstellungsproblemen bei Android
+	$bilder["pixel"] = array();
+	$bilder["lg"] = array();
+	$bilder["thumbs"] = array();
+	
+	
+	// Alle Bilder abklappern
+	foreach ($article->images() as $img){
+		switch (true) {
+			case preg_match("=/icon.png=", $img):
+				break;
+				
+			case preg_match("=/lg_=", $img):
+				array_push($bilder["lg"], "/assets/php/timthumb/images.php?src=".$img->url()."&w=800&q=80");
+				break;
+				
+			case preg_match("=svg.png=", $img):
+				array_push($bilder["svgs"], "/assets/php/timthumb/images.php?src=".$img->url()."&w=800&q=80");
+				array_push($bilder["all"],"/assets/php/timthumb/images.php?src=". $img->url()."&w=800&q=80");
+				break;
+			
+			case $prop="proportional":
+				array_push($bilder["pixel"], "/assets/php/timthumb/images.php?src=".$img->url()."&w=800&q=80");
+				array_push($bilder["all"], "/assets/php/timthumb/images.php?src=".$img->url()."&w=800&q=80");
+				array_push($bilder["thumbs"], "/assets/php/timthumb/images.php?src=".$img->url() ."&w=60&h=60&q=95&zc=1&s=1");
+				break;
+			
+			default:
+				array_push($bilder["pixel"], "/assets/php/timthumb/images.php?src=".$img->url()."&w=800&h=600&q=80");
+				array_push($bilder["all"], "/assets/php/timthumb/images.php?src=".$img->url()."&w=800&h=600&q=80");
+				array_push($bilder["thumbs"], "/assets/php/timthumb/images.php?src=".$img->url() ."&w=60&h=60&q=95&zc=1&s=1");
+		}
+	}
+
+	return $bilder;
+
+}
 
 ?>

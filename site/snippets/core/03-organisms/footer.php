@@ -1,5 +1,17 @@
 <footer class="container">
-	<?php echo $site->copyright()->kirbytext(); ?>
+	<div class="row">
+		<div class="col-md-6">
+			<?php echo $site->copyright()->kirbytext(); ?>
+		</div>
+		<div class="col-md-6">
+			<a href="http://twitter.com/cnoss">
+			<figure class="footer__twitter">
+				<img src="../../../../assets/img/core/twitter.svg">
+				<figcaption>twitter.com/cnoss</figcaption>
+			</figure>
+			</a>
+		</div>
+	</div>
 </footer>
 
 <!-- Weniger wichtiges CSS laden wir asynchron nach, damit die Seite schneller ausgeliefert werden kann. -->
@@ -56,5 +68,10 @@
 		<!-- Let's not assume anything -->
 		<link rel="stylesheet" href="/assets/css/main-css.php">
     </noscript>
+        <script>
+		// Picture element HTML5 shiv
+		document.createElement( "picture" );
+	</script>
+	<script src="/assets/lib/picturefill.min.js" async></script>
 </body>
 </html>

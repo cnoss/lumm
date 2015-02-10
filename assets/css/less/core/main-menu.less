@@ -1,30 +1,36 @@
 /*------------------------------------*\
     $MENU
 \*------------------------------------*/
-.main-menu_list{
-    margin: 0;    
-    padding: 0;
-    padding-right: @custom-basefontsize;
-    padding-top: @custom-basefontsize;
-    background: #fff;
+
+
+.main-menu{
+	background: #fff;
+	margin-bottom: @custom-basefontsize;
 	
-    li{
-        display: block;
-        float: left;
-        width: 100%;
-        .transition(width 1s);
-        @media (min-width: @screen-sm-min) {  width: 50%; }
-       
-                
-        a{
+	.menu_list{
+	 	
+	 	margin:0;
+	 	padding: 0;
+	 	
+	    li{
 	        display: block;
-	        border-top: solid 1px #000;
-	        padding: @custom-basefontsize /2 0;
-	        margin-left: @custom-basefontsize;
-        }
-	}
-	
-	&:after{
-		.clear;
+	        float: left;
+	        width: 100%;
+	        .transition(width 1s);
+	        @media (min-width: @screen-sm-min) {  width: 50%; }
+			
+	                
+	        a{
+		        display: block;
+		        border-top: solid 1px #000;
+		        padding: @custom-basefontsize /2 0;
+				margin-right: @custom-basefontsize;
+	        }
+		}
+		
+		&:after{
+			.clear;
+		}
 	}
 }
+

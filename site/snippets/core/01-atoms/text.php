@@ -1,1 +1,1 @@
-<?php echo markdown($text); ?>
+<?php echo kirbytext($text); ?>

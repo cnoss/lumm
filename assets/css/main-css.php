@@ -3,7 +3,7 @@
 // Any updates?
 $changes = round((filemtime("less") +  filemtime("less/core") +  filemtime("less/custom")) / 3);
 
-if($changes > filemtime("main-css.less")){
+if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
 	
 	// Core variables and mixins
 	$import = array(
@@ -16,6 +16,12 @@ if($changes > filemtime("main-css.less")){
 	// Where are the less files?
 	$core_path 		= "./less/core";
 	$custom_path 	= "./less/custom";
+	
+	// Cache leeren
+	$cached_files = glob( $core_path . './cached/' );
+	foreach($cached_files as $file){ 
+		unlink($file);
+	}
 	
 	// get filesnames and remove paths (in order to compare filenames)
 	$core_less 		= str_replace($core_path, "", glob( $core_path . '/*.less' ));
@@ -37,11 +43,6 @@ if($changes > filemtime("main-css.less")){
 	foreach($less_stack as $file){ 	$main_less .= "@import '" . $file . "';\n"; }
 	file_put_contents("main-css.less", $main_less);
 	
-	// Cache leeren
-	$cached_files = glob( $core_path . './cached/' );
-	foreach($cached_files as $file){ 
-		unlink($file);
-	}
 
 }
 

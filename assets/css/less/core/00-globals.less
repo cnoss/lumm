@@ -1,0 +1,91 @@
+body, html{
+	line-height: 130%;
+	font-size: @custom-basefontsize;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $Typo
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6{
+	line-height: 120%;
+	color: @brand-primary;
+	margin: 0;
+	padding: 0;
+}
+
+h1{ 	font-size: @custom-basefontsize * 1.6; }
+h2{ 	font-size: @custom-basefontsize * 1.4; }
+h3{ 	font-size: @custom-basefontsize * 1.2; }
+h4{ 	font-size: @custom-basefontsize ; }
+p{ 		font-size: @custom-basefontsize; .hyphens(auto); }
+
+.body ul{
+	margin-top: @custom-basefontsize /2;
+	padding-left: @custom-basefontsize;
+	
+	li{
+		display: block;
+		margin: 0 @custom-basefontsize @custom-basefontsize/2 @custom-basefontsize *2;
+		
+
+		&:before{
+			content: ">>";
+			color: @brand-primary;
+			padding-right: @custom-basefontsize /2;
+			margin-left: @custom-basefontsize * -2;
+			
+		}
+	}
+}
+
+
+
+
+/*------------------------------------*\
+    $Typo margins
+\*------------------------------------*/
+
+.head + .body, .body + .foot{
+	margin-top: @custom-basefontsize;
+}
+
+p + p {
+	margin-top: @custom-basefontsize * 0.5;
+}
+
+
+
+
+/*------------------------------------*\
+    $Container metrics
+\*------------------------------------*/
+
+footer{
+	margin: @custom-basefontsize 0;
+}
+
+figure.video{
+	width: 100%;
+	height: 60%;
+	
+	iframe{
+		width: 100%;
+		height: 60%;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+    $Images
+\*------------------------------------*/
+
+img.scale{
+	width: 100%;
+}

@@ -1,4 +1,5 @@
-<?php snippet('core/03-organisms/header') ?>
+<?php include 'assets/php/functions.php'; ?>
+<?php snippet(get_organism("header")); ?>
 <?php $containers = get_container($site, $pages, $page); ?> 
 
 <section class="container">
@@ -20,4 +21,4 @@
 <?php endforeach ?>
 </section>
 
-<?php snippet('core/03-organisms/footer') ?>
+<?php snippet(get_organism("footer")) ?>

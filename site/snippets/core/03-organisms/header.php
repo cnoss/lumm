@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php include 'assets/php/functions.php'; ?>
 <html lang="<?php echo $site->language()->code(); ?>">
 <head>
 
@@ -10,6 +9,7 @@
 <meta name="description" content="<?php echo $site->description()->html() ?>">
 <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
+	
 <style>
 <?php
 require_once "assets/lib/less.php/Less.php";
@@ -41,16 +41,21 @@ try{
 
 <header class="container">
 	
-	<div class="logo">
-		<?php
-			snippet("core/02-molecules/heading", array("content" => $site ));
-		?>
+	<div class="row">
+		<div class="col-md-12 logo">
+			<?php
+				snippet(get_molecule("heading"), array("content" => $site ));
+			?>
+		</div>
 	</div>
-		
-	<?php
-		$class = "main-menu";
-		$items = make_menu_items($pages, $class);
-		snippet("core/02-molecules/menu", array("items" => $items, "class" => $class ));
-	?>
+	
+	<div class="row">
+		<div class="col-md-12 main-menu">
+		<?php
+			$items = make_menu_items($pages);
+			snippet(get_molecule("menu"), array("items" => $items ));
+		?>
+		</div>
+	</div>
 	
 </header>

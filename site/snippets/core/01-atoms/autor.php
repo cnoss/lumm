@@ -1,0 +1,1 @@
+<p class="autor"><?php echo $text; ?></p>
