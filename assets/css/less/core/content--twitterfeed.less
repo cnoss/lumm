@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $twitterfeed
+\*------------------------------------*/
+
+#twitterfeed{
+	background: #fff;
+	padding: @custom-basefontsize/2 @custom-basefontsize;
+
+	.tweet__standard{
+		
+		padding: @custom-basefontsize /2 0;
+		
+		&+.tweet__standard{
+			border-top: @brand-primary solid 1px;
+		}
+		
+		time{
+			display: block;
+		}
+	}
+}
+

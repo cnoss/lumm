@@ -1,7 +1,7 @@
 <?php
 
 // Any updates?
-$changes = round((filemtime("less") +  filemtime("less/core") +  filemtime("less/custom")) / 3);
+$changes =  max(array(filemtime("less"), filemtime("less/core"), filemtime("less/custom")));
 
 if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
 	

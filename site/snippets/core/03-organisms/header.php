@@ -35,26 +35,41 @@ try{
 
 ?>
 </style>
+
+
+<script>
+	
+// Stack of js actions, that have to be fired, after the page is loaded
+var init_actions = new Array();	
+
+</script>
 </head>
 
 <body>
 
+
 <header class="container">
 	
 	<div class="row">
-		<div class="col-md-12 logo">
+		<div class="col-md-12">
+			<div class="logo">
+				<a href="<?php echo $site->homePage()->url(); ?>">
 			<?php
 				snippet(get_molecule("heading"), array("content" => $site ));
 			?>
+				</a>
+			</div>
 		</div>
 	</div>
 	
 	<div class="row">
-		<div class="col-md-12 main-menu">
-		<?php
-			$items = make_menu_items($pages);
-			snippet(get_molecule("menu"), array("items" => $items ));
-		?>
+		<div class="col-md-12">
+			<div class="main-menu">
+			<?php
+				$items = make_menu_items($pages);
+				snippet(get_molecule("menu"), array("items" => $items ));
+			?>
+			</div>
 		</div>
 	</div>
 	

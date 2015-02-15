@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $instafeed
+\*------------------------------------*/
+
+#instafeed{
+	
+	padding: 0;
+	
+	.image_grid{
+		
+		display: inline-block;
+		width: 16.6667%;
+		@media (max-width: @screen-sm-min) { 
+			width: 33.3334%; 
+			&:nth-child(n+7) { display: none; }
+		}
+	
+	}
+}
+
