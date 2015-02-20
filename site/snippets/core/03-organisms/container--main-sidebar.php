@@ -1,8 +1,13 @@
 <!-- Organism: Main-Sidebar -->
 <div class="row">
 	<div class="col-md-8">
-		<?php $containers = $content->find("hauptspalte")->children()->visible(); ?>
-		<?php foreach($containers as $container): ?>
+		<?php
+			if(isset($content)){
+				$containers = $content->find("hauptspalte")->children()->visible();
+			}else{
+				$containers = $page->find("hauptspalte")->children()->visible();
+			}
+			foreach($containers as $container): ?>
 		<?php
 			
 			// Bilder holen
@@ -23,9 +28,13 @@
 	</div>
 	
 	<div class="col-md-4">
-		<?php $containers = $content->find("sidebar")->children()->visible(); ?>
-		<?php foreach($containers as $container): ?>
-		<?php
+		<?php	
+			if(isset($content)){
+				$containers = $content->find("sidebar")->children()->visible();
+			}else{
+				$containers = $page->find("sidebar")->children()->visible();
+			}
+			foreach($containers as $container):
 			
 			// Bilder holen
 			$bilder = get_images_from_article( $container );

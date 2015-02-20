@@ -1,0 +1,17 @@
+Title: Teaserimage
+
+----
+
+Text: 
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-02-20
+
+----
+
+Layout: slideshow__standard

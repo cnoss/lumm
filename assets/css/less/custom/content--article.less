@@ -1,9 +1,27 @@
+.body ul{
+	
+	margin-top: @custom-basefontsize /2;
+	padding-left: 0;
+	
+	li{
+		display: block;
+		margin: 0 @custom-basefontsize @custom-basefontsize/2 @custom-basefontsize *1.5;
+		
+		&:before{
+			content: ">>";
+			color: @brand-primary;
+			padding-right: @custom-basefontsize /4;
+			margin-left: @custom-basefontsize * -1.5;
+			
+		}
+	}
+}
 
 .article__standard{
 	
 	
 	background-color: #fff;
-	padding: @custom-basefontsize @grid-gutter-width/2;
+	padding: @custom-basefontsize;
 
 	
 	.foot{
@@ -12,6 +30,8 @@
 }
 
 .article__headline_outside{
+	
+	margin-bottom: @custom-basefontsize /4;
 	
 	.body{ .article__standard; }
 	.head{

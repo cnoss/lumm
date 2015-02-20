@@ -22,7 +22,6 @@ function convert_date($date) {
 	return date("d.m.Y",mktime(0,0,0,$month,$day,$year))." - ". preg_replace("=:..$=", "", $date);
 }
 
-
 function autolink($str, $attributes=array()) {
 	$attrs = '';
 	foreach ($attributes as $attribute => $value) $attrs .= " {$attribute}=\"{$value}\"";
@@ -49,7 +48,23 @@ $response = $twitter->setGetfield($getfield)
              ->performRequest();
 
 $result=json_decode($response, true);
-foreach($result as $item){	
-	print '<div class="'.$class.'">'. autolink($item["text"]). "<time>".convert_date($item["created_at"]).'</time></div>';
-}
+
+if(sizeof($result) > 0):
+	foreach($result as $item): ?>
+
+<div class="<?php echo $class; ?>">
+	<p class="tweet_body"><?php echo autolink($item["text"]); ?></p>
+	<div class="tweet_foot">
+		<time class="time"><?php echo convert_date($item["created_at"]); ?></time>
+		<div class="interaction_bar">
+			<a class="btn btn-default interaction_bar__item" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo $item["id"]; ?>"><span>t</span><span class="show_on_hover">weet</span></a>
+			<a class="btn btn-default interaction_bar__item" href="https://twitter.com/intent/retweet?tweet_id=<?php echo $item["id"]; ?>"><span>r</span><span class="show_on_hover">etweet</span></a>
+			<a class="btn btn-default interaction_bar__item" href="https://twitter.com/intent/favorite?tweet_id=<?php echo $item["id"]; ?>"><span>s</span><span class="show_on_hover">tar</span></a>
+		</div>
+	</div>
+</div>
+
+<?php 
+	endforeach; 
+endif;
 ?>

@@ -1,4 +1,7 @@
-<?php foreach($containers as $container): ?>
+<?php 
+	$containers = get_container($site, $pages, $page); 
+	foreach($containers as $container): 
+?>
 <div class="row">
 	<div class="col-md-12">
 	<?php

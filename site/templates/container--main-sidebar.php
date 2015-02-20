@@ -1,13 +1,15 @@
 <!-- Template: container--main-sidebar -->
-<?php include 'assets/php/functions.php'; ?>	
-<?php snippet(get_organism("header")); ?>
+<?php 
+	include 'assets/php/functions.php';
+	snippet(get_organism("header"));
+?>
 
 <main class="main" role="main">
 
 	<section class="container">
 
 	<?php 
-		snippet(get_organism("container--main-sidebar"), array("containers" => $containers)));
+		snippet(get_organism("container--main-sidebar"));
 	?>
 		
 	</section>

@@ -14,9 +14,46 @@
 			border-top: @brand-primary solid 1px;
 		}
 		
-		time{
-			display: block;
+		&:hover{
+			.interaction_bar{ opacity: 1; }
 		}
+		
 	}
+	
+	.tweet_foot{
+		
+		margin-top: @custom-basefontsize /2;
+		font-size: @font-size-small;	
+		
+		
+		.interaction_bar{
+			
+			opacity: 0;
+			float: right;
+			.transition(opacity 0.5);
+
+			.interaction_bar__item{
+				
+				padding: 3px 8px;
+				   
+				span{
+					display: block;
+					overflow: hidden;
+					float: left;
+				}
+				
+				.show_on_hover{ 
+					max-width: 0;
+					.transition(max-width .5s);
+				}
+			}
+			&:hover{
+				.show_on_hover{ max-width: 200px; }
+			}
+			
+		}
+		
+	}
+
 }
 

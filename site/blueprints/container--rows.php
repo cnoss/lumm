@@ -9,6 +9,7 @@ pages:
     -content--slideshow
     -content--instafeed
     -content--twitterfeed
+    -content--blogfeed
 files: false
 fields:
   info:

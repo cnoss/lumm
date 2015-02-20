@@ -40,3 +40,10 @@ fields:
       article__headline_outside: Headline außerhalb der Box
       article__hero: Hero Box
       article__imagesonly: Nur Bilder
+  home:
+    label: Sichtbar auf Startseite
+    type: radio
+    width: 1/2
+    options:
+      false: Nein
+      true: Ja

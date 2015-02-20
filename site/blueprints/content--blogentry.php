@@ -45,3 +45,10 @@ fields:
     options:
       blogentry__standard: Standard
       blogentry__focussed: Hervorgehoben
+  home:
+    label: Sichtbar auf Startseite
+    type: radio
+    width: 1/2
+    options:
+      false: Nein
+      true: Ja      

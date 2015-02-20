@@ -33,3 +33,7 @@ Autor: Christian
 ----
 
 Layout: blogentry__focussed
+
+----
+
+Home: true

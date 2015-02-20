@@ -1,4 +1,5 @@
 <?php include 'assets/php/functions.php'; ?>
+<?php $containers = get_blog_container($site, $pages, $page, 200); ?>
 <?php snippet(get_organism("header")); ?>
 
 <section class="container">

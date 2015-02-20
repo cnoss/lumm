@@ -10,14 +10,20 @@
  
 function get_container($site, $pages, $page) {
 
-	// get all articles and add pagination
-	$containers = $page->children();//->visible();
-
-	// pass $articles and $pagination to the template
-	//return compact('containers');
+	// get all articles
+	$containers = $page->children();
 	return $containers;
 
 };
+	
+function get_blog_container($site, $pages, $page, $limit) {
+
+	$containers = $page->children()->visible()->limit($limit)->sortBy('date', 'desc');//->visible();
+	return $containers; 
+
+
+};
+
 
 /**
  * Prüft, ob es ein spezielles Snipplet gibt. Falls nicht, wird das default Snip zurück gegeben.

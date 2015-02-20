@@ -14,4 +14,14 @@ fields:
     type: headline
   title:
     label: Title/ Headline
-    type:  text   
+    type:  text
+  text:
+  	label: Content
+  	type: textarea
+  layout:
+    label: Layout
+    type: radio
+    width: 1/2
+    options:
+      article__standard: Standard
+      article__headline_outside: Headline außerhalb der Box

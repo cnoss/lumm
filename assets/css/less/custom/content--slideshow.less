@@ -1,5 +1,58 @@
 .slideshow__standard{
+	
+	background: #ff00ff;
+	
+	.blueimp-gallery > .indicator > li{
+		box-shadow: none;
+		border-color: rgba(255,255,255,0.3);
+	}
+	
+	.blueimp-gallery > .indicator > .active{
+		border-color: #fff;
+	}
+	
+	.blueimp-gallery > .indicator.svgs > li{
+		background-color: lighten(@brand-accent, 30%);
+		//border-color: @brand-accent;
+		&:hover,
+		&.active {
+			background-color: @brand-accent;
+			border-color: @brand-accent;
+		}
+	}
+	
+	.blueimp-gallery > .description {
+		position: absolute;
+		top: 30px;
+		left: 15px;
+		color: #fff;
+	}
+	
+	.blueimp-gallery-controls > .description {
+	  display: block;
+	}
+	
+	#blueimp-gallery-caption-home{
+		h3{
+			margin-bottom: 0;
+		}	
+	}
+	
+	#blueimp-gallery-home{
+		@media (orientation:landscape){ 
+			padding-bottom: 55%;
+		}
+	}
+	
+	.blueimp-gallery-carousel{
+		box-shadow: inherit;
+		margin: 0;
+		padding-bottom: 45%;
+	} 
 
+	.blueimp-gallery{
+		background-color: #fff;
+	}
 
 }
 
@@ -8,7 +61,7 @@
 	
 	// Die Slideshow soll vertikal oben an der Textbox ausgerichtet sein.
 	@media (min-width: @screen-md-min) { 
-		padding-top: @custom-basefontsize + @custom-basefontsize * 1.8;  
+		padding-top: @custom-basefontsize + @custom-basefontsize * 1.6;  
 	}
 	
 
