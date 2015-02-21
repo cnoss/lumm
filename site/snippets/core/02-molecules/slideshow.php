@@ -1,5 +1,4 @@
 <!-- Molecule: slideshow -->
-
 <?php 
 
 // Falls es nur ein Bild gibt, zeigen wir es an

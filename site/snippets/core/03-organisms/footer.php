@@ -25,6 +25,10 @@
 	</div>
 </footer>
 
+
+<!-- Zum detektieren des Anzeigemodus -->
+<div class="detect visible-xs-block"></div><div class="detect visible-sm-block"></div><div class="detect visible-md-block"></div><div class="detect visible-lg-block"></div>
+
 <!-- Weniger wichtiges CSS laden wir asynchron nach, damit die Seite schneller ausgeliefert werden kann. -->
 <script type="text/javascript">
 	/*!
@@ -84,6 +88,6 @@
 	document.createElement( "picture" );
 </script>
 
-<script type="text/javascript" src="/min/b=assets&amp;f=lib/instafeed-js/instafeed.min.js,lib/picturefill.min.js,lib/jquery-1.9.0.min.js,js/lumm.js,js/blueimp-km-v1.0.0.js"></script>
+<script type="text/javascript" src="/min/g=js"></script>
 </body>
 </html>

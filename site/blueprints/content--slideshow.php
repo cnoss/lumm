@@ -38,3 +38,10 @@ fields:
     options:
       slideshow__standard: Standard
       slideshow__headline_outside: Headline außerhalb der Box
+  autostart:
+    label: Slideshow automatisch starten?
+    type: radio
+    width: 1/2
+    options:
+      false: Nein
+      true: Ja      
