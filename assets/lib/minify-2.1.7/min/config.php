@@ -50,7 +50,7 @@ $min_allowDebugFlag = false;
  * will have to load extra code to guess. Some examples below:
  */
 //$min_cachePath = 'c:\\WINDOWS\\Temp';
-$min_cachePath = $_SERVER['DOCUMENT_ROOT'].'/site/cache';
+$min_cachePath = '/home/kmeister/christiannoss.de/site/cache';
 //$min_cachePath = preg_replace('/^\\d+;/', '', session_save_path());
 /**
  * To use APC/Memcache/ZendPlatform for cache storage, require the class and
@@ -70,8 +70,8 @@ $min_cachePath = $_SERVER['DOCUMENT_ROOT'].'/site/cache';
  * If /min/ is directly inside your document root, just uncomment the 
  * second line. The third line might work on some Apache servers.
  */
- $min_documentRoot = "";
-//$min_documentRoot = $_SERVER['DOCUMENT_ROOT'] ."/assets/lib/minify";
+//$min_documentRoot = "";
+$min_documentRoot = "/home/kmeister/christiannoss.de";
 //$min_documentRoot = substr(__FILE__, 0, -15);
 //$min_documentRoot = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
 
@@ -127,7 +127,7 @@ $min_serveOptions['maxAge'] = 1800;
  * Set to true to disable the "f" GET parameter for specifying files.
  * Only the "g" parameter will be considered.
  */
-$min_serveOptions['minApp']['groupsOnly'] = false;
+$min_serveOptions['minApp']['groupsOnly'] = true;
 
 
 /**

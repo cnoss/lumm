@@ -20,3 +20,4 @@ return array(
 		'//assets/js/lumm.js'
 	)
 );
+
