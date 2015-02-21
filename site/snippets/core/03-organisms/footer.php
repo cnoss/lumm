@@ -83,7 +83,7 @@
 	// Picture element HTML5 shiv
 	document.createElement( "picture" );
 </script>
-
-<script type="text/javascript" src="/min/b=assets&amp;f=lib/instafeed-js/instafeed.min.js,lib/picturefill.min.js,lib/jquery-1.9.0.min.js,js/lumm.js,js/blueimp-km-v1.0.0.js"></script>
+<script type="text/javascript" src="/min/g=js"></script>
+<!--script type="text/javascript" src="/min/b=assets&amp;f=lib/instafeed-js/instafeed.min.js,lib/picturefill.min.js,lib/jquery-1.9.0.min.js,js/lumm.js,js/blueimp-km-v1.0.0.js"></script-->
 </body>
 </html>

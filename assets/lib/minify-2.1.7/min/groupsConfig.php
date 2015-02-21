@@ -12,6 +12,14 @@
  **/
 
 return array(
-	'keyName' => array('//assets/lib/instafeed-js/instafeed.min.js', '//assets/lib/picturefill.min.js', '//assets/js/lumm.js')
+	'js' => array(
+		'//assets/lib/instafeed-js/instafeed.min.js', 
+		'//assets/lib/picturefill.min.js',
+		'//assets/lib/jquery-1.9.0.min.js', 
+		'//assets/js/blueimp-km-v1.0.0.js', 
+		'//assets/js/lumm.js'
+	 )
     // 'css' => array('//css/file1.css', '//css/file2.css'),
 );
+
+?>
