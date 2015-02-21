@@ -1,14 +1,10 @@
 <?php 
 /** Die Klasse einbinden **/
 require_once("../../lib/twitter-api-php/TwitterAPIExchange.php"); 
+include_once('../../../config/custom-config.php');
 
 /** Hier kommen die Codes der APP rein **/ 
-$settings = array(
-	'oauth_access_token' 			=> "22971416-p2LsnnlaECyQFfubPwkgqFeIp7N1IFoavNyhDwms0",
-	'oauth_access_token_secret' 	=> "UZN7ZORo45MJnX9wH90JMuSD4mEHAeyEbHvxnXZxRWrjR",
-	'consumer_key' 					=> "WX2nNMQrDZ6bIHGmRdX2KoTAi",
-	'consumer_secret' 				=> "tBKOdfCrjkLz5lVWYVbtecUOobpf0nCHOB4KYPWpWS3rPxoN7u"
-);
+$settings = $custom_config["twitter_data"];
 
 # konvertiert rfc timstamp zu unix ts
 function convert_date($date) {
@@ -40,7 +36,7 @@ if(isset($_GET["class"])){ $class = $_GET["class"]; }
 /** Perform a GET request and echo the response **/
 /** Note: Set the GET field BEFORE calling buildOauth(); **/
 $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-$getfield = '?screen_name=cnoss&count=5';
+$getfield = '?screen_name='.$settings["screen_name"].'&count='.$settings["shown_items"];
 $requestMethod = 'GET';
 $twitter = new TwitterAPIExchange($settings);
 $response = $twitter->setGetfield($getfield)

@@ -6,11 +6,12 @@
  * @package Minify
  */
 
+include_once('../../../../config/custom-config.php');
 
 /**
  * Allow use of the Minify URI Builder app. Only set this to true while you need it.
  */
-$min_enableBuilder = true;
+$min_enableBuilder = false;
 
 /**
  * If non-empty, the Builder will be protected with HTTP Digest auth.
@@ -50,7 +51,7 @@ $min_allowDebugFlag = false;
  * will have to load extra code to guess. Some examples below:
  */
 //$min_cachePath = 'c:\\WINDOWS\\Temp';
-$min_cachePath = '/home/kmeister/christiannoss.de/site/cache';
+$min_cachePath = $custom_config["cachedir"];
 //$min_cachePath = preg_replace('/^\\d+;/', '', session_save_path());
 /**
  * To use APC/Memcache/ZendPlatform for cache storage, require the class and
@@ -71,7 +72,7 @@ $min_cachePath = '/home/kmeister/christiannoss.de/site/cache';
  * second line. The third line might work on some Apache servers.
  */
 //$min_documentRoot = "";
-$min_documentRoot = "/home/kmeister/christiannoss.de";
+$min_documentRoot = $custom_config["base_path"];
 //$min_documentRoot = substr(__FILE__, 0, -15);
 //$min_documentRoot = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
 

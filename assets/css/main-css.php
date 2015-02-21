@@ -1,5 +1,7 @@
 <?php
 
+include_once('../../config/custom-config.php');
+
 // Any updates?
 $changes =  max(array(filemtime("less"), filemtime("less/core"), filemtime("less/custom")));
 
@@ -18,7 +20,7 @@ if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
 	$custom_path 	= "./less/custom";
 	
 	// Cache leeren
-	$cached_files = glob( $core_path . './cached/' );
+	$cached_files = glob( $custom_config["cachedir"] );
 	foreach($cached_files as $file){ 
 		unlink($file);
 	}
@@ -58,12 +60,12 @@ try{
 		'sourceMap'         => 	true,
 	    'sourceMapWriteTo'  => 	'./sourcemaps/main.map',
 	    'sourceMapURL'      => 	'./sourcemaps/main.map',
-		'cache_dir' 		=> 	'./cached/'
+		'cache_dir' 		=> 	$custom_config["cachedir"]
 	);
 
 	$css_file_name = Less_Cache::Get( $less_files, $options );
 	header('Content-Type: text/css');
-	echo file_get_contents( './cached/'.$css_file_name );
+	echo file_get_contents( $custom_config["cachedir"]."/".$css_file_name );
 
 }catch(Exception $e){
     echo $e->getMessage();

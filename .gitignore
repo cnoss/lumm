@@ -1,13 +1,9 @@
-assets/css/cached/
-cache/
-*/cache/
+coda_backups/
+site/accounts/
+site/cache/
+thumbs/
 
 .htaccess
-style.css
 .DS_Store
+config/custom-config.php
 
-coda_backups/
-timthumb-config.php
-thumbs/
-site/config/config.php
-site/accounts/

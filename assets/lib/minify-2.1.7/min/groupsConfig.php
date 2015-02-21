@@ -11,13 +11,9 @@
  * See http://code.google.com/p/minify/wiki/CustomSource for other ideas
  **/
 
+include_once('../../../../config/custom-config.php');
+
 return array(
-	'js' => array(
-		'//assets/lib/instafeed-js/instafeed.min.js', 
-		'//assets/lib/picturefill.min.js',
-		'//assets/lib/jquery-1.9.0.min.js', 
-		'//assets/js/blueimp-km-v1.0.0.js', 
-		'//assets/js/lumm.js'
-	)
+	'js' => $custom_config["internal_js_files"]
 );
 
