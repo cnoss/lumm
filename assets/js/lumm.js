@@ -77,16 +77,16 @@ detect_viewmode = (function(){
 ############################################ */
 var slideshow = new Object();
 slideshow.bildgroessen = [];
-slideshow.bildgroessen["xs"] = 600;
+slideshow.bildgroessen["xs"] = 400;
 slideshow.bildgroessen["sm"] = 992;
-slideshow.bildgroessen["md"] = 1200;
-slideshow.bildgroessen["lg"] = 1200;
+slideshow.bildgroessen["md"] = 992;
+slideshow.bildgroessen["lg"] = 992;
 
 slideshow.bildkompression = [];
-slideshow.bildkompression["xs"] = 85;
-slideshow.bildkompression["sm"] = 85;
-slideshow.bildkompression["md"] = 80;
-slideshow.bildkompression["lg"] = 80;
+slideshow.bildkompression["xs"] = 80;
+slideshow.bildkompression["sm"] = 80;
+slideshow.bildkompression["md"] = 75;
+slideshow.bildkompression["lg"] = 75;
 
 slideshow.tt_url = "/assets/php/timthumb/images.php";
 

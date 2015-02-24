@@ -14,4 +14,8 @@ Date:
 
 ----
 
-Layout: slideshow__headline_outside
+Layout: slideshow__headline_hidden__padding
+
+----
+
+Autostart: false

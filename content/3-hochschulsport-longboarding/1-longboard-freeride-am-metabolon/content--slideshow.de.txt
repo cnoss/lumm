@@ -1,20 +1,8 @@
-Info: 
-
-----
-
-Visible: 
-
-----
-
 Title: Longboard Freeride am Metabolon
 
 ----
 
 Text: 
-
-----
-
-Invisible: 
 
 ----
 
@@ -26,4 +14,8 @@ Date:
 
 ----
 
-Layout: 
+Layout: slideshow__headline_hidden
+
+----
+
+Autostart: false

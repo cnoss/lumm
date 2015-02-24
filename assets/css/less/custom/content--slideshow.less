@@ -1,5 +1,9 @@
 .slideshow__standard{
-		
+	
+	.head{
+		.headline__uppercase;
+	}
+	
 	.blueimp-gallery > .indicator > li{
 		box-shadow: none;
 		border-color: rgba(255,255,255,0.3);
@@ -54,13 +58,21 @@
 
 }
 
-.slideshow__headline_outside{
+.slideshow__headline_hidden{
+	
 	.slideshow__standard;
+	.head{
+		display: none;
+	}	
+}
+
+.slideshow__headline_hidden__padding{
+	
+	.slideshow__headline_hidden;
 	
 	// Die Slideshow soll vertikal oben an der Textbox ausgerichtet sein.
 	@media (min-width: @screen-md-min) { 
 		padding-top: @custom-basefontsize + @custom-basefontsize * 1.6;  
 	}
 	
-
 }

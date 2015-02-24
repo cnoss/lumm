@@ -11,7 +11,7 @@
 function get_container($site, $pages, $page) {
 
 	// get all articles
-	$containers = $page->children();
+	$containers = $page->children()->visible();
 	return $containers;
 
 };
