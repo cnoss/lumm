@@ -37,7 +37,8 @@ fields:
     width: 1/2
     options:
       slideshow__standard: Standard
-      slideshow__headline_outside: Headline außerhalb der Box
+      slideshow__headline_hidden: ohne Headline
+      slideshow__headline_hidden__padding: ohne Headline mit Abstand von oben
   autostart:
     label: Slideshow automatisch starten?
     type: radio

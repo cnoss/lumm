@@ -33,20 +33,20 @@
 	
 	margin-bottom: @custom-basefontsize /4;
 	
-	.body{ .article__standard; }
+	.body{ 
+		.article__standard; 
+	}
+	
 	.head{
-		padding-top: @custom-basefontsize;
-		line-height: 100%;
-		margin-bottom: -@custom-basefontsize *1.4;
-		margin-left: @custom-basefontsize;
-		
-		h1{
-			text-transform: uppercase;
-			font-family: @ff-medium;
-			font-weight: 500;
-		}
+		.headline__uppercase;
 	}
 	.foot{
 		display: none;
 	}
+}
+
+.article__headline_hidden{
+	
+	.article__standard;
+	.head{ display: none; }
 }

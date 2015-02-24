@@ -5,6 +5,7 @@ pages:
 	template:
     -container--main-sidebar
     -container--rows
+    -container--article-overview
     -content--article
     -content--slideshow
     -content--instafeed

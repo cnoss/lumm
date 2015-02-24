@@ -38,6 +38,7 @@ fields:
     options:
       article__standard: Standard
       article__headline_outside: Headline außerhalb der Box
+      article__headline_hidden: ohne Headline
       article__hero: Hero Box
       article__imagesonly: Nur Bilder
   home:

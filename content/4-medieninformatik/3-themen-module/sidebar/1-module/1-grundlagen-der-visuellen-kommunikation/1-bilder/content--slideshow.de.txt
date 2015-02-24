@@ -1,0 +1,21 @@
+Title: Grundlagen der visuellen Kommunikation
+
+----
+
+Text: 
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-02-24
+
+----
+
+Layout: slideshow__standard
+
+----
+
+Autostart: true

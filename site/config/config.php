@@ -1,6 +1,7 @@
 <?php
 
-include_once('config/custom-config.php');
+$index = dirname(__DIR__);
+include_once($index.'/../config/custom-config.php');
 
 /*
 
