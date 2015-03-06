@@ -2,7 +2,12 @@ Title: Mockup 2 Markup
 
 ----
 
-Text: Zur Zeit fokussiere ich mich bei meiner Hochschularbeit auf das Thema "Übergang von Design(mockups) zu interaktiven Prototypen". Im Kontext Web-basierter Anwendungen. Es gibt verschiedene Vorgehensweisen um von einer Idee zum fertigen Web-Projekt zu kommen und egal, ob man Ansätzen wie "Mobile First" folgt, ob man entlang von Workflows wie dem "Responsive Design Workflow" arbeitet oder Methodologien wie SMACSS, OOCSS, Atomic Web Design oder BEM nutzt: irgendwann muss eine irgendwie visualisierte Idee in Code umgesetzt werden. Und genau um diesen Übergang vom Mockup zum Markup geht es bei Mockup2Markup.
+Text: 
+
+Zur Zeit fokussiere ich mich bei meiner Hochschularbeit auf das Thema "Übergang von Design(Mockups) zu interaktiven Prototypen" im Kontext Web-basierter Anwendungen.  Es gibt verschiedene Vorgehensweisen um von einer Idee zum fertigen Web-Projekt zu kommen und egal, ob man Ansätzen wie <a href="http://www.lukew.com/resources/mobile_first.asp">"Mobile First"</a> folgt, ob man entlang von Workflows wie dem <a href="http://responsivedesignworkflow.com/">"Responsive Design Workflow"</a> arbeitet oder Methodologien wie <a href="https://smacss.com/">SMACSS</a>, <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>, <a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic Web Design</a> oder <a href="https://bem.info/method/">BEM</a> nutzt: irgendwann muss eine irgendwie visualisierte Idee in Code umgesetzt werden. Um diesen Übergang geht es beim Projekt Mockup2Markup. 
+
+
+(link: http://cnoss.github.io/mockup2markup/ text: Mehr zu Mockup2Markup class:link--hero)
 
 ----
 
@@ -26,4 +31,4 @@ Subheadline: Auf der Suche nach einem geschmeidigen Übergang von Design(mockups
 
 ----
 
-Tags: 
+Tags: mockup2markup,Design,Css,WBA

@@ -42,6 +42,16 @@
 		if($content->autor() != ""){
 			snippet(get_atom("autor"), array("text" => $content->autor()));
 		}
-		?>
+		
+		if($content->tags() != ""): ?>
+			
+		<!--div class="tag-list-wrap">
+			<span class="glyphicon glyphicon-tags"></span>
+			<?php
+				$items = make_tag_list($content->tags());
+				snippet(get_atom("list-unordered"), array("items" => $items, "class" => "tag-list" )); 
+			?>
+		</div-->
+		<?php endif; ?>
 	</div>
 </article>
