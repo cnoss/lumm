@@ -1,16 +1,4 @@
-Info: 
-
-----
-
-Visible: 
-
-----
-
-Title: Mobilemania, oder: Papa, warum guckst Du eigentlich dauernd auf Dein Handy?
-
-----
-
-Invisible: 
+Title: Mobilemania
 
 ----
 
@@ -19,3 +7,7 @@ Keywords:
 ----
 
 Desc: 
+
+----
+
+Headline-zeigen: true

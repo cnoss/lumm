@@ -1,4 +1,23 @@
 <!-- Organism: Main-Sidebar -->
+
+<?php 
+	if(isset($content)){
+		$heading_content = $content;
+	}else{
+		$heading_content = $page;
+	}
+?>
+
+<?php if($heading_content->headline_zeigen() == "true"): ?>
+<div class="row">
+	<div class="col-md-8">
+		<?php
+			snippet(get_molecule("heading"), array("content" => $heading_content, "class" => "h--hero" ));
+		?>
+	</div>
+</div>
+<?php endif; ?>
+
 <div class="row">
 	<div class="col-md-8">
 		<?php			

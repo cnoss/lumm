@@ -33,3 +33,10 @@ fields:
   desc:
     label: Meta-Description
     type:  text
+  headline_zeigen:
+    label: Headline zeigen
+    type: radio
+    width: 1/2
+    options:
+      false: Nein
+      true: Ja        

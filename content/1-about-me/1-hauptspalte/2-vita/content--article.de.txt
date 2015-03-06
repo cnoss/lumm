@@ -24,7 +24,7 @@ Date: 2015-02-08
 
 ----
 
-Layout: article article--headline-outside
+Layout: article no-head
 
 ----
 

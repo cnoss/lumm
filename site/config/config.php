@@ -52,3 +52,10 @@ Minify output
 ---------------------------------------
 */
 c::set('MinifyHTML', $custom_config["compress_html"]);
+
+/*
+---------------------------------------
+Cache Dir
+---------------------------------------
+*/
+c::set('cachedir', $custom_config["cachedir"]);

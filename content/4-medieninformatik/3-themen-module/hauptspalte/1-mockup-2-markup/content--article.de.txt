@@ -1,0 +1,29 @@
+Title: Mockup 2 Markup
+
+----
+
+Text: Zur Zeit fokussiere ich mich bei meiner Hochschularbeit auf das Thema "Übergang von Design(mockups) zu interaktiven Prototypen". Im Kontext Web-basierter Anwendungen. Es gibt verschiedene Vorgehensweisen um von einer Idee zum fertigen Web-Projekt zu kommen und egal, ob man Ansätzen wie "Mobile First" folgt, ob man entlang von Workflows wie dem "Responsive Design Workflow" arbeitet oder Methodologien wie SMACSS, OOCSS, Atomic Web Design oder BEM nutzt: irgendwann muss eine irgendwie visualisierte Idee in Code umgesetzt werden. Und genau um diesen Übergang vom Mockup zum Markup geht es bei Mockup2Markup.
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-03-06
+
+----
+
+Layout: article article--focussed
+
+----
+
+Home: true
+
+----
+
+Subheadline: Auf der Suche nach einem geschmeidigen Übergang von Design(mockups) zu interaktiven Prototypen.
+
+----
+
+Tags: 
