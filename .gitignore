@@ -1,6 +1,7 @@
 coda_backups/
 site/accounts/
 site/cache/
+assets/css/cached/
 thumbs/
 
 .htaccess
