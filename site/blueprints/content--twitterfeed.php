@@ -21,7 +21,8 @@ fields:
   layout:
     label: Layout
     type: radio
-    width: 1/2
     options:
       article: Standard
       article article--headline-outside: Headline außerhalb der Box
+      article no-head: ohne Headline
+      article article--close-head: Headline nah an Content

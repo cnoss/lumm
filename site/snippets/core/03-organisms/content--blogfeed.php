@@ -2,7 +2,7 @@
 <?php 
 	$limit = 10;
 	if($content->anzahl() != ""){ $limit = $content->anzahl()->value(); }
-	$containers = $pages->index()->children()->filterBy('home','true')->limit($limit)->sortBy('date', 'desc'); 
+	$containers = $pages->index()->children()->filterBy('home','true')->sortBy('date', 'desc')->limit($limit); 
 ?>
 
 <?php foreach($containers as $container): ?>

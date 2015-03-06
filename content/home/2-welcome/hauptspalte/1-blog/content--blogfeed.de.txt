@@ -2,4 +2,4 @@ Title: Blog
 
 ----
 
-Anzahl:3
+Anzahl: 1

@@ -30,8 +30,16 @@ Date:
 
 ----
 
-Layout: article article--headline-outside
+Layout: article
 
 ----
 
 Home: false
+
+----
+
+Subheadline: 
+
+----
+
+Tags: 

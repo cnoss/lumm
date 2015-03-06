@@ -12,6 +12,16 @@
 		h2, h3, h4{
 			margin-bottom: @custom-basefontsize /4;
 		}
+		
+		figure{
+			margin: @custom-basefontsize *2 0;
+			figcaption{
+				width: 50%;
+				line-height: 120%;
+				font-weight: 100;
+				margin-top: @custom-basefontsize;
+			}
+		}
 	}
 	
 	.foot{ display: none; }
@@ -27,8 +37,11 @@
 		margin: 0;
 	}
 	.body{ background-color: #fff; padding: @custom-basefontsize; }
-	
-	
+
+}
+
+.article--close-head{
+	.head{ margin-bottom: 0; }
 }
 
 .article--focussed{
@@ -74,7 +87,7 @@
 		}
 		
 		.autor:before{
-			content: " / ";
+			content: " | ";
 			color: @brand-primary;
 		}
 	}
