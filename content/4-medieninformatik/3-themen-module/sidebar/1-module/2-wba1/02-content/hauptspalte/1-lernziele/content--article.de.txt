@@ -1,0 +1,29 @@
+Title: Lernziele
+
+----
+
+Text: 
+
+Inhaltlicher Kern des Moduls ist das Erlernen und Anwenden von Web-Technologien wie HTML, CSS und Javascript. Darüber hinaus aber auch der Umgang mit Frameworks, rechtliche und gestalterische Aspekte und vieles mehr.  In der Kompetenzmatrix, die dem Studiengang zugrunde liegt, sollen mit dem Modul folgende Kompetenzen gestärkt werden:
+
+- Analyse-, Design-, Realisierungs- und Evaluierungskompetenz: Die Studierenden erlangen die Fähigkeit, komplexe Systeme zu analysieren, im Team zu entwerfen, zu realisieren, zu testen und zu evaluieren.
+- Medienkompetenz: Die Studierenden können eine Perspektive der Medienkonzeption einnehmen, haben eine mediengestalterische Grundkompetenz entwickelt und sind in der Lage bzgl. der Kommunikationsziele eine geeignete Medienauswahl zu treffen.
+- Praktische und theoretische Methodenkompetenz: Die Studierenden erlangen die Fähigkeit zum methodischen Vorgehen, der Auswahl und der Durchführung von Arbeits- und Dokumentationstechniken und können Wissen aus den Bereichen Kerninformatik, Medientechnik, Internet- und Web-Technologien und angrenzenden Wissenschaften kombinieren und mit Komplexität umgehen.
+- Fachliche, konstruktive Problemlösungskompetenz: Die Studierenden erlangen die Fähigkeit, algorithmische Entwurfs-, erfolgreiche Benutzungs-, zielführende Gestaltungs- und angemessene Systemarchitektur-Muster zu erkennen und anzuwenden.
+- Selbstentwicklungskompetenz: Die Studierenden erlangen die Fähigkeit zum lebenslangen Lernen.
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-02-23
+
+----
+
+Layout: article
+
+----
+
+Home: false

@@ -23,5 +23,5 @@ fields:
     type: radio
     width: 1/2
     options:
-      article__standard: Standard
-      article__headline_outside: Headline außerhalb der Box
+      article: Standard
+      article article--headline-outside: Headline außerhalb der Box

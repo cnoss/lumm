@@ -3,21 +3,23 @@
 include_once('../../config/custom-config.php');
 
 // Any updates?
-$changes =  max(array(filemtime("less"), filemtime("less/core"), filemtime("less/custom")));
+$changes =  max(array(filemtime("less"), filemtime("less/00-base"), filemtime("less/01-atoms"), filemtime("less/02-molecules"), filemtime("less/03-organisms")));
 
 if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
 	
 	// Core variables and mixins
 	$import = array(
-		"./less/variables.less",
+		"./less/variables_bootstrap.less",
 		"../lib/bootstrap/less/mixins.less",
 		"./less/variables_custom.less"
 		
 	);
 	
 	// Where are the less files?
-	$core_path 		= "./less/core";
-	$custom_path 	= "./less/custom";
+	$base 			= "./less/00-base";
+	$atoms		 	= "./less/01-atoms";
+	$molecules	 	= "./less/02-molecules";
+	$organisms	 	= "./less/03-organisms";
 	
 	// Cache leeren
 	$cached_files = glob( $custom_config["cachedir"] );
@@ -25,19 +27,14 @@ if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
 		unlink($file);
 	}
 	
-	// get filesnames and remove paths (in order to compare filenames)
-	$core_less 		= str_replace($core_path, "", glob( $core_path . '/*.less' ));
-	$custom_less 	= str_replace($custom_path, "", glob( $custom_path . '/*.less'));
-	
-	// find core files where no custom pendant is available
-	$core_less = array_diff( $core_less, $custom_less );
-	
-	// add paths again
-	$core_less = 	preg_filter('/^/', $core_path, $core_less);
-	$custom_less = 	preg_filter('/^/', $custom_path, $custom_less);
+	// get less files
+	$base_less 		= glob( $base . '/*.less' );
+	$atoms_less 	= glob( $atoms . '/*.less' );
+	$molecules_less = glob( $molecules . '/*.less' );
+	$organisms_less = glob( $organisms . '/*.less' );
 	
 	// generate less stack with all less files
-	$less_stack = array_merge($core_less, $custom_less);
+	$less_stack = array_merge($base_less, $atoms_less, $molecules_less, $organisms_less);
 	
 	// generate Main less file
 	$main_less = "";

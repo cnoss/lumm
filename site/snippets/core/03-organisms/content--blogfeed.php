@@ -17,7 +17,8 @@
 			snippet($template, array(
 				'content' => $container, 
 				'snippet' => $template,
-				'class' => $container->layout()
+				'class' => $container->layout(),
+				'docs' => $docs
 			)); 
 			?>
 		</div>

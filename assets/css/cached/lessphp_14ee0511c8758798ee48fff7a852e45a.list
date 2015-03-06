@@ -1,5 +1,5 @@
 assets/css/less/above-the-fold.less
-assets/css/less/variables.less
+assets/css/less/variables_bootstrap.less
 assets/lib/bootstrap/less/mixins.less
 assets/lib/bootstrap/less/mixins/hide-text.less
 assets/lib/bootstrap/less/mixins/opacity.less
@@ -31,11 +31,12 @@ assets/lib/bootstrap/less/mixins/nav-vertical-align.less
 assets/lib/bootstrap/less/mixins/grid-framework.less
 assets/lib/bootstrap/less/mixins/grid.less
 assets/css/less/variables_custom.less
+assets/css/less/00-base/05-helper.less
 assets/lib/bootstrap/less/normalize.less
 assets/lib/bootstrap/less/scaffolding.less
 assets/lib/bootstrap/less/grid.less
 assets/lib/bootstrap/less/utilities.less
 assets/lib/bootstrap/less/responsive-utilities.less
-assets/css/less/core/header.less
-assets/css/less/core/main-menu.less
-lessphp_2283a673cedfdcf24fad3a391054c2e7e6fbb455.css
+assets/css/less/03-organisms/header.less
+assets/css/less/03-organisms/main-menu.less
+lessphp_85b02b82a3e67574940ee536d5e874ddf7c71fcc.css

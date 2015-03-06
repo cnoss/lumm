@@ -1,0 +1,21 @@
+Title: Vortrag zum Download
+
+----
+
+Text: Vortrag als Einzelbilder zum Download
+
+----
+
+Autor: 
+
+----
+
+Date: 
+
+----
+
+Layout: article no-head
+
+----
+
+Home: false

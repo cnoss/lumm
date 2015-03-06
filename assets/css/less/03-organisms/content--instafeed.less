@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    $instafeed
+\*------------------------------------*/
+
+#instafeed{
+	
+	padding: 0;
+	margin-bottom: @custom-basefontsize /2;
+	
+	.image_grid{
+		border: none;
+		display: inline-block;
+		width: 16.6667%;
+		@media (max-width: @screen-sm-min) { 
+			width: 33.3334%; 
+			&:nth-child(n+7) { display: none; }
+		}
+	
+	}
+}
+

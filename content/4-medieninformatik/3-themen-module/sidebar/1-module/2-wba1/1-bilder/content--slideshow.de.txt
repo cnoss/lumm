@@ -1,0 +1,21 @@
+Title: Web-basierte Anwendungen 1
+
+----
+
+Text: 
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-02-24
+
+----
+
+Layout: slideshow
+
+----
+
+Autostart: true

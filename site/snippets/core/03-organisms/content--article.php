@@ -1,6 +1,12 @@
 <!-- Organism: Article -->
 <div class="<?=$class?>">
 <?php 
-	snippet(get_molecule("article"), array("content" => $content ));
+	
+	if(!isset($docs)){ $docs = false; }
+	
+	snippet(get_molecule("article"), array(
+		"content" 	=> $content,
+		"docs"		=> $docs
+	));
 ?>
 </div>

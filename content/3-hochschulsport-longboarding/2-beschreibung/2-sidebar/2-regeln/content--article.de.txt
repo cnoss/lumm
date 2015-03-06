@@ -30,7 +30,7 @@ Date:
 
 ----
 
-Layout: article__headline_outside
+Layout: article article--headline-outside
 
 ----
 
