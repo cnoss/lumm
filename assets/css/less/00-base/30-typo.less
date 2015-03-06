@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    $Typo
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6{
+	.font-200;
+	line-height: 110%;
+	color: @brand-primary;
+	margin: 0;
+	padding: 0;
+}
+
+h1, .h1{ 	font-size: @h1-size; }
+h2, .h2{ 	font-size: @custom-basefontsize * 1.2; }
+h3, .h3{ 	font-size: @custom-basefontsize * 1.2; }
+h4, .h4{ 	font-size: @custom-basefontsize ; }
+p{ 			font-size: @custom-basefontsize; .hyphens(auto); }
+strong { .font-500; }
+
+.headline--uppercase{
+	h1, h2, h3{
+		text-transform: uppercase;
+		.font-500;
+		line-height: 100%;
+	}
+
+}
+
+.no-head{
+	.head{ display: none; }
+}
+
+
+/*------------------------------------*\
+    $Typo margins
+\*------------------------------------*/
+
+p + p {
+	margin-top: @custom-basefontsize * 0.5;
+}
+
+p + h2{
+	margin-top: @custom-basefontsize;
+}

@@ -34,11 +34,10 @@ fields:
   layout:
     label: Layout
     type: radio
-    width: 1/2
     options:
-      slideshow__standard: Standard
-      slideshow__headline_hidden: ohne Headline
-      slideshow__headline_hidden__padding: ohne Headline mit Abstand von oben
+      slideshow: Standard
+      slideshow no-head: ohne Headline
+      slideshow no-head gap-at-top: ohne Headline mit Abstand von oben
   autostart:
     label: Slideshow automatisch starten?
     type: radio

@@ -58,7 +58,7 @@ Date: 2015-02-19
 
 ----
 
-Layout: article__headline_outside
+Layout: article article--headline-outside
 
 ----
 

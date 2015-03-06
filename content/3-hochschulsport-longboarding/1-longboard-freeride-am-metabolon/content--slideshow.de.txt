@@ -14,7 +14,7 @@ Date:
 
 ----
 
-Layout: slideshow__headline_hidden
+Layout: slideshow no-head
 
 ----
 

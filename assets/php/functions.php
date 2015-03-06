@@ -98,6 +98,36 @@ function make_menu_items($pages) {
 
 };
 
+
+
+/**
+ * Baut eine Linkliste für Downloaddateb
+ * 
+ * @author c.noss@klickmeister.de
+ * @return Menü Objekt 
+ */
+ 
+ 
+function make_dldata_list( $data_array ) {
+
+	// Rückgabeobjekt erzeugen
+	$list = array();
+	
+	// Datenarray abarbeiten
+	foreach($data_array as $data){
+				
+			// Markup erzeugen
+			$item = array();
+			$item["content"] = '<a href="'.$data["url"].'"><span class="icon download '.$data["type"].'"></span>'.$data["name"].'</a>';
+			array_push($list, $item);
+		}
+
+	return $list;
+
+};
+
+
+
 /**
  * Liefert die Bilder eines Artikels kategorisiert nach Typ
  * 
@@ -144,6 +174,48 @@ function get_images_from_article( $article, $prop = false ){
 	}
 
 	return $bilder;
+
+}
+
+/**
+ * Liefert Downloaddokumente eines Artikels kategorisiert nach Typ
+ * 
+ * @author c.noss@klickmeister.de
+ * @return multidimensionales array mit downloaddaten 
+ */
+ 
+function get_documents_from_article( $article, $prop = false ){
+	
+	$docs = array();
+	$docs["all"] = array();
+	$docs["pdf"] = array(); // Ehemals SVGs, wurden dann aber in PNGs konvertiert wegen Darstellungsproblemen bei Android
+	$docs["zip"] = array();
+	
+	
+	// Alle Bilder abklappern
+	foreach ($article->files() as $file){
+	
+		$f = array();
+		$f["url"] 	= $file->url();
+		$f["name"] 	= $file->name();
+		$f["type"] 	= $file->extension();
+		
+		array_push($docs["all"], $f);
+		
+		switch (true) {
+				
+			case preg_match("=pdf=", $f["type"]):
+				array_push($docs["pdf"], $f );
+				break;
+				
+			case preg_match("=zip=", $f["type"]):
+				array_push($docs["zip"], $f );
+				break;
+
+		}
+	}
+
+	return $docs;
 
 }
 

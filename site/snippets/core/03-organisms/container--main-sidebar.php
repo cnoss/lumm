@@ -1,7 +1,7 @@
 <!-- Organism: Main-Sidebar -->
 <div class="row">
 	<div class="col-md-8">
-		<?php
+		<?php			
 			if(isset($content)){
 				$containers = $content->find("hauptspalte")->children()->visible();
 			}else{
@@ -13,6 +13,9 @@
 			// Bilder holen
 			$bilder = get_images_from_article( $container );
 			
+			// Dokumente holen
+			$docs = get_documents_from_article( $container );
+			
 			// Snip holen
 			$template = get_snip( $container->uid(), "default"); 			
 			$template = get_snip( $container->intendedTemplate(), $template);
@@ -21,8 +24,11 @@
 				'content' 	=> $container, 
 				'snippet' 	=> $template,
 				'class' 	=> $container->layout(),
-				'bilder' 	=> $bilder
+				'bilder' 	=> $bilder,
+				'docs'		=> $docs
 			)); 
+			
+
 		?>
 		<?php endforeach ?>
 	</div>
@@ -39,6 +45,9 @@
 			// Bilder holen
 			$bilder = get_images_from_article( $container );
 			
+			// Dokumente holen
+			$docs = get_documents_from_article( $container );
+	
 			// Snip holen
 			$template = get_snip( $container->uid(), "default"); 			
 			$template = get_snip( $container->intendedTemplate(), $template);
@@ -47,7 +56,8 @@
 				'content' 	=> $container, 
 				'snippet' 	=> $template,
 				'class' 	=> $container->layout(),
-				'bilder'	=> $bilder
+				'bilder'	=> $bilder,
+				'docs'		=> $docs
 			)); 
 		?>
 		<?php endforeach ?>

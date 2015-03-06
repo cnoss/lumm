@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    $Globals
+\*------------------------------------*/
+body{
+	background: url("/assets/img/custom/linie_grau.png");
+	//background-color: #fffcef;
+}
+
+body, html{
+	line-height: 130%;
+	font-size: @custom-basefontsize;
+	.font-200;
+	color: #666;
+}
+
+a{ 
+	color: #000; 
+	text-decoration: none;
+	.transition(color 0.3s);
+	border-bottom: dotted 1px @brand-accent;
+	
+	&:hover{
+		color: @brand-accent;
+		border-bottom: none;
+	}
+}
+
+
+.sidebar .body *,
+.sidebar .foot{
+	font-size: @custom-basefontsize * 0.9;
+}
+
+
+
+/*------------------------------------*\
+    $Container metrics
+\*------------------------------------*/
+
+footer{
+	margin: @custom-basefontsize 0;
+}
+
+figure.video{
+	width: 100%;
+	height: 60%;
+	
+	iframe{
+		width: 100%;
+		height: 60%;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+    $Images
+\*------------------------------------*/
+
+img.scale{
+	width: 100%;
+}
+
+
+
+
+/*------------------------------------*\
+    $Interactions
+\*------------------------------------*/
+
+.interaction_bar{
+	.interaction_bar__item{
+		color: @brand-primary;
+	}
+}

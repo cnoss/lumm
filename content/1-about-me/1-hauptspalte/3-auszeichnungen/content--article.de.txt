@@ -20,4 +20,8 @@ Date: 2015-02-09
 
 ----
 
-Layout: article__headline_outside
+Layout: article
+
+----
+
+Home: false

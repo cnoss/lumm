@@ -1,0 +1,21 @@
+Info: 
+
+----
+
+Visible: 
+
+----
+
+Title: Sidebar
+
+----
+
+Invisible: 
+
+----
+
+Keywords: 
+
+----
+
+Desc: 

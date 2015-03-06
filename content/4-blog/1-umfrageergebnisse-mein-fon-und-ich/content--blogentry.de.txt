@@ -32,8 +32,8 @@ Autor: Christian
 
 ----
 
-Layout: blogentry__focussed
+Layout: blogentry blogentry--focussed
 
 ----
 
-Home: true
+Home: false

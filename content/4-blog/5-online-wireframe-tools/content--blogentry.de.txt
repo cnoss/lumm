@@ -26,4 +26,8 @@ Desc:
 
 ----
 
-Layout: blogentry__standard
+Layout: blogentry
+
+----
+
+Home: false

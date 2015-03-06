@@ -14,7 +14,7 @@ Date:
 
 ----
 
-Layout: slideshow__headline_hidden__padding
+Layout: slideshow no-head gap-at-top
 
 ----
 

@@ -30,4 +30,8 @@ Autor: Christian
 
 ----
 
-Layout: blogentry__standard
+Layout: blogentry
+
+----
+
+Home: false

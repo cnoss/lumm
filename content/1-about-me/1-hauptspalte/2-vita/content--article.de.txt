@@ -24,4 +24,8 @@ Date: 2015-02-08
 
 ----
 
-Layout: article__headline_outside
+Layout: article article--headline-outside
+
+----
+
+Home: false

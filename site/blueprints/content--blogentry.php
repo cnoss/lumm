@@ -43,8 +43,8 @@ fields:
     type: radio
     width: 1/2
     options:
-      blogentry__standard: Standard
-      blogentry__focussed: Hervorgehoben
+      blogentry: Standard
+      blogentry blogentry--focussed: Hervorgehoben
   home:
     label: Sichtbar auf Startseite
     type: radio

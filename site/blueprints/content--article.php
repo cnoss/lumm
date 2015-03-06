@@ -34,13 +34,11 @@ fields:
   layout:
     label: Layout
     type: radio
-    width: 1/2
     options:
-      article__standard: Standard
-      article__headline_outside: Headline außerhalb der Box
-      article__headline_hidden: ohne Headline
-      article__hero: Hero Box
-      article__imagesonly: Nur Bilder
+      article: Standard
+      article article--headline-outside: Headline außerhalb der Box
+      article no-head: ohne Headline
+      article no-head gap-at-top: ohne Headline mit Abstand von oben
   home:
     label: Sichtbar auf Startseite
     type: radio

@@ -22,6 +22,17 @@
 		?>
 	</div>
 	
+	<?php if(sizeof($docs["all"]) >0): ?>
+	<div class="documents">
+		
+		<?php
+			$items = make_dldata_list($docs["all"]);
+			snippet(get_atom("list-unordered"), array("items" => $items, "class" => "download-list" )); 
+		?>
+		
+	</div>
+	<?php endif; ?>
+	
 	<div class="foot">
 		<?php
 		if($content->date() != ""){
