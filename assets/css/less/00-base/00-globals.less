@@ -13,23 +13,7 @@ body, html{
 	color: #666;
 }
 
-a{ 
-	color: #000; 
-	text-decoration: none;
-	.transition(color 0.3s);
-	border-bottom: dotted 1px @brand-accent;
-	
-	&:hover{
-		color: @brand-accent;
-		border-bottom: none;
-	}
-}
 
-
-.sidebar .body *,
-.sidebar .foot{
-	font-size: @custom-basefontsize * 0.9;
-}
 
 
 
@@ -58,7 +42,8 @@ figure.video{
     $Images
 \*------------------------------------*/
 
-img.scale{
+img.scale,
+figure.scale img{
 	width: 100%;
 }
 
@@ -72,5 +57,48 @@ img.scale{
 .interaction_bar{
 	.interaction_bar__item{
 		color: @brand-primary;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+    $Links
+\*------------------------------------*/
+
+a, .link{ 
+	color: #000; 
+	text-decoration: none;
+	.transition(color 0.3s);
+	border-bottom: dotted 1px @brand-accent;
+	
+	&:hover{
+		color: @brand-accent;
+		border-bottom: none;
+	}
+}
+
+.link--hero{
+	
+	display: inline-block;
+	margin: @custom-basefontsize /2 0;
+	border: none;
+	border-left: solid 3px @brand-accent;
+	padding-left: @custom-basefontsize;
+	.transition(~"border 0.3s, padding 0.3s");
+		
+	span{ 
+		margin-top: -4px;
+		margin-right: @custom-basefontsize /2;
+	}
+	
+	&:hover{
+		border-left: solid 10px @brand-primary;
+		padding-left: @custom-basefontsize /4;
+	}
+	
+	a{
+		border: none;
 	}
 }

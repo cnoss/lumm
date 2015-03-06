@@ -27,27 +27,11 @@
 	padding: 0;
 	
 	li{
-		display: block;
-		margin: @custom-basefontsize /2 0;
-		border-left: solid 3px @brand-accent;
-		padding-left: @custom-basefontsize;
-		.transition(~"border 0.3s, padding 0.3s");
-		
-		a{
-			border: none;
-			span{ 
-				margin-top: -4px;
-				margin-right: @custom-basefontsize /2;
-			}
-		}
-		
-		&:hover{
-			border-left: solid 10px @brand-primary;
-			padding-left: @custom-basefontsize /4;
-		}
+		.link--hero;
+		display: block;	
 	}
+	
 }
-
 
 .download-list{
 	margin: 0;
@@ -66,4 +50,28 @@
 		}
 		
 	}
+}
+
+.tag-list{
+	margin: 0;
+	padding: 0;
+	
+	li{
+		display: inline-block;
+		margin: @custom-basefontsize /2 0;
+		
+		& + li:before{
+			content: ", "
+		}
+			
+		a{
+			border: none;
+			span{ 
+				margin-top: -4px;
+				margin-right: @custom-basefontsize /2;
+			}
+		}
+		
+	}
+	
 }

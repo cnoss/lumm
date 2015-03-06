@@ -58,8 +58,16 @@ Date: 2015-02-19
 
 ----
 
-Layout: article no-head
+Layout: article
 
 ----
 
 Home: true
+
+----
+
+Subheadline: 
+
+----
+
+Tags: 

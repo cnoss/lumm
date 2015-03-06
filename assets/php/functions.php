@@ -101,10 +101,10 @@ function make_menu_items($pages) {
 
 
 /**
- * Baut eine Linkliste für Downloaddateb
+ * Baut eine Linkliste für Downloaddaten
  * 
  * @author c.noss@klickmeister.de
- * @return Menü Objekt 
+ * @return List Objekt 
  */
  
  
@@ -119,6 +119,38 @@ function make_dldata_list( $data_array ) {
 			// Markup erzeugen
 			$item = array();
 			$item["content"] = '<a href="'.$data["url"].'"><span class="icon download '.$data["type"].'"></span>'.$data["name"].'</a>';
+			array_push($list, $item);
+		}
+
+	return $list;
+
+};
+
+
+
+
+/**
+ * Baut eine Taglist
+ * 
+ * @author c.noss@klickmeister.de
+ * @return list Objekt 
+ */
+ 
+ 
+function make_tag_list( $tags ) {
+	
+	// Tags in Array
+	$tag_array = explode(",", $tags);
+	
+	// Rückgabeobjekt erzeugen
+	$list = array();
+	
+	// Datenarray abarbeiten
+	foreach($tag_array as $tag){
+				
+			// Markup erzeugen
+			$item = array();
+			$item["content"] = '<a href="/search/tag:'.$tag.'">'.$tag.'</a>';
 			array_push($list, $item);
 		}
 
@@ -200,7 +232,9 @@ function get_documents_from_article( $article, $prop = false ){
 		$f["name"] 	= $file->name();
 		$f["type"] 	= $file->extension();
 		
-		array_push($docs["all"], $f);
+		if(preg_match("=pdf|zip=", $f["type"])){
+			array_push($docs["all"], $f);			
+		}
 		
 		switch (true) {
 				
