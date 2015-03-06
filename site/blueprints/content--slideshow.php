@@ -37,11 +37,18 @@ fields:
     options:
       slideshow: Standard
       slideshow no-head: ohne Headline
-      slideshow no-head gap-at-top: ohne Headline mit Abstand von oben
   autostart:
     label: Slideshow automatisch starten?
     type: radio
     width: 1/2
     options:
       false: Nein
-      true: Ja      
+      true: Ja   
+  ratio:
+    label: Seitenverhältnis
+    type: radio
+    width: 1/2
+    options:
+      ratio-2zu1: 2:1
+      ratio-16zu9: 16:9
+      ratio-4zu3: 4:3  

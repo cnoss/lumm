@@ -26,7 +26,6 @@ class Less_Cache{
 	 */
 	public static function Get( $less_files, $parser_options = array(), $modify_vars = array() ){
 
-
 		//check $cache_dir
 		if( isset($parser_options['cache_dir']) ){
 			Less_Cache::$cache_dir = $parser_options['cache_dir'];

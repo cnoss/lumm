@@ -14,6 +14,7 @@
 <?php
 require_once "assets/lib/less.php/Less.php";
 
+
 try{
 	$parser = new Less_Parser();
 	
@@ -23,11 +24,11 @@ try{
 		'sourceMap'         => true,
 	    'sourceMapWriteTo'  => 'assets/css/sourcemaps/above-the-fold.map',
 	    'sourceMapURL'      => 'assets/css/sourcemaps/above-the-fold.map',
-		'cache_dir' 		=> 'assets/css/cached/'
+		'cache_dir' 		=> c::get('cachedir')
 	);
 
 	$css_file_name = Less_Cache::Get( $less_files, $options );
-	echo file_get_contents( 'assets/css/cached/'.$css_file_name );
+	echo file_get_contents( c::get('cachedir')."/".$css_file_name );
 
 }catch(Exception $e){
     echo $e->getMessage();

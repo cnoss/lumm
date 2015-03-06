@@ -13,8 +13,9 @@ else:
 	if(!isset($kennung)){ $kennung = ""; } 		
 	if(!isset($idx)){ $idx = "0"; } 
 	if(!isset($autostart)){ $autostart = "false"; } 
+	if($content->ratio() == ""){ $ratio = "ratio-2zu1"; } else{ $ratio = $content->ratio(); }
 ?>
-	<div id="blueimp-gallery-<?php echo $kennung; ?>" data-autostart="<?php echo $autostart ?>" data-uid="<?php echo $kennung; ?>" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls <?php echo $class;?>">
+	<div id="blueimp-gallery-<?php echo $kennung; ?>" data-autostart="<?php echo $autostart ?>" data-uid="<?php echo $kennung; ?>" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls <?php echo $class;?> <?php echo $ratio;?>">
 	    <div class="slides"></div>
 	    <!--h3 class="title"></h3-->
 	    <!--a class="prev">‹</a-->

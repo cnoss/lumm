@@ -22,8 +22,6 @@
 	
 	.head{ 
 		.headline--uppercase;
-		padding: 0 @custom-basefontsize;
-		height: @h1-size;
 		margin: 0;
 	}
 	.body{ background-color: #fff; padding: @custom-basefontsize; }
@@ -31,17 +29,20 @@
 	
 }
 
-.headline-hidden{
+.article--focussed{
 	
-	.head{ display: none; }
-	
-}
+	.head{
+		
+		margin-bottom: @custom-basefontsize;
+		
+		h1{
+			font-size: @h1-size--hero;
+			margin-bottom: @custom-basefontsize /2;
 
-.gap-at-top{
-	
-	// Die Slideshow soll vertikal oben an der Textbox ausgerichtet sein.
-	@media (min-width: @screen-md-min) { 
-		margin-top: @h1-size;  
+		}
+		
+		.subheadline{
+			color: #000;
+		}
 	}
-	
 }

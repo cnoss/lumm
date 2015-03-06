@@ -19,3 +19,7 @@ Layout: slideshow no-head gap-at-top
 ----
 
 Autostart: true
+
+----
+
+Ratio: ratio-4zu3

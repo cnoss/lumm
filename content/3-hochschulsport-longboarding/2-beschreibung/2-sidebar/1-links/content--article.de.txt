@@ -19,7 +19,7 @@ Date: 2015-02-20
 
 ----
 
-Layout: article article--headline-outside
+Layout: article
 
 ----
 

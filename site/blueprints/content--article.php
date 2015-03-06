@@ -15,9 +15,15 @@ fields:
   title:
     label: Title/ Headline
     type:  text
+  subheadline:
+    label: Subheadline
+    type:  text    
   text:
   	label: Content
-  	type: textarea    
+  	type: textarea
+  tags:
+    label: Tags
+    type: tags  	
   invisible:
     label: Unsichtbare Angaben
     type: headline
@@ -36,9 +42,9 @@ fields:
     type: radio
     options:
       article: Standard
+      article article--focussed: Hervorgehoben
       article article--headline-outside: Headline außerhalb der Box
       article no-head: ohne Headline
-      article no-head gap-at-top: ohne Headline mit Abstand von oben
   home:
     label: Sichtbar auf Startseite
     type: radio
