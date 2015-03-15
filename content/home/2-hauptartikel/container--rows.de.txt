@@ -6,7 +6,7 @@ Visible:
 
 ----
 
-Title: Hauptspalte
+Title: Hauptartikel
 
 ----
 
@@ -19,3 +19,7 @@ Keywords:
 ----
 
 Desc: 
+
+----
+
+Headline-zeigen: 

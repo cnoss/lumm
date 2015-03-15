@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    $blogfeed
+\*------------------------------------*/
+
+@media (min-width: @screen-md-min) { 
+	.blogfeed-grid{
+		.flex;
+		.flex-direction(row);
+		.flex-wrap(wrap);
+		
+		.blogfeed-grid__item {
+			.align-content(stretch);
+			flex: 0 0 33.3%;
+			margin-bottom: @custom-basefontsize /2;
+			overflow: hidden;
+				
+			.article{
+	
+				&:before{
+					content: " ";
+					position: absolute;
+					background: #fff;
+					left: @grid-gutter-width/2;
+					top: 0;
+					height: 1000px;
+					z-index: -1;
+					right: @grid-gutter-width/2;
+					width: auto;
+				}
+			}
+			
+			&:hover{
+				
+			}
+		}
+	
+	}
+
+}
+@media (min-width: @screen-md-min){
+	.complete--hero{
+		
+		font-size: 130%;
+		
+		.article{
+			padding: @custom-basefontsize*2 @custom-basefontsize *6;
+			
+			& .body{
+				line-height: 150%;
+			}
+		}
+	}
+}

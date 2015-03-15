@@ -18,12 +18,22 @@ function get_container($site, $pages, $page) {
 	
 function get_blog_container($site, $pages, $page, $limit) {
 
-	$containers = $page->children()->visible()->limit($limit)->sortBy('date', 'desc');//->visible();
+	$containers = $pages->find("blog")->children()->visible()->limit($limit)->sortBy('date', 'desc');//->visible();
 	return $containers; 
 
 
 };
 
+/**
+ * Returns a String in Kirbytext Linksyntax
+ * Needs: 	Array with $array["url"] and $array["url"]
+ * Returns: String
+ 
+ */
+function get_kirby_linksyntax( $link ){
+	
+	return "(link: ". $link["url"] . " text:" .$link["text"] . ")";	
+}
 
 /**
  * Prüft, ob es ein spezielles Snipplet gibt. Falls nicht, wird das default Snip zurück gegeben.

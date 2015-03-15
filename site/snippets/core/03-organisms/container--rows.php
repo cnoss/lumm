@@ -19,7 +19,13 @@
 <?php endif; ?>
 
 <?php 
-	$containers = get_container($site, $pages, $page); 
+	//$containers = get_container($site, $pages, $page); 
+	if(isset($content)){
+		$containers = $content->children()->visible();
+	}else{
+		$containers = $page->children()->visible();
+	}
+	//$containers = $content->children()->visible(); //get_container($site, $pages, $page); 
 	foreach($containers as $container): 
 ?>
 <div class="row">
@@ -35,7 +41,7 @@
 	// Snip holen
 	$template = get_snip( $container->uid(), "default"); 			
 	$template = get_snip( $container->intendedTemplate(), $template);
-	
+
 	snippet($template, array(
 		'content' 	=> $container, 
 		'snippet' 	=> $template,
@@ -46,4 +52,4 @@
 	?>
 	</div>
 </div>
-<?php endforeach ?>
+<?php endforeach; ?>

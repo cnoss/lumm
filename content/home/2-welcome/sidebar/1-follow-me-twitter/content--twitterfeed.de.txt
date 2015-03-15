@@ -1,9 +1,0 @@
-Title: Gezwitscher
-
-----
-
-Text: Follow me @(link: twitter.com/cnoss text: twitter.com/cnoss)
-
-----
-
-Layout: article article--close-head

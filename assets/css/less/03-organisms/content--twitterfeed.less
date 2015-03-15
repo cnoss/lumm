@@ -5,36 +5,41 @@
 #twitterfeed{
 	background: #fff;
 	padding: @custom-basefontsize/2 @custom-basefontsize;
-
-	.tweet__standard{
+	margin-bottom: @custom-basefontsize /2;
+	
+	.tweet{
 		
 		padding: @custom-basefontsize /2 0;
 		
-		&+.tweet__standard{
+		&+.tweet{
 			border-top: @brand-primary solid 1px;
 		}
 		
 		&:hover{
-			.interaction_bar{ opacity: 1; }
+			.interaction-bar{ opacity: 1; }
 		}
 		
 	}
 	
-	.tweet_foot{
+	.tweet__foot{
 		
-		margin-top: @custom-basefontsize /2;
+		margin-top: @custom-basefontsize;
 		font-size: @font-size-small;	
 		
+		&, time, .interaction-bar, .interaction-bar .btn{
+			font-size: @font-size-small;
+		}
 		
-		.interaction_bar{
+		.interaction-bar{
 			
 			opacity: 0;
+			margin-top: -@custom-basefontsize /4;
 			float: right;
 			.transition(opacity 0.5);
 
-			.interaction_bar__item{
+			.interaction-bar__item{
 				
-				padding: 3px 8px;
+				padding: 1px 8px;
 				   
 				span{
 					display: block;
@@ -42,7 +47,7 @@
 					float: left;
 				}
 				
-				.show_on_hover{ 
+				.show-on-hover{ 
 					max-width: 0;
 					.transition(max-width .5s);
 				}

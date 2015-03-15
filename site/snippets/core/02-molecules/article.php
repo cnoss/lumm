@@ -15,14 +15,28 @@
 	</div>
 	
 	<div class="body">
-		<?php
-		if($content->text() != ""){
+		<?php	
+		if(isset($excerpt)){
+			snippet(get_atom("text"), array("text" => $excerpt));	
+			
+		}else if($content->text() != ""){
 			snippet(get_atom("text"), array("text" => $content->text()));	
 		} 
 		?>
+		
+		<?php
+		// Do we have a URL and a linkname?
+		if(isset($link["text"])){ 
+			snippet(get_atom("text"), array("text" => get_kirby_linksyntax($link)));
+		
+		// or do we have a link only?
+		}else if(isset($link)){
+			snippet(get_atom("text"), array("text" => $link));
+		}
+		?>
 	</div>
 	
-	<?php if(sizeof($docs["all"]) >0): ?>
+	<?php if(isset($docs) && sizeof($docs["all"]) >0): ?>
 	<div class="documents">
 		
 		<?php

@@ -47,7 +47,6 @@
 				'docs'		=> $docs
 			)); 
 			
-
 		?>
 		<?php endforeach ?>
 	</div>

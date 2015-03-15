@@ -1,0 +1,13 @@
+Title: Blog-Snips
+
+----
+
+Anzahl: 6
+
+----
+
+Type: blog
+
+----
+
+Type-of-layout: excerpt
