@@ -10,7 +10,9 @@ $changes =  max(array(filemtime("less"), filemtime("less/00-base"), filemtime("l
 
 // Check lumm cache
 if((file_exists($css_cached_lumm)) && ($changes < filemtime($css_cached_lumm))){
-	echo file_get_contents($css_cached_lumm); exit;
+	header('Content-Type: text/css');
+	echo file_get_contents($css_cached_lumm);
+	exit;
 }
 
 if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
@@ -30,7 +32,7 @@ if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
 	$organisms	 	= "./less/03-organisms";
 	
 	// Cache leeren
-	$cached_files = glob( $custom_config["cachedir"] );
+	$cached_files = array_filter(glob( $custom_config["cachedir"] ), 'is_file');
 	foreach($cached_files as $file){ 
 		unlink($file);
 	}
@@ -49,7 +51,7 @@ if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
 	foreach($import as $file){ 		$main_less .= "@import '" . $file . "';\n"; }
 	foreach($less_stack as $file){ 	$main_less .= "@import '" . $file . "';\n"; }
 	file_put_contents("main-css.less", $main_less);
-	
+	exit;
 
 }
 
