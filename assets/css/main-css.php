@@ -2,8 +2,16 @@
 
 include_once('../../config/custom-config.php');
 
+// Filename for persistent cache
+$css_cached_lumm = $custom_config["cachedir"] ."/style.css";
+
 // Any updates?
 $changes =  max(array(filemtime("less"), filemtime("less/00-base"), filemtime("less/01-atoms"), filemtime("less/02-molecules"), filemtime("less/03-organisms")));
+
+// Check lumm cache
+if((file_exists($css_cached_lumm)) && ($changes < filemtime($css_cached_lumm))){
+	echo file_get_contents($css_cached_lumm); exit;
+}
 
 if((!file_exists("main-css.less")) || ($changes > filemtime("main-css.less"))){
 	
@@ -61,8 +69,13 @@ try{
 	);
 
 	$css_file_name = Less_Cache::Get( $less_files, $options );
+	$css = file_get_contents( $custom_config["cachedir"]."/".$css_file_name );
+	
+	// create a more persistent cache file
+	file_put_contents($css_cached_lumm, $css);
+		
 	header('Content-Type: text/css');
-	echo file_get_contents( $custom_config["cachedir"]."/".$css_file_name );
+	echo $css;
 
 }catch(Exception $e){
     echo $e->getMessage();
