@@ -1,10 +1,21 @@
 <!-- Organism: Blogfeed -->
-<?php 
+
+
+<?php // Shall we show a ruler to Seperate the Content?
+	
+	if($content->ruler() == "ruler"){
+		snippet(get_atom("hr"));
+	}
+	
+?>
+
+<?php // Process Blog Content
 	
 	// How many articles should be shown?
 	$limit = 10;
 	if($content->anzahl() != ""){ $limit = $content->anzahl()->value(); }
-
+	if($content->layout() == "part-of-content"){ $limit--; }
+		
 	// What kind of articles should be shown?
 	$type = false;
 	if($content->type() != ""){ $type = $content->type(); }
@@ -17,17 +28,42 @@
 	
 ?>
 
+
+<?php // Headline und Teasertext verarbeiten
+	if($content->layout() != "no-head"){
+		if($content->layout() == "headline-only"){
+			snippet(get_molecule("heading"), array("content" => $content, "class" => "h--hero"));
+			
+		}else if($content->layout() == "part-of-content"){
+			$containers = $containers->toArray();
+			array_unshift($containers, $content);
+		}else{
+			snippet(get_organism("content--article"), array("content" => $content, "class" => $class));		
+		}
+			
+	}
+?>
+
 <?php 
 
 if($content->type_of_layout()=="excerpt"): ?>
 	<div class="row blogfeed-grid">
-	<?php foreach($containers as $container): ?>
+	<?php foreach($containers as $container): 
+		
+		$link = array("text"=>"weiter lesen", "url"=> $container->url());
+		
+		// If Headline is part of content, don't show link ot itself
+		if($content->url() == $container->url()){
+			$link = "";
+		}
+		
+	?>
 		<div class="col-md-4 blogfeed-grid__item ">
 			<div class="article">
 				<?php snippet(get_molecule("article"), array(
 					"content" 	=> $container, 
 					"excerpt" 	=> $container->text()->excerpt(200),
-					"link"		=> array("text"=>"weiter lesen", "url"=> $container->url())
+					"link"		=> $link
 				)); 
 				?>
 			</div>

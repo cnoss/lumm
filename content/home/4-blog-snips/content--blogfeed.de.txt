@@ -1,4 +1,4 @@
-Title: Blog-Snips
+Title: Die letzten Blogeinträge
 
 ----
 
@@ -11,3 +11,15 @@ Type: blog
 ----
 
 Type-of-layout: excerpt
+
+----
+
+Text: 
+
+----
+
+Layout: part-of-content
+
+----
+
+Ruler: ruler
