@@ -3,28 +3,47 @@
 \*------------------------------------*/
 
 #twitterfeed{
-	background: #fff;
-	padding: @custom-basefontsize/2 @custom-basefontsize;
-	margin-bottom: @custom-basefontsize /2;
 	
-	.tweet{
+	.flex;
+	.flex-direction(row);
+	.flex-wrap(wrap);
+
+	& > div{
 		
-		padding: @custom-basefontsize /2 0;
+		overflow: hidden;
+		margin-bottom: @custom-basefontsize /2;
 		
-		&+.tweet{
-			border-top: @brand-primary solid 1px;
+		.tweet{
+			padding:  @custom-basefontsize;
+			background: #fff;
+			
+			&:hover{
+				.interaction-bar{ opacity: 1; }
+			}
 		}
 		
-		&:hover{
-			.interaction-bar{ opacity: 1; }
+		&:before{
+			content: " ";
+			position: absolute;
+			background: #fff;
+			left: @grid-gutter-width/2;
+			top: 0;
+			height: 1000px;
+			z-index: -1;
+			right: @grid-gutter-width/2;
+			width: auto;
 		}
 		
 	}
 	
+	
+	
 	.tweet__foot{
 		
-		margin-top: @custom-basefontsize;
+		margin-top: @custom-basefontsize /2;
+		padding-top: @custom-basefontsize /2;
 		font-size: @font-size-small;	
+		border-top: solid 1px @gray-lighter;
 		
 		&, time, .interaction-bar, .interaction-bar .btn{
 			font-size: @font-size-small;

@@ -30,7 +30,7 @@ function autolink($str, $attributes=array()) {
 
 /* Get Params
 ################################### */
-$class = "tweet";
+$class = "col-md-6";
 if(isset($_GET["class"])){ $class = $_GET["class"]; }
 
 /** Perform a GET request and echo the response **/
@@ -49,13 +49,15 @@ if(sizeof($result) > 0):
 	foreach($result as $item): ?>
 
 <div class="<?php echo $class; ?>">
-	<p class="tweet__body"><?php echo autolink($item["text"]); ?></p>
-	<div class="tweet__foot">
-		<time class="time"><?php echo convert_date($item["created_at"]); ?></time>
-		<div class="interaction-bar">
-			<a class="btn btn-default interaction-bar__item" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo $item["id"]; ?>"><span>t</span><span class="show-on-hover">weet</span></a>
-			<a class="btn btn-default interaction-bar__item" href="https://twitter.com/intent/retweet?tweet_id=<?php echo $item["id"]; ?>"><span>r</span><span class="show-on-hover">etweet</span></a>
-			<a class="btn btn-default interaction-bar__item" href="https://twitter.com/intent/favorite?tweet_id=<?php echo $item["id"]; ?>"><span>s</span><span class="show-on-hover">tar</span></a>
+	<div class="tweet">
+		<p class="tweet__body"><?php echo autolink($item["text"]); ?></p>
+		<div class="tweet__foot">
+			<time class="time"><?php echo convert_date($item["created_at"]); ?></time>
+			<div class="interaction-bar">
+				<a class="btn btn-default interaction-bar__item" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo $item["id"]; ?>"><span>t</span><span class="show-on-hover">weet</span></a>
+				<a class="btn btn-default interaction-bar__item" href="https://twitter.com/intent/retweet?tweet_id=<?php echo $item["id"]; ?>"><span>r</span><span class="show-on-hover">etweet</span></a>
+				<a class="btn btn-default interaction-bar__item" href="https://twitter.com/intent/favorite?tweet_id=<?php echo $item["id"]; ?>"><span>s</span><span class="show-on-hover">tar</span></a>
+			</div>
 		</div>
 	</div>
 </div>

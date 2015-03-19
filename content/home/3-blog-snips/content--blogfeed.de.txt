@@ -1,8 +1,8 @@
-Title: Die letzten Blogeinträge
+Title: Die neuesten Blogeinträge
 
 ----
 
-Anzahl: 6
+Anzahl: 3
 
 ----
 

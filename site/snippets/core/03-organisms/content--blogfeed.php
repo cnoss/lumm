@@ -21,7 +21,9 @@
 	if($content->type() != ""){ $type = $content->type(); }
 
 	if($type == "home"){
-		$containers = $pages->index()->children()->filterBy('home','true')->sortBy('date', 'desc')->limit($limit); 	
+		$containers = $pages->index()->children()->filterBy('home','true')->sortBy('date', 'desc')->limit($limit);
+	}else if($content->filter() != ""){
+		$containers = $pages->index()->children()->filterBy('tags',$content->filter(), ',')->sortBy('date', 'desc')->limit($limit);
 	}else{
 		$containers = get_blog_container($site, $pages, $page, $limit);
 	}

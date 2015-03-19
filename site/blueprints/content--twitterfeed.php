@@ -18,6 +18,16 @@ fields:
   text:
   	label: Content
   	type: textarea
+  invisible:
+    label: Unsichtbare Angaben
+    type: headline
+  ruler:
+    label: Trenner anzeigen
+    type: radio
+    width: 1/2
+    options:
+      no-ruler: nein
+      ruler: ja
   layout:
     label: Layout
     type: radio

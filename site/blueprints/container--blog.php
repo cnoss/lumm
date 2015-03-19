@@ -4,6 +4,8 @@ title: Blog (Strukturvorlage)
 pages:
 	template:
     -content--blogentry
+	num: date
+	visible: true
 files: false
 fields:
   info:

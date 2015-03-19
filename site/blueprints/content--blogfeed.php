@@ -24,6 +24,9 @@ fields:
   anzahl:
   	label: Anzahl der angezeigten Beiträge
   	type:  number
+  filter:
+    label: Nur Einträge mit Tags
+    type: tags
   ruler:
     label: Trenner anzeigen
     type: radio

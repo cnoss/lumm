@@ -18,7 +18,7 @@ function get_container($site, $pages, $page) {
 	
 function get_blog_container($site, $pages, $page, $limit) {
 
-	$containers = $pages->find("blog")->children()->visible()->limit($limit)->sortBy('date', 'desc');//->visible();
+	$containers = $pages->find("blog")->children()->visible()->flip()->limit($limit)->sortBy('date', 'desc');//->visible();
 	return $containers; 
 
 
@@ -190,7 +190,8 @@ function get_images_from_article( $article, $prop = false ){
 	// Alle Bilder abklappern
 	foreach ($article->images() as $img){
 		switch (true) {
-			case preg_match("=/icon.png=", $img):
+			case preg_match("=/icon_=", $img):
+				$bilder["icon"] = $img->url();
 				break;
 				
 			case preg_match("=/lg_=", $img):
