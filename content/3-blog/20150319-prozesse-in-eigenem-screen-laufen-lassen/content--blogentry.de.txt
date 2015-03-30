@@ -11,19 +11,17 @@ Wenn man auf einem entfernten Server arbeitet und längere Prozesse laufen lasse
 screen -S "Name-den-ich-vergeben-kann"
 </pre>
 
-Danach kann das Terminal geschlossen werden. Will man den Screen wieder öffnen, dann verbindet man sich wieder mit dem entfernten Rechner und öffnet den Screen mit:
+Danach kann das Terminal geschlossen werden. Will man den Screen wieder öffnen, dann verbindet man sich wieder mit dem entfernten Rechner und lässt sich die offenen Screens anzeigen mit:
 
  <pre>
-screen -r "Name-den-ich-vergeben-kann"
+screen -r
 </pre>
 
-Falls man den Namen des Screens vergessen hat, kann man mit:
+Dann hängt man die ID des Screen an den Aufruf und öffnet damit wieder den Screen:
 
  <pre>
-screen -r 
+screen -r id.Name-den-ich-vergeben-kann
 </pre>
-
-sehen, welche Screen noch geöffnet sind.
 
 ----
 

@@ -3,40 +3,45 @@
 \*------------------------------------*/
 
 #twitterfeed{
-	
-	.flex;
-	.flex-direction(row);
-	.flex-wrap(wrap);
 
-	& > div{
-		
-		overflow: hidden;
-		margin-bottom: @custom-basefontsize /2;
-		
-		.tweet{
-			padding:  @custom-basefontsize;
-			background: #fff;
+	@media (min-width: @screen-md-min) { 	
+		.flex;
+		.flex-direction(row);
+		.flex-wrap(wrap);
+
+		& > div{
 			
-			&:hover{
-				.interaction-bar{ opacity: 1; }
+			overflow: hidden;
+			margin-bottom: @custom-basefontsize /2;
+			flex: 0 0 49.95%;
+			
+			&:before{
+				content: " ";
+				position: absolute;
+				background: #fff;
+				left: @grid-gutter-width/2;
+				top: 0;
+				height: 1000px;
+				z-index: -1;
+				right: @grid-gutter-width/2;
+				width: auto;
 			}
+			
 		}
-		
-		&:before{
-			content: " ";
-			position: absolute;
-			background: #fff;
-			left: @grid-gutter-width/2;
-			top: 0;
-			height: 1000px;
-			z-index: -1;
-			right: @grid-gutter-width/2;
-			width: auto;
-		}
-		
 	}
 	
+	.tweet{
+		padding:  @custom-basefontsize;
+		background: #fff;
+				
+		&:hover{
+			.interaction-bar{ opacity: 1; }
+		}
+	}
 	
+	& > div{
+		margin-bottom: @custom-basefontsize /2;
+	}
 	
 	.tweet__foot{
 		
