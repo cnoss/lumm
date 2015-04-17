@@ -1,0 +1,34 @@
+Title: virtuelles museum // kölner sport
+
+----
+
+Subheadline: Die Stadt, der Sport, die Geschichte - Kölner Sport im Web
+
+----
+
+Text: 
+
+Innerhalb dieses Vorhabens begaben sich die Fakultäten für Architektur, Angewandte Sozialwissenschaften sowie Informatik und Ingenieurwissenschaften der Fachhochschule Köln sowie das Institut für Sportgeschichte der Deutsche Sporthochschule Köln auf die Suche nach einer angemessenen und innovativen Vermittlungsform des Themas Sportgeschichte, die gleichermaßen anschaulich, ansprechend und wissenschaftlich fundiert ist. Der Begriff des Museums wurde dabei bewusst gewählt, um die Wertigkeit bei der Vermittlung von Geschichte hervorzuheben. Das interdisziplinäre Projekt wurde über den Zeitraum von April 2008 – März 2012 von der RheinEnergie – Stiftung finanziell gefördert. Entstanden sind verschiedene Aktionen, Ausstellungen und die
+prototypische Umsetzung des Konzepts am Beispiel des Müngersdorfer Sportparks.
+
+http://virtuelles-sportmuseum.de
+
+----
+
+Tags: Design
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-04-16
+
+----
+
+Layout: article
+
+----
+
+Home: false

@@ -1,0 +1,35 @@
+Title: Mockup2Markup
+
+----
+
+Subheadline: Dialog über schlaue Designimplementierung im Web
+
+----
+
+Text: 
+
+(image: diagramm.svg class: scale)
+
+Mockup2Markup ist ein Forschungsvorhabens im Rahmen der Medieninformatik an der Fachhochschule Köln. Ziel ist die Installation  einer online Gesprächsrunde rund um den Übergang vom non-funktionalen Prototyp zu geschmeidigem HTML Markup. Das Vorhaben richtet sich an Frontend-Entwickler und Designer, die Interesse und Spaß an eleganten Design-Implementierungen in HTML, CSS und Javascript haben.
+
+Mehr zu diesem Projekt gibt es unter http://cnoss.github.io/mockup2markup/
+
+----
+
+Tags: CSS,Design,Web,Development,FH-Köln,Medieninformatik
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-04-13
+
+----
+
+Layout: article article--focussed
+
+----
+
+Home: false
