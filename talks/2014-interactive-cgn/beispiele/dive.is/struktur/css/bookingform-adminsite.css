@@ -1,0 +1,23 @@
+.booking_form .km_orderform{margin-top:40px;}
+.booking_form .km_orderform .booking .btn{font-size:20px;}
+.booking_form .km_orderform .km_datapair{margin-bottom:15px;}
+.booking_form .km_orderform fieldset{clear:both;margin-bottom:20px;}
+.booking_form .km_orderform input[type=text]{width:500px;display:block;}
+.booking_form .km_orderform textarea{width:500px;}
+.booking_form .km_orderform select{display:block;width:150px;}
+.booking_form .km_orderform .km_cost_display{width:800px;height:80px;clear:both;}
+.booking_form .km_orderform .km_cost_display span.wpdev-form-control-wrap{float:left;}
+.booking_form .km_orderform .km_participants{width:800px;}
+.booking_form .km_orderform .km_fieldset{width:610px;margin-top:10px;margin-left:85px;clear:both;}
+.booking_form .km_orderform .participant_data label{width:93px;float:left;font-size:14px;text-align:right;}
+.booking_form .km_orderform .participant_data input[type=text]{margin-right:10px;}
+.booking_form .km_orderform label.km_cost_hint{width:320px;margin-left:10px;}
+.booking_form .km_orderform label.participant_name{width:180px;float:left;}
+.booking_form .km_orderform input[type=text].participant_weight{width:80px;float:left;margin-left:20px;}
+.booking_form .km_orderform input[type=text].participant_height{width:80px;float:left;}
+.booking_form .km_orderform input[type=text].participant_certicifate{width:222px;float:left;margin-right:90px;}
+.booking_form .km_orderform input[type=text].participant_logged_dives{width:80px;float:left;}
+.booking_form .km_orderform input[type=text].participant_last_dive{margin-right:165px;width:80px;float:left;}
+.booking_form .km_orderform label.participant_drysuite_experienced{width:160px;}
+.booking_form .km_orderform select.participant_gender{width:80px;float:right;}
+.booking_form .km_orderform label{clear:float;width:200px;}

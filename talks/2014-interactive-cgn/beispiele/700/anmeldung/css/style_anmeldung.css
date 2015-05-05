@@ -1,0 +1,63 @@
+form {
+	float: left;
+	margin: 0px 0 30px 0;
+	width: 640px;
+}
+fieldset {
+    border: 2px #7BB442 solid;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    padding: 20px;
+    width: 580px;
+    
+}
+
+label, input, select {
+    display: block;
+}
+
+input[type="text"] {
+    border: 1px #7BB442 solid; 
+    height: 18px;
+    width: 220px;
+}
+
+label {
+    display: inline;
+    font-size: 14px;
+}
+
+fieldset p {
+    font-size: 14px;
+    margin: 0 0 4px 0;
+}
+
+
+
+input[type="radio"] {
+    display: inline-block;
+    margin: 0px 15px 20px 0;
+}
+
+
+input, select {
+margin: 0 0 10px 0;
+}
+
+#marginal {
+	float: left;
+	margin: 5px 0 0 0;
+	width: 300px;
+}
+#marginal h1 {
+	font-size: 14px;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#marginal p {
+    display: block;
+    font-size: 12px;
+    margin: 0 0 10px 0;
+}
+

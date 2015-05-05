@@ -1,0 +1,246 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>Schlagzeugweltrekord</title>
+    <script type="text/javascript" src="http://use.typekit.com/dgs1rhn.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript">
+    
+    
+        /* *
+         *  ==Aufgabe 1==
+         *
+         *  Bestimmte Eingabefelder des Formulars dürfen vor dem Abschicken nicht leer sein und sollten ggf. mit
+         *  Javascript validiert werden. Hierfür sollten die Pflichtfelder idealerweise so gekennzeichnet sein, dass ein Zugriff auf
+         *  diese recht leicht über das DOM und JavaScript möglich wird. Dafür sollte den Pflichtfeldern per Hand die selbe Klasse zugewiesen werden.
+         *  Für diese Aufgabe sind nur die Eingabefelder im Fieldset "Persönliche Daten" zu betrachten. "Organisatorische" soll nicht beachtet werden.
+         *  Die Zeichenkettenlänge eines Pflichtfelds (pflichtfeld.value.length) darf nicht 0 betragen (leeres Feld). Ist dies aber trotzdem der Fall,
+         *  wird die Rahmenfarbe dieses Felds auf Rot gesetzt, um dem User eine visuelle Rückmeldung zu geben.
+         *  Wurde mindestens ein Pflichtfeld gefunden welches leer ist, dann sollte das Abschicken des Formulars unterbunden werden.
+         *  Teil des Codes ist vorgegeben und soll, wo gekennzeichnet, ergänzt werden.
+         *  Für die Lösung dieser Aufgabe soll querySelector und querySelectorAll verwendet werden.
+         *
+         * * * * * * * * * */
+    
+    
+        /* Wenn der DOM-Baum aufgebaut ist, wird die Funktion load aufgerufen */
+        document.addEventListener("DOMContentLoaded", function(){
+        
+            /* #####TODO####: Um dem form-Element einen Eventhandler zuweisen zu können, muss dieser erst bezogen werden */
+            var contact_form = document;
+                        
+            contact_form.addEventListener('submit', function(e) {
+                var form_errors_found = false; /* Festhalten ob mindestens ein leeres Pflichtfeld gefunden wurde */
+                
+                /* ####TODO####: selektieren aller(!) Pflichtfelder (Tipp: Verwendung der Klasse, die alle Pflichtfelder per Hand zugewiesen erhalten haben, als Auswahlkriterium) */
+                var required_fields = [];
+                
+                /* jedes Pflichtfeld durchgehen und Inhalt überprüfen */
+                for(var i = 0; i < required_fields.length; i++) {
+                    
+                    /* ####TODO####: Überprüfen, ob der Inhalt des Pflichtfelds die Länge 0 hat */
+                    if(false) {
+                        
+                        /* ####TODO####: aktuell untersuchtes Feld ist leer -> somit Rahmenfarbe dieses Elements über style auf Rot setzen ( #ff0000 ) */
+                        required_fields; 
+                        
+                        form_errors_found = true; /* mindestens ein leeres Pflichtfeld wurde gefunden */
+                    }
+                    else {
+                        /* ####TODO####: aktuell untersuchtes Feld ist nicht leer -> ggf. zurücksetzen der Rahmenfarbe ( pflichtfeld.style.borderColor = ''; ) */
+                    }
+                }
+                
+                /* wenn mindestens ein leeres Pflichtfeld gefunden wurde, dann deaktiviere das Standardverhalten -> Formular wird nicht mehr abgeschickt */
+                if(form_errors_found)
+                    e.preventDefault();
+            });
+        
+        });
+        
+        
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_anmeldung.css">
+    </head>
+    <body>
+    <div id="wrap"> 
+        
+        <!-- Header -->
+        <div id="header" class="clearfix"> 
+            
+            <!-- Hauptnavigation -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">&Uuml;ber den Rekord</a></li>
+                <li><a href="#">Organisatorisch</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li id="selected">Anmeldung</li>
+            </ul>
+            <img src="images/logo.jpg" alt="Logo Weltrekordversuch" width="140" height="89" />
+        </div>
+        
+        <!-- Teaser -->
+        <div id="teaser" class="clearfix">
+            <img src="images/teaser.jpg" alt="Teaser-Bild" />
+            <p>
+                Beschreibung des aktuell angezeigten Projektes            
+            </p>
+            
+            <!-- Teaser Navigation -->
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><img src="images/pfeil_links.png" alt="Pfeil links" width="7" height="13" /></a></li>
+                <li><a href="#"><img src="images/pfeil_rechts.png" alt="Pfeil rechts" width="7" height="13" /></a></li>
+            </ul>
+        </div>
+        
+        <div class="clearfix"> 
+            <h1>
+                Anmeldung
+            </h1>
+            <!-- Formular -->
+            <form name="anmeldung" action="#" method="post">
+                <fieldset>
+                    <legend>
+                        Persönliche Daten
+                    </legend>
+                    <label id="label_anrede" for="anrede">Anrede</label>
+                    <select id="anrede" name="anrede">
+                        <option>Herr</option>
+                        <option>Frau</option>
+                    </select>
+                    <label id="label_vorname" for="vorname">Vorname</label>
+                    <input type="text" id="vorname" name="vorname"  maxlength="40"/>
+                    <label for="nachname"> Nachname</label>
+                    <input type="text" id="nachname" name="nachname"  maxlength="40"/>
+                    <label for="strasse">Straße und Hausnr.</label>
+                    <input type="text" id="strasse" name="strasse"  maxlength="40"/>
+                    <label for="postleitzahl">Postleitzahl</label>
+                    <input type="text" id="postleitzahl" name="postleitzahl" maxlength="5"/>
+                        
+                    <label for="ort">Ort</label>
+                    <input type="text" id="ort" name="ort" maxlength="40"/>
+                </fieldset>
+                <fieldset>
+                    <legend>Organisatorisches</legend>
+                    <p>Bringen Sie ein eigenes Schlagzeug mit?</p>
+                    <label for="schlagzeug_ja">Ja</label>
+                    <input id="schlagzeug_ja" type="radio" name="schlagzeug" value="ja" /> 
+                    <label for="schlagzeug_nein">Nein</label>
+                    <input id="schlagzeug_nein" type="radio" name="schlagzeug" value="nein" /> 
+                    
+                    <p>Wie viel Erfahrung haben Sie mit dem Schlagzeug spielen?</p>
+                    <label for="erfahrung_sehr_wenig">Sehr wenig</label>
+                    <input id="erfahrung_sehr_wenig" type="radio" name="erfahrung" value="sehr_wenig" /> 
+                    <label for="erfahrung_mittelmaessig">mittelmäßige</label>
+                    <input id="erfahrung_mittelmaessig" type="radio" name="erfahrung" value="mittelmaessige" /> 
+                    <label for="erfahrung_eher_mehr">eher mehr</label>
+                    <input id="erfahrung_eher_mehr" type="radio" name="erfahrung" value="eher_mehr" /> 
+                    <label for="erfahrung_viel">viel</label>
+                    <input id="erfahrung_viel" type="radio" name="erfahrung" value="viel" /> 
+                    
+                    <p>Benötigen Sie eine Übernachtungsmöglichkeit?</p>
+                    <label for="uebernachtung_ja">Ja</label>
+                    <input id="uebernachtung_ja" type="radio" name="uebernachtung" value="uebernachtung_ja" /> 
+                    <label for="uebernachtung_nein">Nein</label>
+                    <input id="uebernachtung_nein" type="radio" name="uebernachtung" value="uebernachtung_ja" /> 
+    
+    
+      
+                </fieldset>
+                <input type="submit" value="anmelden">
+            </form>
+            <!-- Marginalspalte -->
+            <div id="marginal">
+                <h1>Dies ist ein Typoblindtext</h1>
+                <p>
+                    An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal 
+                    benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. 
+                    Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. 
+                    Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog. 
+                    
+                </p>
+                <p>
+                    Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are 
+                    testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht 
+                    zum Beispiel fast jede Schrift gut aus. Quod erat demonstrandum. Seit 1975 fehlen in den 
+                    meisten Testtexten die Zahlen, weswegen nach TypoGb. 204 § ab dem Jahr 2034 Zahlen in 86 der 
+                    Texte zur Pflicht werden. Nichteinhaltung wird mit bis zu 245 € oder 368 $ bestraft. 
+                </p>
+                <p>
+                    Genauso wichtig in sind mittlerweile auch Âçcèñtë, die in neueren Schriften aber fast immer 
+                    enthalten sind. Ein wichtiges aber schwierig zu integrierendes Feld sind OpenType-Funktionalitäten. 
+                    Je nach Software und Voreinstellungen können eingebaute Kapitälchen, Kerning oder Ligaturen
+                    (sehr pfiffig) nicht richtig dargestellt werden. Dies ist ein Typoblindtext. An ihm kann man sehen, 
+                    ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks 
+                    oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - 
+                    man nennt diese Sätze »Pangrams«.
+                </p>
+    
+            </div>
+        </div>
+    
+    
+    
+        <!-- Footer mit Links -->
+        <div id="footer" class="clearfix">
+            <div>
+                <ul>
+                    <li><a href="#">RSS-Feed</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Infos &uuml;ber den Weltrekord</a></li>
+                    <li><a href="#">Programmablauf</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Die Stadt Gummersbach</a></li>
+                    <li><a href="#">Der Campus Gummersbach</a></li>
+                    <li><a href="#">virtueller Rundgang </a></li>
+                    <li><a href="#">Wegbeschreibung </a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Die Teilnehmer</a></li>
+                    <li><a href="#">Special Guests</a></li>
+                    <li><a href="#">Anmeldeformular</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Das Schlagzeug</a></li>
+                    <li><a href="#">Merchandise</a></li>
+                    <li><a href="#">B&ouml;rse</a></li>
+                    <li><a href="#">Mitfahrzentrale</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Virtueller Trainingsraum</a></li>
+                    <li><a href="#">&Uuml;bungsanleitung </a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Sponsoren</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Pressebereich</a></li>
+                    <li><a href="#">Pressespiegel</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+            
+    </body>
+    </html>

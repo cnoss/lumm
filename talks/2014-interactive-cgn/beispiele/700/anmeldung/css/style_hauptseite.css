@@ -1,0 +1,84 @@
+#first_section {
+	width: 960px;
+}
+#first_section div {
+	margin: 0 20px 0 0;
+	width: 220px;
+}
+#first_section div, #first_section a {
+	float: left;
+}
+#first_section img, #second_section img {
+	border: #C7CBCC 5px solid;
+	margin: 0 0 15px 0;
+}
+#second_section {
+	float: left;
+	margin: 46px 0 0 0;
+	width: 640px;
+}
+#second_section div {
+	float: left;
+	margin: 0 20px 30px 0;
+	width: 300px;
+}
+#second_section div p {
+	margin: 0 0 10px 0;
+}
+
+#second_section a {
+	background-color: #7BB442;
+	color: #FFF;
+	display: inline-block;
+	font-size: 12px;
+	height: 22px;
+    text-align: center;
+	text-decoration: none;
+    line-height: 22px;
+}
+
+#second_section a img{
+    border: none;
+    margin: 0px;
+}
+.link_sprechblase {
+	width: 35px;
+}
+.link_mehr_infos {
+	width: 156px;
+}
+#tweetbox {
+	float: left;
+	margin: 46px 0 0 0;
+	width: 300px;
+}
+#tweetbox > div {
+	border: 5px #7BB442 solid;
+	border-radius: 5px;
+	float: left;
+	height: 552px;
+	margin: -1px 0 0 0;
+}
+#tweetbox > img {
+	float: left;
+	margin: 0px 0 0 20px;
+	padding: 0;
+}
+#tweetbox > h1 {
+	float: left;
+	font-size: 12px;
+	margin: 10px 0 0 10px;
+	padding: 0;
+}
+#tweetbox div div {
+	border-bottom: 1px #7BB442 solid;
+	font-size: 12px;
+	padding: 10px 8px 10px 8px;
+}
+#tweetbox div div:last-child {
+	border: none;
+}
+#tweetbox .time {
+    margin: 2px 0 0 0;
+	color: #4368AB;
+}
