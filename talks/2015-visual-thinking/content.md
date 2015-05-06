@@ -59,6 +59,10 @@ Zeichnen Sie aus den Glyphen folgende Dinge, jeweils drei mal:
 - iPod
 - Schreibtischleuchte
 - fröhliches Gesicht
+- Stadt
+- Wolke
+- einen Stapel Geld
+
 Zeit: 30 Minuten
 
 # Vokabular aufbauen und Sätze bilden
@@ -68,16 +72,16 @@ Wie bei jeder neuen Sprache müssen wir auch in diesem Fall einen gewissen Satz 
 Geschlossene Glyphen stehen meist für Konzepte, Personen, Entitäten, Knoten oder Gegenstände, also Dinge mit einer Identität. Offene Glyphen stehen dagegen für Verknüpfungen, Zustände oder Bezüge.
 
 ## Aufgabe 3a: Vokabeln suchen
-Machen Sie in der 10er Gruppe eine möglichst vollständige Liste von Konzepten, Personen, Entitäten, Knoten und Gegenständen die in beim Apple AppStore Prozess eine Rollen spielen. Die Liste wird nachher zusammen getragen.
+Machen Sie in einer 3er Gruppe eine möglichst vollständige Liste von Konzepten, Personen, Entitäten, Knoten und Gegenständen die beim nachhaltigen Wassermanagement  eine Rollen spielen (hier u.a. zu nennen: Wasserverbände, Trinkwasserversorger, Abwasserbehandler, Gemeinden, Unternehmen, Landwirtschaft, Naturschutzverbände, Normengebende Verbände, Legislative, Sportler, Fischer, Bürger etc.) Die Liste wird nachher zusammen getragen.
 Zeit: 20 Minuten
 
 ## Aufgabe 3b: Vokabeln visualisieren
 Finden Sie zu den einzelnen Vokabeln entsprechende Visualisierungen. 
-Zeit: 30 Minuten
+Zeit: 45 Minuten
 
 ## Aufgabe 3c:
 Finden und visualisieren Sie Bezüge zwischen zwei Konzepten, Personen, Entitäten, Knoten oder Gegenständen.
-Zeit: 30 Minuten
+Zeit: 20 Minuten
 
 # Texte schreiben
 Aus einzelnen Sätzen bilden wir komplexere Texte. Dazu sollte uns klar sein, welches Ziel wir mit diesem Text, oder in unserem Fall der Visualisierung, erreichen wollen. Hier ein paar Ansätze:
@@ -88,5 +92,5 @@ für den Kopf: schematisch, logisch und abstrakt |  |  |
 für das Herz: emotional, metaphorisch, sympathisch | ||
 für die Hand: praktisch, verständlich, einfach ||| 
 
-## Aufgabe 4: Entwickeln Sie in alleine eine komplette Übersicht über die Abläufe im Apple AppStore.
+## Aufgabe 4: Entwickeln Sie alleine eine möglichst komplette Übersicht über die Abläufe und Abhängigkeiten beim nachhaltigen Wassermanagement, um sie einem Schüler am Anfang der gymnasialen Oberstufe zu erklären.
 Zeit: 60 Minuten

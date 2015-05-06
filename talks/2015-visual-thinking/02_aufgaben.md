@@ -17,25 +17,33 @@ Zeichnen Sie aus den Glyphen folgende Dinge, jeweils drei mal:
 - iPod
 - Schreibtischleuchte
 - fröhliches Gesicht
+- Stadt
+- Wolke
+- einen Stapel Geld
 
-**Zeit: 45 Minuten**
+**Zeit: 30 Minuten**
 
 # Aufgabe 3a: Vokabeln suchen
-Machen Sie in der 10er Gruppe eine möglichst vollständige Liste von Konzepten, Personen, Entitäten, Knoten und Gegenständen die in beim Apple AppStore Prozess eine Rollen spielen. Die Liste wird nachher zusammen getragen.
+Machen Sie in einer 3er Gruppe eine möglichst vollständige Liste von Konzepten, Personen, Entitäten, Knoten und Gegenständen die beim nachhaltigen Wassermanagement  eine Rolle spielen (hier u.a. zu nennen: Wasserverbände, Trinkwasserversorger, Abwasserbehandler, Gemeinden, Unternehmen, Landwirtschaft, Naturschutzverbände, Normengebende Verbände, Legislative, Sportler, Fischer, Bürger etc.) Die Liste wird nachher zusammen getragen.
 
 **Zeit: 30 Minuten**
 
 # Aufgabe 3b: Vokabeln visualisieren
-Finden Sie zu den einzelnen Vokabeln entsprechende Visualisierungen. 
+Finden Sie zu den einzelnen Vokabeln entsprechende Visualisierungen mit Varianten. 
 
 **Zeit: 45 Minuten**
 
 # Aufgabe 3c:
 Finden und visualisieren Sie in 2er Gruppen Bezüge zwischen zwei Konzepten, Personen, Entitäten, Knoten oder Gegenständen.
 
-**Zeit: 30 Minuten**
+**Zeit: 20 Minuten**
 
 # Aufgabe 4
-Entwickeln Sie in alleine eine komplette Übersicht über die Abläufe im Apple AppStore.
+Entwickeln Sie alleine eine möglichst komplette Übersicht über die Abläufe und Abhängigkeiten beim nachhaltigen Wassermanagement, um sie einem Schüler am Anfang der gymnasialen Oberstufe zu erklären.
+
+**Zeit: 60 Minuten**
+
+# Aufgabe 5
+Überführen Sie die Übersicht in ein Poster und ergänzen Sie alle relevanten und Angaben und kurze Erläuterungstexte für eine Postersession.
 
 **Zeit: 60 Minuten**

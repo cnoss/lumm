@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="220px" height="220px" viewBox="0 0 220 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>02_diagramm</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="02_Kopf-Unterschied" sketch:type="MSLayerGroup" transform="translate(40.000000, 25.000000)">
+            <g id="Graph" transform="translate(0.000000, 55.000000)" sketch:type="MSShapeGroup">
+                <path d="M18,0.5 L18,114.5" id="axis-y" stroke="#333333" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M0.5,94 L140.5,94" id="axis-x" stroke="#333333" stroke-width="2" stroke-linecap="round"></path>
+                <rect id="Large" fill="#333333" x="105" y="32" width="20" height="61" rx="4"></rect>
+                <rect id="Medium" fill="#333333" x="70" y="51" width="20" height="42" rx="4"></rect>
+                <rect id="Small" fill="#333333" x="35" y="72" width="20" height="21" rx="4"></rect>
+            </g>
+            <g id="Ovals" transform="translate(42.000000, 0.000000)">
+                <circle id="Left" stroke="#333333" sketch:type="MSShapeGroup" cx="20.5" cy="17.5" r="16.5"></circle>
+                <circle id="Right" stroke="#333333" sketch:type="MSShapeGroup" cx="44.5" cy="17.5" r="16.5"></circle>
+                <path d="M32.5,28.5692212 C35.2770434,25.75609 37,21.8359611 37,17.5 C37,13.1640389 35.2770434,9.24390998 32.5,6.43077885 C29.7229566,9.24390998 28,13.1640389 28,17.5 C28,21.8359611 29.7229566,25.75609 32.5,28.5692212 Z" id="Instersect" sketch:type="MSShapeGroup"></path>
+                <text id="A" sketch:type="MSTextLayer" font-family="HanziPen SC" font-size="14" font-weight="normal" line-spacing="26" fill="#333333">
+                    <tspan x="14" y="15">A</tspan>
+                </text>
+                <text id="B" sketch:type="MSTextLayer" font-family="HanziPen SC" font-size="14" font-weight="normal" line-spacing="26" fill="#333333">
+                    <tspan x="42" y="15">B</tspan>
+                </text>
+                <text id="W" sketch:type="MSTextLayer" font-family="HanziPen SC" font-size="14" font-weight="normal" line-spacing="26" fill="#333333">
+                    <tspan x="31" y="166">W</tspan>
+                </text>
+                <text id="E" sketch:type="MSTextLayer" font-family="HanziPen SC" font-size="14" font-weight="normal" line-spacing="26" fill="#333333">
+                    <tspan x="0" y="166">E</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
