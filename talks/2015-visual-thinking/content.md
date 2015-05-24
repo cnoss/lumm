@@ -1,6 +1,8 @@
 Visual Thinking Workshop
 ============
 
+von Christian Noss // christian.noss@fh-koeln.de
+
 Thanks to David Gray! http://www.davegrayinfo.com/visual-thinking-school/
 
 #Was ist Visual Language / Visual Thinking / Visual Working?

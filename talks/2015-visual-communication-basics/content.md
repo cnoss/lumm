@@ -1,6 +1,6 @@
 Visual Communication Basics
 ============
-
+Christian Noss // christian.noss@fh-koeln.de
 
 # Was ist unserer Kommunikationsziel?
 - erklären?
