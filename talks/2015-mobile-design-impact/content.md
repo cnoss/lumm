@@ -32,7 +32,7 @@ Thanks to Brad Frost an many others!
 
 # Wie gehen wir mit der Vielfalt um?
 - Content ~ Tool ~ Idea ~ App
-- Next Buzzword: Responsive Design: http://www.polarfoundation.org/ http://froont.com/
+- Next Buzzword: Responsive Design (ethan marcotte): http://www.polarfoundation.org/ http://froont.com/
 - The Web is Responsive from the beginning.
 - Concept vs. Reality
 - Approaches: Graceful Degradation vs. Progressive Enhancement
