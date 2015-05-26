@@ -1580,7 +1580,7 @@ table th[class*="col-"] {
 }
 #cn .riesig {
   font-size: 120px !important;
-  line-height: 90%;
+  line-height: 100%;
 }
 #cn .sauklein {
   font-size: 18px !important;
