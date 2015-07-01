@@ -1564,6 +1564,9 @@ table th[class*="col-"] {
 #cn .grau {
   color: rgba(64, 61, 57, 0.6);
 }
+#cn .weiss {
+  color: #fff;
+}
 #cn small {
   font-size: 20px;
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="586px" height="385px" viewBox="0 0 586 385" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
+    <title>architektur-s3-bsp</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="architektur-s3-bsp" sketch:type="MSArtboardGroup">
+            <g id="Server" sketch:type="MSLayerGroup" transform="translate(38.000000, 22.000000)">
+                <path d="M93.1768466,110 C93.1768466,120.49341 72.318499,129 46.5884233,129 C20.8583476,129 0,120.49341 0,110 L0,19 L93.1768466,19 L93.1768466,110 Z" id="Oval-1-Copy" fill="#000000" sketch:type="MSShapeGroup"></path>
+                <ellipse id="Oval-1" stroke="#000000" stroke-width="2" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="46.5884233" cy="18.6545455" rx="45.7413611" ry="18.6545455"></ellipse>
+            </g>
+            <path d="M448,96 L132,96 L132,165" id="Path-160-Copy" stroke="#77CC00" stroke-width="2" stroke-dasharray="2" sketch:type="MSShapeGroup" transform="translate(290.000000, 130.500000) scale(-1, 1) translate(-290.000000, -130.500000) "></path>
+            <path d="M184.121496,179.878504 L58.1214956,179.878504 L58.1214956,254.121496" id="Path-160-Copy-3" stroke="#DD1166" stroke-width="2" stroke-dasharray="2" sketch:type="MSShapeGroup" transform="translate(121.121496, 217.000000) rotate(-90.000000) translate(-121.121496, -217.000000) "></path>
+            <path d="M181.250374,182.249626 L63.7503737,182.249626 L63.7503737,247.248879" id="Path-160-Copy-4" stroke="#77CC00" stroke-dasharray="2" sketch:type="MSShapeGroup" transform="translate(122.500374, 214.749253) rotate(-90.000000) translate(-122.500374, -214.749253) "></path>
+            <rect id="Rectangle-12" stroke="#DD1166" stroke-width="2" stroke-dasharray="2" sketch:type="MSShapeGroup" x="156" y="225" width="149" height="141"></rect>
+            <rect id="Rectangle-13" stroke="#77CC00" stroke-width="2" stroke-dasharray="2" sketch:type="MSShapeGroup" x="327" y="165" width="231" height="164"></rect>
+            <text id="Interaktion-abbilden" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="14" font-weight="normal" sketch:alignment="right" line-spacing="12" fill="#000000">
+                <tspan x="12" y="296">Interaktion abbilden, in </tspan>
+                <tspan x="13.148" y="311">Daten umwandeln und </tspan>
+                <tspan x="78.766" y="326">übertragen.</tspan>
+            </text>
+            <text id="Device-des-Nutzers" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="14" font-weight="normal" line-spacing="12" fill="#DD1166">
+                <tspan x="162" y="240">Device des Nutzers</tspan>
+            </text>
+            <text id="Infoscreen" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="14" font-weight="normal" line-spacing="12" fill="#77CC00">
+                <tspan x="333" y="180">Infoscreen</tspan>
+            </text>
+            <text id="Daten-liefern." sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="14" font-weight="normal" line-spacing="12" fill="#000000">
+                <tspan x="455" y="142">Daten liefern.</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
