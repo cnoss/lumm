@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="220px" height="220px" viewBox="0 0 220 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>03_hier</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="03_Kopf-Beziehung" sketch:type="MSLayerGroup" transform="translate(27.000000, 38.000000)">
+            <g id="Top-Node" transform="translate(63.000000, 0.000000)" sketch:type="MSShapeGroup">
+                <rect id="L1" fill="#333333" x="6" y="9" width="28" height="2" rx="3"></rect>
+                <rect id="L2" fill="#333333" x="6" y="14" width="28" height="2" rx="3"></rect>
+                <rect id="L3" fill="#333333" x="6" y="19" width="28" height="2" rx="3"></rect>
+                <rect id="Top" stroke="#333333" x="0" y="0" width="40" height="30" rx="4"></rect>
+            </g>
+            <g id="Mid-1" transform="translate(0.000000, 75.000000)" sketch:type="MSShapeGroup">
+                <rect id="L1" fill="#333333" x="6" y="9" width="28" height="2" rx="3"></rect>
+                <rect id="L2" fill="#333333" x="6" y="14" width="28" height="2" rx="3"></rect>
+                <rect id="L3" fill="#333333" x="6" y="19" width="28" height="2" rx="3"></rect>
+                <rect id="Top" stroke="#333333" x="0" y="0" width="40" height="30" rx="4"></rect>
+            </g>
+            <g id="Mid-2" transform="translate(63.000000, 75.000000)" sketch:type="MSShapeGroup">
+                <rect id="L1" fill="#333333" x="6" y="9" width="28" height="2" rx="3"></rect>
+                <rect id="L2" fill="#333333" x="6" y="14" width="28" height="2" rx="3"></rect>
+                <rect id="L3" fill="#333333" x="6" y="19" width="28" height="2" rx="3"></rect>
+                <rect id="Top" stroke="#333333" x="0" y="0" width="40" height="30" rx="4"></rect>
+            </g>
+            <g id="Mid-3" transform="translate(126.000000, 75.000000)" sketch:type="MSShapeGroup">
+                <rect id="L1" fill="#333333" x="6" y="9" width="28" height="2" rx="3"></rect>
+                <rect id="L2" fill="#333333" x="6" y="14" width="28" height="2" rx="3"></rect>
+                <rect id="L3" fill="#333333" x="6" y="19" width="28" height="2" rx="3"></rect>
+                <rect id="Top" stroke="#333333" x="0" y="0" width="40" height="30" rx="4"></rect>
+            </g>
+            <g id="Connection" transform="translate(20.000000, 29.000000)" stroke="#333333" sketch:type="MSShapeGroup">
+                <path d="M63.5,0.5 L63.5,46.5" id="Line" stroke-linecap="square"></path>
+                <path d="M-0.377495357,46.3667009 C-0.377495357,46.3667009 -0.377494355,31.6729824 -0.377495357,29.648556 C-0.377495967,27.6241297 0.531375757,26.8368254 2.48243429,26.8368254 C4.43349282,26.8368254 82.3567838,26.8368442 123.293959,26.8368254 C125.410041,26.8368244 126.045112,28.0653661 126.045113,29.9989217 C126.045114,31.9324774 126.045113,46.4285349 126.045113,46.4285349" id="Path-18"></path>
+            </g>
+            <g id="Lower-1" transform="translate(0.000000, 104.000000)" sketch:type="MSShapeGroup">
+                <path d="M20.5,0.5 L20.5,32.5" id="Line" stroke="#333333" stroke-linecap="square"></path>
+                <circle id="Oval-7" fill="#333333" cx="20.5" cy="35.5" r="3.5"></circle>
+                <circle id="Oval-7-copy" fill="#333333" cx="3.5" cy="23.5" r="3.5"></circle>
+                <circle id="Oval-7-copy-2" fill="#333333" cx="36.5" cy="23.5" r="3.5"></circle>
+                <path d="M3.63869093,20.7540136 L3.63869093,12.1717184 C3.63869093,12.1717184 3.63869093,10.3611233 5.44928601,10.3611233 L34.3312359,10.3611233 C35.6397991,10.3611233 36.5671463,10.3611233 36.5671463,12.1717184 L36.5671444,20.7245457" id="Path-20" stroke="#333333"></path>
+            </g>
+            <g id="Lower-2" transform="translate(63.000000, 105.000000)" sketch:type="MSShapeGroup">
+                <path d="M20.5,0.5 L20.5,32.5" id="Line" stroke="#333333" stroke-linecap="square"></path>
+                <circle id="Oval-7" fill="#333333" cx="20.5" cy="35.5" r="3.5"></circle>
+                <circle id="Oval-7-copy" fill="#333333" cx="3.5" cy="23.5" r="3.5"></circle>
+                <circle id="Oval-7-copy-2" fill="#333333" cx="36.5" cy="23.5" r="3.5"></circle>
+                <path d="M3.63869093,20.7540136 L3.63869093,12.1717184 C3.63869093,12.1717184 3.63869093,10.3611233 5.44928601,10.3611233 L34.3312359,10.3611233 C35.6397991,10.3611233 36.5671463,10.3611233 36.5671463,12.1717184 L36.5671444,20.7245457" id="Path-20" stroke="#333333"></path>
+            </g>
+            <g id="Lower-3" transform="translate(126.000000, 105.000000)" sketch:type="MSShapeGroup">
+                <path d="M20.5,0.5 L20.5,32.5" id="Line" stroke="#333333" stroke-linecap="square"></path>
+                <circle id="Oval-7" fill="#333333" cx="20.5" cy="35.5" r="3.5"></circle>
+                <circle id="Oval-7-copy" fill="#333333" cx="3.5" cy="23.5" r="3.5"></circle>
+                <circle id="Oval-7-copy-2" fill="#333333" cx="36.5" cy="23.5" r="3.5"></circle>
+                <path d="M3.63869093,20.7540136 L3.63869093,12.1717184 C3.63869093,12.1717184 3.63869093,10.3611233 5.44928601,10.3611233 L34.3312359,10.3611233 C35.6397991,10.3611233 36.5671463,10.3611233 36.5671463,12.1717184 L36.5671444,20.7245457" id="Path-20" stroke="#333333"></path>
+            </g>
+        </g>
+    </g>
+</svg>
