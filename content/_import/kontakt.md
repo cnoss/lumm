@@ -12,4 +12,4 @@ post_type: page
 
 # Kontakt
 
-Prof. Christian Noss Fachhochschule Köln Fakultät für Informatik und Ingenieurwissenschaften Steinmüllerallee 1 Raum A 3.241 E-Mail: noss@gm.fh-koeln.de www.gm.fh-koeln.de/~noss
+Prof. Christian Noss TH Köln Fakultät für Informatik und Ingenieurwissenschaften Steinmüllerallee 1 Raum A 3.241 E-Mail: noss@gm.fh-koeln.de www.gm.fh-koeln.de/~noss
