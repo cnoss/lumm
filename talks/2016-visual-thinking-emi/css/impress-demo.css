@@ -85,7 +85,8 @@ body {
     font-family: 'Myriad Pro', sans-serif;
     font-weight: 100;
     min-height: 740px;
-    
+
+
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
     background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
@@ -93,8 +94,8 @@ body {
     background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-	
-	
+
+
 	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #c9c6c1 100%); /* FF3.6+ */
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#c9c6c1)); /* Chrome,Safari4+ */
 	background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#c9c6c1 100%); /* Chrome10+,Safari5.1+ */
@@ -171,7 +172,7 @@ a:focus {
     We start with basics to make sure it displays correctly in everywhere ...
 */
 
-.step {
+.step, .lg-step {
     position: relative;
     width: 900px;
     padding: 40px;
@@ -187,6 +188,10 @@ a:focus {
     line-height: 1.1;
 }
 
+.lg-step{
+  width: 1200px;
+}
+
 /*
     ... and we enhance the styles for impress.js.
 
@@ -194,7 +199,7 @@ a:focus {
 */
 .impress-enabled .step {
     margin: 0;
-    opacity: 0;
+    opacity: 0.02;
 
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
@@ -227,7 +232,7 @@ a:focus {
 
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-	
+
     font-size: 30px;
     line-height: 36px;
     letter-spacing: -1px;
