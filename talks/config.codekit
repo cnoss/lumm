@@ -12717,6 +12717,24 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
+	"\/2015-mobile-design-impact-fv\/css\/cn.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/2015-mobile-design-impact-fv\/css\/cn.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/2015-mobile-design-impact-fv\/css\/impress-demo.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/2015-mobile-design-impact-fv\/css\/impress-demo.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/2015-mobile-design-impact-fv\/favicon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -33260,6 +33278,37 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
+		},
+	"\/2016-showcase\/images\/11157499_849555631758402_7076030766539129522_o.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 244274,
+		"inputAbbreviatedPath": "\/2016-showcase\/images\/11157499_849555631758402_7076030766539129522_o.jpg",
+		"outputAbbreviatedPath": "\/2016-showcase\/images\/11157499_849555631758402_7076030766539129522_o.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2016-showcase\/images\/Plakat_v1.2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 318804,
+		"inputAbbreviatedPath": "\/2016-showcase\/images\/Plakat_v1.2.jpg",
+		"outputAbbreviatedPath": "\/2016-showcase\/images\/Plakat_v1.2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/2016-showcase\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/2016-showcase\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/2016-visual-thinking-emi\/02_aufgaben.md": {
 		"criticStyle": 0,
