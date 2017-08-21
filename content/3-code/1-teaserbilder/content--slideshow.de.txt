@@ -1,0 +1,25 @@
+Title: Teaserbilder
+
+----
+
+Text: 
+
+----
+
+Autor: 
+
+----
+
+Date: 
+
+----
+
+Layout: slideshow no-head
+
+----
+
+Autostart: false
+
+----
+
+Ratio: ratio-16zu9

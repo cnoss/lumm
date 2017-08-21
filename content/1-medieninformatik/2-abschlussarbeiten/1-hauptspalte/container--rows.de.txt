@@ -1,0 +1,25 @@
+Info: 
+
+----
+
+Visible: 
+
+----
+
+Title: Hauptspalte
+
+----
+
+Invisible: 
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Headline-zeigen: 

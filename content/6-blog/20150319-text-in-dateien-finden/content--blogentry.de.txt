@@ -1,0 +1,39 @@
+Title: Text in Dateien finden
+
+----
+
+Text: 
+
+Ich will wissen in welchen Dateien ein bestimmter String enthalten ist:
+
+<pre>
+find . -name "*.php" -exec grep "mein Suchstring" '{}' ';' -print
+</pre>
+
+----
+
+Tags: code
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-03-19
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: false

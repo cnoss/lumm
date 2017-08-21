@@ -1,0 +1,17 @@
+Title: Meine Module
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: article-overview
+
+----
+
+Text: In Studiengang Medieninformatik bin ich für folgende Module verantwortlich. Ich freu mich stets über Feedback. <span class="glyphicon glyphicon-send"></span>

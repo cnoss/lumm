@@ -1,0 +1,33 @@
+Title: Different
+
+----
+
+Subheadline: Videowettbewerb zu HONK
+
+----
+
+Text: 
+
+HONK ist eine Adaption von Andersens „Die Geschichte vom hässlichen Entlein“. Ein Musical über das ‚Flügge-werden’: Wer bin ich eigentlich? Warum bin ich anders als die Anderen? Und was ist eigentlich schön an mir? Diese Fragen der Kindheit, der Pubertät und auch des Erwachsen-Seins beantwortet HONK mit einer anrührenden Geschichte, witzigen Texten und hinreißender Musik.
+
+In Kooperation mit dem Musical-Projekt Oberberg und dem Ministerium für Familie, Kinder, Jugend, Kultur und Sport des Landes Nordrhein-Westfalen wurde der Umgang mit der Fragestellung des Anders-Seins als bundesweiter Video-Wettbewerb ausgerufen. Kinder, Jugendliche und Erwachsene wurden aufgefordert eigene kreative Beiträge in Form von Videos zu produzieren und im Rahmen des Wettbewerbs zu veröffentlichen. Die Ergebnisse aus dem Wettbewerb und ergänzenden Workshops bildeten die Grundlage für eine spätere Inszenierung des Musicals HONK. Regie und die ca. 20 DarstellerInnen setzten sich mit den Ergebnissen auseinander, ließen sich davon inspirieren und übernahmen einige Teile. Die erstellten Videos ergänzten das Bühnengeschehen. Innerhalb des Vorhabens wurde der komplette Teil der digitalen Kommunikation vom Lehr- und Forschungsgebiet Medieninformatik übernommen.
+
+----
+
+Tags: Web
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-04-16
+
+----
+
+Layout: article
+
+----
+
+Home: false

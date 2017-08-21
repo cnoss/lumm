@@ -1,0 +1,42 @@
+Title: App Entwicklung "Make exercising social again!"
+
+----
+
+Text: 
+
+Ein schönes Projekt rund um das Thema "Gesundheitsförderung mit digitalen Tools". Hierzu gibt es ein Projekt von einem Telekom Spin-Off. Die Konzeptionsphase ist abgeschlossen und erste Low-Fi Prototypen liegen vor. Jetzt geht es darum das Ganze in die digitale Wirklichkeit zu befördern. Dazu werden implementierungsstarke Studierende gesucht, die das Projekt als Abschluss- und/oder Praxisprojekt bearbeiten möchten. Folgende Skills/ Interessen wären von Vorteil:
+
+-  Web-Development
+- Screendesign
+- Integration in IT Cloud Backend
+- Usability/ UX: Konzeption und Gestaltung der Interaktion zwischen Nutzer und App
+
+Die Company sitzt im Startplatz in Köln. Wer also in dem Zuge ein bisschen Coworking Luft schnuppern möchte ist hier richtig. Mehr Infos dazu gibt es im Medieninformatik Wiki unter:
+
+----
+
+Tags: Projekt,Bachelorarbeit,Praxisprojekt
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2017-03-21
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: false

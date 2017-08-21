@@ -1,0 +1,35 @@
+.blogentry{
+	
+	background-color: #fff;
+	margin-bottom: @custom-basefontsize /2;
+	padding: @custom-basefontsize;
+	line-height: 130%;
+	
+	.head{ margin-bottom: @custom-basefontsize /2; }
+	.body{ margin-bottom: @custom-basefontsize; }
+	
+	.foot{
+		
+		time, .autor{ 
+			display: inline-block; 
+			background-color: rgba(0,0,0,0.3);
+			color: #fff;
+			padding: 0 @custom-basefontsize/4;
+			margin-right:  @custom-basefontsize/4
+		}
+	}
+}
+
+.blogentry--focussed{
+
+	background-color: @brand-accent;
+	
+	&,h1,p{
+		color: #fff;
+	}
+	
+	p a{
+		border-bottom: 1px solid @gray-light;
+	}
+
+}

@@ -1,0 +1,38 @@
+Title: Themenvorschlag: Atomic Design Implementierung
+
+----
+
+Subheadline: 
+
+----
+
+Text: 
+
+Die Methodologie (link: http://atomicdesign.bradfrost.com/ text: Atomic Design) ist ein eleganter Ansatz mit einem sehr prägnantem Leitbild für GUI-Modularisierung im Web. Doch wie lässt sich dieser Ansatz in verschiedenen Frameworks und Content Management Systemen umsetzen? 
+
+Eine Abschlussarbeit in diesem Themenfeld sollte die Methodologie beschreiben, gegen andere Ansätze abgrenzen und deren Vor- und Nachteile beleuchten. In einem zweiten Schritt könnte dann ein Beispielprojekt in einem CMS oder Framework durchgeführt werden, wobei der Fokus auf der Implementierung der Methodologie läge. 
+
+Mögliche CMSe? Im Grunde offen. Schön wäre mal eine Implementierung in Wordpress.
+Mögliche Frameworks? Auch offen. Angular, Ractive.js und React wären interessant.
+
+02.01.2015
+
+----
+
+Tags: Design,CSS,Atomic Design,WBA,GDVK
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2016-01-17
+
+----
+
+Layout: article
+
+----
+
+Home: false

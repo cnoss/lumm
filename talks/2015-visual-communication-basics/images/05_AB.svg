@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="220px" height="220px" viewBox="0 0 220 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>05_AB</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="12_Hez-Unterschied" sketch:type="MSLayerGroup" transform="translate(28.000000, 31.000000)">
+            <g id="LKW" transform="translate(0.000000, 61.000000)" sketch:type="MSShapeGroup">
+                <path d="M13.8999819,26 L23.5,26 L51.1000181,26 L51.1000181,26 C51.5632884,23.7177596 53.581042,22 56,22 C58.418958,22 60.4367116,23.7177596 60.8999819,26 L69,26 L69,12 L24,12 L24,0 L12.0181748,0 C10.9115072,0 9.9108569,0.892885859 9.78347279,1.99161638 L8.79168686,10.5461017 L0,15.0299034 L0,26 L4.10001811,26 C4.56328842,23.7177596 6.58104197,22 9,22 C11.418958,22 13.4367116,23.7177596 13.8999819,26 Z" id="Rectangle-43" stroke="#333333"></path>
+                <circle id="Oval-47-copy-2" stroke="#333333" cx="9.5" cy="28.5" r="3.5"></circle>
+                <circle id="Oval-47-copy-3" stroke="#333333" cx="55.5" cy="28.5" r="3.5"></circle>
+                <path d="M28,12 C28,12 31.4787175,1.00000094 37.9058023,1 C44.332887,0.999999288 51,12 51,12" id="Path-45" fill="#333333"></path>
+                <path d="M43.6545124,12 C43.6545124,12 47.830236,1.00000046 52.6594915,1 C57.488747,0.999999544 62.0552398,8.24230302 64,12" id="Path-46" fill="#333333"></path>
+            </g>
+            <g id="Baum" transform="translate(89.000000, 0.000000)" sketch:type="MSShapeGroup">
+                <path d="M36.4915872,46.8487061 C36.977408,46.9477817 37.4821368,47 38,47 C38.9319401,47 39.8213441,46.8308901 40.6345642,46.5239148 C41.7973274,49.1599924 44.4337852,51 47.5,51 C50.0999719,51 52.3909462,49.6770246 53.7364605,47.6675362 L53.7364605,47.6675362 C55.3349588,48.5034429 57.3327269,49 59.5,49 C63.5252429,49 66.965777,47.2871235 68.3495663,44.8685528 C73.2664886,44.1611919 77,40.6835519 77,36.5 C77,34.1742954 75.8461848,32.0667479 73.9766667,30.5320198 C74.6271472,29.4952099 75,28.2882444 75,27 C75,23.9782283 72.9485346,21.4036592 70.074574,20.4233318 C70.6734254,19.1990032 71,17.8777974 71,16.5 C71,10.1487251 64.060414,5 55.5,5 C53.5991214,5 51.7781629,5.25387441 50.0953602,5.71841612 C47.3651481,2.2507004 42.9641881,0 38,0 C31.096708,0 25.2825977,4.35244934 23.5360176,10.277556 C21.894857,8.85456932 19.7922364,8 17.5,8 C12.2532946,8 8,12.4771522 8,18 C8,19.4310112 8.28555213,20.7918179 8.79995031,22.0227276 C3.88012233,22.3433447 0,26.016244 0,30.5 C0,35.1944206 4.25329462,39 9.5,39 C10.7856141,39 12.0115829,38.7715092 13.1299468,38.3574387 C13.9662658,42.6839385 18.7383083,46 24.5,46 C25.7367978,46 26.9279941,45.8472012 28.0444489,45.5644088 C28.3529788,47.5062838 30.2302465,49 32.5,49 C34.2349627,49 35.7406027,48.1272478 36.4915872,46.8487061 Z" id="Oval-53" stroke="#333333"></path>
+                <path d="M19.5447557,101.56877 C19.5447557,101.56877 22.2859034,102.380963 28.8978151,94.3849834 C35.5097272,86.3890038 32.7685784,51.260414 32.7685784,51.260414" id="Path-47" stroke="#333333"></path>
+                <path d="M43.5447557,101.56877 C43.5447557,101.56877 46.2859034,102.380963 52.8978151,94.3849834 C59.5097272,86.3890038 56.7685784,51.260414 56.7685784,51.260414" id="Path-47-copy" stroke="#333333" transform="translate(50.500000, 76.500000) scale(-1, 1) translate(-50.500000, -76.500000) "></path>
+                <g id="Früchte" transform="translate(16.000000, 13.000000)" fill="#333333">
+                    <circle id="Oval-66" cx="2.5" cy="12.5" r="2.5"></circle>
+                    <circle id="Oval-66-copy" cx="12.5" cy="22.5" r="2.5"></circle>
+                    <circle id="Oval-66-copy-2" cx="21.5" cy="2.5" r="2.5"></circle>
+                    <circle id="Oval-66-copy-3" cx="30.5" cy="18.5" r="2.5"></circle>
+                    <circle id="Oval-66-copy-4" cx="40.5" cy="6.5" r="2.5"></circle>
+                    <circle id="Oval-66-copy-5" cx="47.5" cy="25.5" r="2.5"></circle>
+                </g>
+            </g>
+            <text id="Culture" sketch:type="MSTextLayer" font-family="HanziPen SC" font-size="16" font-weight="normal" line-spacing="26" fill="#333333">
+                <tspan x="104" y="125">Culture</tspan>
+            </text>
+            <g id="Arrow" transform="translate(0.000000, 100.000000)">
+                <path d="M69,6 L2.5,6" id="Line" stroke="#333333" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path d="M8,0 L8,12 L0,6 L8,0 Z" id="Triangle-1" fill="#333333" sketch:type="MSShapeGroup"></path>
+                <text id="B" sketch:type="MSTextLayer" font-family="HanziPen SC" font-size="14" font-weight="normal" line-spacing="26" fill="#333333">
+                    <tspan x="0" y="23">B</tspan>
+                </text>
+                <text id="A" sketch:type="MSTextLayer" font-family="HanziPen SC" font-size="14" font-weight="normal" line-spacing="26" fill="#333333">
+                    <tspan x="61" y="23">A</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

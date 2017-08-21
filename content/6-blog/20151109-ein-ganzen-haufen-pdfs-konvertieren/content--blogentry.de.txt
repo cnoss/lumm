@@ -1,0 +1,41 @@
+Title: Ein ganzen Haufen PDFs konvertieren
+
+----
+
+Text: 
+
+Gerade sitz ich vor einem großen Haufen an Zeichnungen im PDF Format. Ich brauche aber JPEG Files. Wie schön, dass Image Magick auf dem Server läuft. Damit lassen sich elegante Dinge tun, z.B. alle Bilder in JPGs konvertieren. Und das geht so:
+
+<pre>
+find . -name "*.pdf" -exec convert -density 300 '{}' '{}'.jpg ';'
+</pre>
+
+Oder mal im ganzen Satz: finde alle Dateien im aktuellen Verzeichnis mit der Endung .pdf und konvertiere sie zu JPG Dateien. Gibt ihnen dabei ein Auflösung von 300 dpi mit.
+
+----
+
+Tags: code
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-11-09
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: false

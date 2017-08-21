@@ -1,0 +1,1 @@
+<time datetime="<?php echo date("Y-m-d h:i", $date); ?>"><?php echo date("d.m.Y", $date); ?></time>

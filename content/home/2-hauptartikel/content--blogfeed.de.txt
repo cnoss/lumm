@@ -1,0 +1,21 @@
+Title: Hauptartikel
+
+----
+
+Anzahl: 1
+
+----
+
+Type: home
+
+----
+
+Type-of-layout: complete--hero
+
+----
+
+Text: 
+
+----
+
+Layout: no-head

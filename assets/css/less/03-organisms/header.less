@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    $Logo
+\*------------------------------------*/
+.logo{
+	
+	background-color: #fff;
+	@logofont: @custom-basefontsize *2.4;
+	padding: @custom-basefontsize;
+	
+	@media (max-width: @screen-sm-min) {  @logofont: @custom-basefontsize *0.9; }
+	
+	h1, h2{ 
+		color: #000;
+		line-height: 100%;
+		text-transform: uppercase;
+	}
+	
+	h1{	
+		.font-100; 
+		font-size: @logofont; 
+		@media (max-width: @screen-sm-min) { font-size: @logofont * 0.8; } 
+	}
+	
+	h2{	
+		font-weight: 300; 
+		font-size: @logofont * 0.8;
+		@media (max-width: @screen-sm-min) { font-size: @logofont * 0.6; }	
+	}
+	
+}
+
+header{
+	margin-bottom: @custom-basefontsize /2;
+}

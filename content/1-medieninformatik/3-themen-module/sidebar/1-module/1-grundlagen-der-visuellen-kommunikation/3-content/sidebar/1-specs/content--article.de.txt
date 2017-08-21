@@ -1,0 +1,28 @@
+Title: Specs
+
+----
+
+Text: 
+
+* Studiengang: Medieninformatik Bachelor
+* Studiensemester: 2
+* Credit Points: 5
+* Voraussetzung: Einführung in die Medieninformatik
+
+Dieses Modul wird nur im Sommersemester angeboten.
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-02-24
+
+----
+
+Layout: article
+
+----
+
+Home: false

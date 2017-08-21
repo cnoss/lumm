@@ -1,0 +1,21 @@
+Title: Longboard Freeride am Metabolon
+
+----
+
+Text: 
+
+----
+
+Autor: 
+
+----
+
+Date: 
+
+----
+
+Layout: slideshow no-head
+
+----
+
+Autostart: false

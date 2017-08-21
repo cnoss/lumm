@@ -1,0 +1,21 @@
+Title: Ein Bild sagt mehr als 1000 Worte
+
+----
+
+Text: 
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-02-20
+
+----
+
+Layout: slideshow no-head
+
+----
+
+Autostart: true

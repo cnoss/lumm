@@ -1,0 +1,52 @@
+Title: Prozesse in eigenem Screen laufen lassen
+
+----
+
+Text: 
+
+Wenn man auf einem entfernten Server arbeitet und längere Prozesse laufen lassen will, ist es praktisch, dafür nicht dauerhaft mit der entfernten Maschine verbunden sein zu müssen. Dafür gibt es das schöne Tool "Screen", was auf dem entfernten Rechner quasi eine eigene Konsole öffnet, die zu einem späteren Zeitpunkt wieder geöffnet werden kann.
+
+##Neuen Screen auf remote Rechner aufmachen:
+<pre>
+screen -S "Name-den-ich-vergeben-kann"
+</pre>
+
+Danach kann das Terminal geschlossen werden. Will man den Screen wieder öffnen, dann verbindet man sich wieder mit dem entfernten Rechner und lässt sich die offenen Screens anzeigen mit:
+
+ <pre>
+screen -r
+</pre>
+
+Dann hängt man die ID des Screen an den Aufruf und öffnet damit wieder den Screen:
+
+ <pre>
+screen -r id.Name-den-ich-vergeben-kann
+</pre>
+
+----
+
+Tags: code
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-03-19
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: false

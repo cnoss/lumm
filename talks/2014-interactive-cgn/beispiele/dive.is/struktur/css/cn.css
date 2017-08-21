@@ -1,0 +1,20 @@
+
+.contentbox{
+	margin-bottom: 20px;
+}
+
+.invers{
+	background-color: #fff;
+	color: #000;
+}
+
+.contentbox *{
+	text-align: left !important;
+	
+}
+
+.contentbox h2,
+.contentbox h3{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

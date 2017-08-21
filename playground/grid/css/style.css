@@ -1,0 +1,13 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+
+html, body{
+	font-size: 10px;
+	padding-top: 1px;
+	line-height: 100%;
+}
+
+body{
+	background-image: url("../baseline.svg");
+	background-size: 200px;
+}

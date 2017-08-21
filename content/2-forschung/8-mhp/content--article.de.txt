@@ -1,0 +1,29 @@
+Title: The MHP Knowledge Project
+
+----
+
+Subheadline: 2004, Universität Duisburg Essen
+
+----
+
+Text: In diesem europäischen Verbundprojekt wurden in Kooperation mit dem Institute for Computer Science and Business Information Systems der Universität Duisburg-Essen Gestaltungskriterien und -empfehlungen für die Entwicklung von Anwendungen für die Multimedia Home Plattform (MHP) entwickelt. Ergebnis des Vorhabens ist eine umfangreiche Sammlung zur Unterstützung von MHP Entwicklern. Die Sammlung wird auf unterschiedliche Arten bereit gestellt, als zusammenhängendes druckbares Dokument, als durchsuchbare Hilfe mit Stichwort- und Volltextsuche sowie Querverweisen und als Validator mit dessen Hilfe MHP Anwendungen überprüft werden können.
+
+----
+
+Tags: Web
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-04-16
+
+----
+
+Layout: article
+
+----
+
+Home: false

@@ -1,0 +1,223 @@
+/* Icons
+============================================================
+	
+	Die Icons können folgendermaßen erstellt werden:
+	Das @icon-grid stellt die Breite und Höhe eines Rasterabschnitts dar.
+	Wir fangen bei 0 an zu Zählen. jede Zeile steht für eine andere Hintergrundfarbe.
+	Möchten wir also das 5. Icon der ersten Zeile haben, so schreiben wir: .ico(4,0);
+	Die 0te Zeile lässt sich auch weglassen. So ergibt: .ico(4); dasselbe Icon wie oben.
+	Ebenso erweitert .size(@size) die Bootstrap-Mixins Funktion .size(@x,@y) um eine
+	Variante mit 1 Parameter. So lässt sich .size(10px) & .size(10px,10px) synonym verwenden.
+	
+	Achtung! –Damit die Änderung sichtbar wird, muss die style.less aktualisiert werden.
+
+*/
+
+@icon-grid: 30px;
+
+.icon(@sprite-col; @sprite-row:0){
+	background-position: ( -1 * @sprite-col * @icon-grid ) ( -1 * @sprite-row * @icon-grid );
+}
+
+.size(@size){
+	height: @size;
+	width: @size;
+}
+
+.sprite(){
+	display: inline-block;
+	background:  url('@{cdn-root}/img/icon-sprite.svg') no-repeat;
+	.transition(opacity 0.25s);
+}
+
+
+
+
+/* Allgemeiner Icon-selektor
+============================================================*/ 
+[class*="newicon-"]{
+	.sprite();
+	.size(24px);
+	&.visible-sm{
+		display: inline-block !important;
+		@media (min-width: @screen-tablet){ display: none !important; }
+	}
+}
+
+
+/* Main-Nav Icons
+============================================================*/ 
+.newicon-menu{
+	.icon(39,1);
+	.size(16px);
+	.opacity(.6);
+	margin: -1px;
+	.active > a &{
+		.icon(40,1);
+		.opacity(1);
+	}
+	a:hover &{
+		.opacity(1);
+	}
+}
+
+.newicon-search{
+	.icon(56,1);
+	.opacity(.6);
+	vertical-align: top;
+	margin: -1px;
+	.active a &,
+	a:hover &{
+		.opacity(1);
+		cursor: pointer;
+	}
+	
+	&+.newicon-menu{
+		vertical-align: middle;
+		margin: -5px 0 1px -8px;
+		cursor: pointer;
+	}
+}
+
+
+.newicon-play-pause{
+	.icon(97,0);
+	.blueimp-gallery-playing &{
+		.icon(98,0);
+	}
+	
+}
+
+.newicon-close{
+	.icon(65,1);
+	.opacity(0.5);
+	margin: -2px;
+	cursor: pointer;
+	&:hover{ .opacity(1); }
+}
+
+
+/* Grid/Listenicons
+============================================================*/ 
+.newicon-list{
+	.icon(69,0);
+	vertical-align: bottom;
+}
+.newicon-block{
+	.icon(74,0);
+	vertical-align: bottom;
+}
+.newicon-grid{
+	.icon(73,0);
+	vertical-align: bottom;
+}
+
+
+/* Social Media-Icons
+============================================================*/
+.social-media{
+	.sprite();
+	.size(20px);
+	.opacity(.6);
+	vertical-align: bottom;
+	&:hover{ .opacity(1); }
+	
+	&.facebook 	{ .icon( 0,1); }
+	&.twitter 	{ .icon( 1,1); }
+	&.youtube 	{ .icon( 2,1); }
+	&.xing 		{ .icon( 3,1); }
+	&.paperpost { .icon( 4,1); }
+	&.rss 		{ .icon( 5,1); }
+	&.pinterest { .icon( 8,1); }
+	&.linkedin 	{ .icon( 9,1); }
+	&.bookmark	{ .icon(10,1); }
+	
+	&.contact	{ .icon(83,1); }
+	&.vimeo		{ .icon(90,1); }
+	
+	&.share		{ .icon(95,1); }
+	&.googleplus{ .icon(96,1); }
+	
+	&.white{ background-color: transparent; }
+}
+
+/* Maps
+============================================================*/
+.newicon-maps-plus,
+.newicon-maps-minus{
+	.size(20px);
+	.opacity( .6 );
+	vertical-align: bottom;
+	background-color: white;
+	&:hover{ .opacity(1); cursor: pointer; }
+}
+
+.newicon-maps-plus{ .icon(20,1); }
+.newicon-maps-minus{.icon(19,1); }
+
+
+/* Glyphicons überschreiben
+============================================================*/
+.glyphicon.glyphicon-upload{
+	.sprite();
+	.icon(87,1);
+	.size(24px);
+	.opacity(.6);
+	vertical-align: middle;
+	&:hover{ .opacity(1); cursor: pointer; }
+	&:before{ content: ''; }
+}
+
+.glyphicon.glyphicon-globe{
+	.sprite();
+	.icon(88,1);
+	.size(20px);
+	.opacity(.6);
+	margin: -5px -4px;
+	vertical-align: baseline;
+	
+	.lt-ie9 &{
+		vertical-align: top;
+		margin-top: 0px;
+	}
+	
+	a:hover &,
+	.active > a > & { .opacity(1); }
+	&:before{ content: ''; }
+}
+
+.glyphicon.glyphicon-home{
+	.sprite();
+	.icon(86,1);
+	.size(20px);
+	margin: -4px;
+	vertical-align: baseline;
+	.opacity(.6);
+	&:hover{ .opacity(1); }
+	&:before{ content: ''; }
+}
+
+
+/* Carousel left/right
+============================================================*/
+.newicon-slide-left{
+	.icon(84,2);
+}
+.newicon-slide-right{
+	.icon(85,2);
+}
+
+/* Downloaddaten
+============================================================*/
+.download{
+	.sprite();
+	.size(24px);
+	//.opacity(.6);
+	margin: (@grid-gutter-width/4) (@grid-gutter-width/4) (@grid-gutter-width/4) 0;
+	vertical-align: middle;
+	
+	&:hover{ .opacity(1); }
+	
+	&.pdf 	{ .icon( 80,0); }
+
+}

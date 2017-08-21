@@ -1,0 +1,14 @@
+assets/css/sourcemaps/
+assets/css/cached/
+coda_backups/
+site/accounts/
+site/cache/
+assets/css/cached/
+thumbs/
+
+.htaccess
+.DS_Store
+config/custom-config.php
+
+downloads/
+downloads/*

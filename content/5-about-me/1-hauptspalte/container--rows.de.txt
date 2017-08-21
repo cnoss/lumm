@@ -1,0 +1,21 @@
+Info: 
+
+----
+
+Visible: 
+
+----
+
+Title: Hauptspalte
+
+----
+
+Invisible: 
+
+----
+
+Keywords: 
+
+----
+
+Desc: 

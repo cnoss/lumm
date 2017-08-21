@@ -1,0 +1,1 @@
+../../../config/component-configs/timthumb-config.php

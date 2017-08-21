@@ -1,0 +1,19 @@
+title: Web-basierte Anwendungen 1: WWW-Technologien im WS 2012/13
+
+----
+
+date: 2012-09-20 19:48
+
+----
+
+text: 
+
+Alte Inhalte, neu verpackt! Nur ein Scherz. Die Veranstaltung präsentiert sich dieses Semester in einem völlig neuen Format. Mehr wird noch nicht veraten. Wer mitmachen will, sollte zu ersten Veranstaltungen, die zusammen mit MTP am Donnerstag dem 04. Oktober 2012 im Raum 3101 stattfinden wird. Den Raum sollten Sie sicherheitshalber vorab noch mal im Veranstaltungsplan prüfen. Eines kann ich jedoch schon mal verraten: wir bekommen in diesem Jahr Support von Jan Kus von Railslove. Somit ist wohl sicher, dass die Veranstaltung noch mal ordentlich durchgepustet wird. Darf ich das so schreiben? Ach, warum nicht. Wir sehen uns bei der ersten Veranstaltung.
+
+----
+
+tags: 
+
+----
+
+categories: Neues

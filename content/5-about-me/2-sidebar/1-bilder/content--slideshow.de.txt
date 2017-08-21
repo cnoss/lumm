@@ -1,0 +1,21 @@
+Title: Bilder
+
+----
+
+Text: 
+
+----
+
+Autor: 
+
+----
+
+Date: 
+
+----
+
+Layout: slideshow no-head gap-at-top
+
+----
+
+Autostart: false

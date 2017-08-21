@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    $Globals
+\*------------------------------------*/
+body{
+	background: url("/assets/img/custom/linie_grau.png");
+	//background-color: #fffcef;
+}
+
+body, html{
+	line-height: 140%;
+	font-size: @custom-basefontsize;
+	.font-200;
+	color: #333;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $Container metrics
+\*------------------------------------*/
+
+footer{
+	margin: @custom-basefontsize 0;
+}
+
+figure.video{
+	width: 100%;
+	height: 60%;
+	
+	iframe{
+		width: 100%;
+		height: 60%;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+    $Images
+\*------------------------------------*/
+
+img.scale,
+figure.scale img{
+	width: 100%;
+}
+
+
+
+
+/*------------------------------------*\
+    $Interactions
+\*------------------------------------*/
+
+.interaction_bar{
+	.interaction_bar__item{
+		color: @brand-primary;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+    $Links
+\*------------------------------------*/
+
+a, .link{ 
+	color: #000; 
+	text-decoration: none;
+	.transition(color 0.3s);
+	border-bottom: dotted 1px @brand-accent;
+	
+	&:hover{
+		color: @brand-accent;
+		border-bottom: none;
+	}
+}
+
+.link--hero{
+	
+	display: inline-block;
+	margin: @custom-basefontsize /2 0;
+	border: none;
+	border-left: solid 3px @brand-accent;
+	padding-left: @custom-basefontsize;
+	.transition(~"border 0.3s, padding 0.3s");
+		
+	span{ 
+		margin-top: -4px;
+		margin-right: @custom-basefontsize /2;
+	}
+	
+	&:hover{
+		border-left: solid 10px @brand-primary;
+		padding-left: @custom-basefontsize /4;
+	}
+	
+	a{
+		border: none;
+	}
+}
+
+
+.container{ max-width: 100%; .transition(max-width 0.5s); }

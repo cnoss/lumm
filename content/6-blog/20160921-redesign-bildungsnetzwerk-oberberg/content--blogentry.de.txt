@@ -1,0 +1,33 @@
+Title: Redesign Bildungsnetzwerk Oberberg
+
+----
+
+Text: Für die Website des Bildungsnetzwerk Oberberg soll ein neues Design entwickelt werden. Ein schönes Projekt für Studierende mit Design- und Webskills. Mehr Infos dazu im (link: http://bit.ly/2cK1Aqr text: Medieninformatik Wiki)
+
+----
+
+Tags: Projekt,Medieninformatik
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2016-09-21
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: false

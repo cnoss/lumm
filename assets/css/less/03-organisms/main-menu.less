@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    $MENU
+\*------------------------------------*/
+
+
+.main-menu{
+	background: #fff;
+	padding: @custom-basefontsize;
+	
+	.menu_list{
+	 	
+	 	margin:0;
+	 	padding: 0;
+	 	
+	    li{
+	        display: block;
+	        float: left;
+	        width: 100%;
+	        .transition(width 1s);
+	        @media (min-width: @screen-sm-min) {  width: 50%; }
+			
+	                
+	        a{
+		        display: block;
+		        border-top: solid 1px #000;
+		        color: @brand-primary;
+		        border-bottom: none;
+		        padding: @custom-basefontsize /2 0;
+				margin-right: @custom-basefontsize;
+				.transition(~"background-color 0.3s 0.1s, padding-left 0.3s, color 0.3s");
+				
+				&:hover{
+					color: #fff;
+					background-color: @brand-primary;
+					text-decoration: none;
+					padding-left: @custom-basefontsize;
+				}
+	        }
+		}
+		
+		&:after{
+			.clear;
+		}
+	}
+}
+

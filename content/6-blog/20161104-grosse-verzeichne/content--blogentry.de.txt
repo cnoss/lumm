@@ -1,0 +1,39 @@
+Title: Große Verzeichnisse finden
+
+----
+
+Text: 
+
+Mit diesem kleinen Codeschnipsel findet man Verzeichnisse, deren Inhalt größer als ein Gigabyte ist. Manchmal praktisch :)
+
+<code>
+du -sg * | awk '$1 > 1'
+</code>
+
+----
+
+Tags: code,Komandozeile
+
+----
+
+Autor: papa
+
+----
+
+Date: 2016-11-04
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: false

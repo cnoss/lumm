@@ -1,0 +1,102 @@
+Title: How we work
+
+----
+
+Text: 
+
+**Stage 1 - The Initial Brief**
+ Please make an appointment to come and visit one of our designers with your room dimensions and your wish list for the project. As much information is taken to establish your individual requirements for the space in terms of function, aesthetics and budget. Appliances and finishes will be discussed broadly, but no specific decisions need to be made at this point.
+
+**Stage 2 - Presentation of Proposals**
+ During the second meeting in the showroom, your appointed designer will present our proposals for your kitchen with drawings and a guide quote.
+ 
+With a detailed explanation and discussion of the layout, you will gain a clear understanding of our ideas and recommendations together with the rationale behind them.
+ 
+By then end of the meeting, we hope that you have enough information to decide to proceed to the next stage. At this point you will be asked to settle an initial design fee before any drawings will be released or amended and site visits arranged.
+
+**Stage 3 - Refining the Design**
+Once the design fee has been settled, this initial deposit is credited to your account when you place an order, but is non-refundable should you decide not to proceed.
+
+At this stage a contract will be issued with a fixed quotation for the final scheme incorporating furniture, appliances, worktops and a first fix dry fit installation.
+
+----
+
+Home: 
+
+----
+
+Teasertext: 
+
+----
+
+Hide-in-lang: false
+
+----
+
+Columns: 
+
+- 
+  noc: 3
+  text2: |
+    One of our surveyors will visit your site to verify our expectations of timing and the preparation of the space and services by your contractor.
+    
+    **Stage 4 - Issuing of Contracts**
+    To confirm an order, a signed contract and the specified deposit payment will be required. The final detailed service drawings will then be completed and issued to all appropriate parties.
+    
+    All component parts for the kitchen are placed on order with our suppliers. Delivery of the bulthaup items into our warehouse is approximately 12 weeks from order. There may be seasonal variations.
+    
+    We aim to take delivery of all parts for your project well before they are required on site. This ensures that we have everything in place to arrive on the designated day to begin installation Our surveyors will continue to monitor the site to check progress to ensure a smooth and co-ordinated installation process.
+    
+    An installation date is mutually agreed and continued liaison between our team and your contractors monitors the condition and progress of your site.
+    
+    As your goods are held in our own storage facility, we are able if neccesary, to re-schedule our installation timing to suit delays in your build programme giving maximum flexibility.
+  text3: |
+    The actual installation on site is likely to take between 5 and 7 days depending on the size of the project. During installation, our design team attends site as often as necessary to remain in close contact with our fitters and your contractors to answer any queries that you may have.
+    
+    We normally recommend that your contractor's plumber and electrician attend site during the final days of our installation to connect the appliances to the service.
+    
+    After installation is completed to your satisfaction, our designer will make a visit to offer help and advice on how to maximise the usage of your new kitchen and all the functions originally discussed.
+    
+    **Stage 5 - Terms and Conditions **
+    To place an order for a kitchen, you will be asked to sign a contract and to pay a deposit, normally one third of the total value of the scheme. The full remaining balance will be due for payment ten working days prior to the delivery and installation on site. For any orders with a value below £5,000 we would ask for payment in full on confirmation of order. If you would like to download our full Terms and Conditions, please feel free to do so below.
+    
+     (file: tkpl.pdf text: The Kitchen People Ltd Terms and Conditions)
+
+----
+
+Layout-switcher: 
+
+- 
+  noic: 4
+  noi: 1
+  notc: 1
+  otc: left
+  appearance: normal
+
+----
+
+Display-data: headline
+
+----
+
+Autor: 
+
+----
+
+Date: 
+
+----
+
+Headline-position: hide
+
+----
+
+Behavior-type: standard
+
+----
+
+Color-class: normal
+
+----
+
+Select-image: 
