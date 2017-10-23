@@ -1,0 +1,50 @@
+Title: Internationales WebDev-Projekt vom 01. bis 09. März 2017
+
+----
+
+Subheadline: Studentisches Web-Projekt in Kooperation mit anderen europäischen Hochschulen
+
+----
+
+Text: 
+
+(image: java-script-web-internet-code-html-computer-1785541.jpg class:scale)
+
+Zusammen mit einigen europäischen Hochschulen möchten wir ein internationales Web Development Projekt starten. Mit dabei sind: Bobigny (Frankreich),  Athens, Greece (Technological Education Institution of Athens),  Sofia, Bulgaria (Technical University of Sofia), Coimbra, Portugal (Universidade de Coimbra), Eindhoven, Netherlands (Fontys Hogescholen) und wir.
+
+Das Ganze wird komplett online abgewickelt und richtet sich an Bachelor Studierende mit Spaß und Skills in den Bereichen Web-Development, Design & Marketing. Wir brauchen mindestens acht Teilnehmer um mitmachen zu können. Aus den Teilnehmern der verschiedenen Länder werden dann internationale Teams gebildet. Ein super Projekt um mal internationale Projektluft zu schnuppern. Wir können das als QQ-Projekt und ggf. als WPF anrechnen.
+
+Dieses Projekt wird an der Université Paris 13 (https://www.univ-paris13.fr/) im Bereich WebDesign/Marketing schon seit ein paar Jahren durchgeführt, allerdings nur lokal, also ohne internationale Beteiligung. Das Projekt ist ein Sprintprojekt von10 Tagen und in der Regel wird ein non-kommerzielles Web-Projekt bearbeitet. Im letzten Jahr war es Konzeption und Entwicklung eines Alumninetzwerks. 
+
+Die Teilnehmer aus Paris (etwa 48) sind im zweiten Studienjahr. Bei den anderen Teilnehmern weiß ich es nicht. Es werden nationen-gemischte 4ter Teams gebildet und das Projekt wird im Wesentlichen eigenständig bearbeitet. Vormittags gibt es anfangs etwas support/ input. Das Ganze wird am 09. März präsentiert/ verteitigt und das wars :)
+
+Für diejenigen, die das als QQ-Projekt (QQ2) machen wollen, wären wir damit durch. Ich bräuchte nur einen KLEINEN Projektbericht, max 5 Seiten. Was da genau drin steht, müssten wir noch besprechen.
+
+Wer das als WPF machen will, da müssten wir noch was drauf satteln, sonst reicht der Workload nicht. Was das konkret ist, müssen wir auch noch besprechen. Auf dem Zeugnis würde das als WPF „Digitale Kommunikation“ landen.
+
+Es gibt auf jeden Fall eine hübsche Urkunde für die Bewerbungsunterlagen.
+
+Vorabtreffen ist am 22.02. um 11:00 Uhr in Gummersbach oder via Skype.
+
+Wer mitspielen will, bitte hier eintragen:
+https://www.medieninformatik.th-koeln.de/w/International_WebDev_Project
+
+----
+
+Tags: WBA1,GDVK
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2017-01-30
+
+----
+
+Layout: article article--focussed
+
+----
+
+Home: true

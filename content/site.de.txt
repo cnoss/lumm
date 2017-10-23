@@ -44,6 +44,7 @@ Social:
 
 (link: https://github.com/cnoss text: github.com/cnoss)
 
+
 (link: https://www.xing.com/profile/Christian_Noss text: xing.com/profile/Christian_Noss)
 
 ----
@@ -60,12 +61,12 @@ Userid: 1348376298
 
 ----
 
-Accesstoken: 1348376298.467ede5.2ade0093c67c4e4c87876a8805d4ded4
+Accesstoken: 1348376298.1677ed0.91f2fcd143e34420b970e12590a4d439
 
 ----
 
-Clientid: a45953a0f38c4da580f58fc200ac94dc
+Clientid: f23b2c4fa5574120b229638876228377
 
 ----
 
-Copyright: © 2007-(date: Year)  Christian Noss
+Copyright: © 2007-2016  Christian Noss

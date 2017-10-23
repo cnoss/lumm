@@ -1,0 +1,29 @@
+Title: Abschlussarbeiten in der Medieninformatik
+
+----
+
+Subheadline: Ideen, Themen und Anregungen
+
+----
+
+Text: Im Medieninformatik Bachelor Studiengang an der TH Köln, Campus Gummersbach, ist das letzte Semester für die Abschlussarbeit vorgesehen. Es besteht aus dem Praxisprojekt, der Bachelorarbeit und dem Bachelor Kolloquium. Es empfiehlt sich, sowohl Praxisprojekt als auch die Bachelorarbeit und einem Themenfeld zu absolvieren, so dass man mal die Zeit und Möglichkeit hat, richtig tief in ein Thema einzutauchen.
+
+----
+
+Tags: Medieninformatik
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2016-01-17
+
+----
+
+Layout: article article--focussed
+
+----
+
+Home: false

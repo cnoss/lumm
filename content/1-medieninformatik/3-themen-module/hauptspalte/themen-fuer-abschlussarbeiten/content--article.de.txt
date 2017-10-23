@@ -1,0 +1,29 @@
+Title: Themen für Abschlussarbeiten
+
+----
+
+Subheadline: 
+
+----
+
+Text: ##Atomic Design Implementierung
+
+----
+
+Tags: 
+
+----
+
+Autor: 
+
+----
+
+Date: 
+
+----
+
+Layout: article
+
+----
+
+Home: false

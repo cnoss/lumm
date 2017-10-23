@@ -1,0 +1,33 @@
+Title: Space in Design Systems
+
+----
+
+Text: Sehr schöner Artikel von Nathan Curtis zum Thema Abstände im Design. (link: https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62 text: Zum Artikel: Space in Design Systems)
+
+----
+
+Tags: GDVK,Design
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2017-08-30
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: false

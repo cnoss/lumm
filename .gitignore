@@ -10,3 +10,5 @@ thumbs/
 .DS_Store
 config/custom-config.php
 
+downloads/
+downloads/*

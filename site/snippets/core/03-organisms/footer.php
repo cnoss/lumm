@@ -19,9 +19,13 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="copyright">
-				<?php echo $site->copyright()->kirbytext(); ?>
+
+				<p><?php echo $site->copyright() ?>
+				<a class="pull-right" href="http://christiannoss.de/de/sonstiges/impressum">Impressum</a>
+				</p>
 			</div>
 		</div>
+
 	</div>
 </footer>
 
@@ -89,6 +93,15 @@
 </script>
 
 <script type="text/javascript" src="/min/g=js"></script>
-
+<!--script data-position="topright" id="rwbanner" src="http://refugeeswelcome.github.io/banner/script.js"></script-->
 </body>
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        clientId: 'a45953a0f38c4da580f58fc200ac94dc',
+        template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>'
+    });
+    feed.run();
+</script>
 </html>

@@ -1,0 +1,55 @@
+Title: Web-basierte Anwendungen 1 im WS 2016/17
+
+----
+
+Text: 
+
+(image: code-1076536_1280.jpg class: scale)
+<br>
+Auch in diesem Semester bieten wir das Modul "Web-basierte Anwendungen 1" im Medieninformatik Bachelor an. Die Durchführung ist etwas anders als in vielen anderen Modulen. Damit die Studierenden sich mehr auf das jeweilige Modul konzentrieren können, haben wir den Workload der Module "Audiovisuelles Medienprojekt", "Medientechnik und -produktion" und "Web-basierte Anwendungen 1" zusammengelegt und wickeln die Module jetzt nacheinander, aber dafür mit doppeltem Zeitbudget ab.
+
+In der ersten Semesterhälfte wird das Modul "Web-basierte Anwendungen 1" durchgeführt. Die Veranstaltung findet somit in äußerst komprimierter Form mit hohem Präsenzanteil statt. Sie läuft über sieben Wochen und wir haben jeweils den kompletten Donnerstag zur Verfügung, sodass Sie parallel keine anderen Veranstaltungen besuchen müssen. Der letzte Termin ist der 17. November 2016. Die WBA1-Tage gehen jeweils von **9:00 Uhr bis 18:00 Uhr**, also Butterbrot einpacken. 
+
+Das Konzept von WBA1 ist auf Anwesenheit und aktive Mitwirkung ausgelegt. Ein Fernstudium ist leider nicht möglich und wird in diesem Modul nicht unterstützt. Allen Teilnehmern empfehle ich vorab den Film [Teaching Teaching & Understanding Understanding](http://www.youtube.com/playlist?list=PL3B329B9D8FE40C3F) zu schauen.
+
+## GitHub
+Wir nutzen in der Veranstaltung (link: https://github.com/th-koeln text: GitHub) als Organisations- und Codesharing Plattform. Darum wäre es praktisch, wenn Sie sich im Vorfeld einen entsprechenden Account zulegen und sich mit der Technologie vertraut machen: (link: https://github.com/th-koeln/wba1-2016/wiki/Git-und-GitHub text: Git und GitHub)
+
+## Weitere Vorbereitung
+Wer sich schon mal ein bisschen einstimmen und vorbereiten möchte, kann die folgenden Quellen im Vorfeld studieren:
+- (link: http://docs.webplatform.org/wiki/concepts/Internet_and_Web/How_does_the_Internet_Work text: How does the Internet work?)
+- (link: http://www.w3schools.com/html/default.asp text: HTML5 Tutorial)
+- (link: https://www.codecademy.com/en/courses/web-beginner-en-HZA3b/0/1?curriculum_id=50579fb998b470000202dc8b text: HTML & CSS @Codecademy)
+
+## Erste Veranstaltung
+Donnerstag, 06. Oktober 2016
+9:00 Uhr
+Raum 3.102
+
+----
+
+Tags: Medieninformatik,WBA1
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2016-09-27
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: false

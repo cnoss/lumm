@@ -1,0 +1,246 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+	<!-- uncomment lines below to include extra p5 libraries -->
+	<!--<script language="javascript" src="libraries/p5.dom.js"></script>-->
+	<!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
+	<!--script language="javascript" type="text/javascript" src="sketch.js"></script-->
+	<!-- this line removes any default padding and style. you might only need one of these values set. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.js"></script>
+	<style>
+		body {padding: 0; margin: 0 auto;}
+		canvas {
+			margin: 0 auto;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+</body>
+
+<script>
+// The statements in the setup() function
+// execute once when the program begins
+
+var params = {};
+
+params.veg = true;
+if(location.href.match(/veg=false/)){
+	params.veg = false;
+}
+
+params.ground = true;
+if(location.href.match(/ground=false/)){
+	params.ground = false;
+}
+
+params.connections = true;
+if(location.href.match(/connections=false/)){
+	params.connections = false;
+}
+
+
+function setup () {
+	// createCanvas should be the first statement
+	createCanvas(720, 400);
+	noLoop();
+}
+
+// The statements in draw() are executed until the
+// program is stopped. Each statement is executed in
+// sequence and after the last line is read, the first
+// line is executed again.
+function draw () {
+
+	background(255);   // Set the background to black
+
+	var colors = {};
+	colors[0] = "#024394";
+	colors[1] = [2,67,148];
+	colors[2] = [187,224,14];
+	colors[4] = [227,72,249];
+	colors[3] = [198,70,68];
+	
+	
+	var s = [0,0,0,100];
+	//draw_sky();
+	if(params.connections) { draw_connections(); }
+	
+	for (var i = 0, l = Math.random() * 50 + 100; i < l; i++) {
+
+		if(params.veg) { draw_veg(); }
+
+		var opacity = Math.random() * 200;
+		var bw = Math.random() * 75 + 25;
+		var bh = Math.random() * Math.random() * 175 + 25;
+		var bl = Math.random() * (width - bw);
+
+		noStroke();
+
+		var opacity = Math.random() * 255;
+		var lighten = Math.random() * 40;
+		var darken = Math.random() * 30;
+		var desaturate = Math.random() * 50 +30;
+		var saturate = Math.random() * 5;
+
+		var color = tinycolor(colors[0]).darken(darken).lighten(lighten).desaturate(desaturate).saturate(saturate);
+		rgb = color.toRgb();
+		var c = [rgb.r,rgb.g,rgb.b];
+
+		c.push(opacity);
+		fill(c);
+		stroke(s);
+		rect(bl, height, bw, -bh);
+
+		if(params.ground) { draw_ground(); }
+
+	}
+
+}
+
+function draw_connections(){
+
+	noFill();
+	smooth();
+
+
+	for (var i = 0, l = Math.random() * 20 + 20; i < l; i++) {
+
+		var x1 = (Math.random() * width) - width/8;
+		var x2 = (Math.random() * width) + width/8;
+		var opacity = Math.random() * 15;
+
+		var color = tinycolor("#000000");
+
+		for (var i2 = 0, l2 = Math.random() * 20; i2 < l2; i2++) {
+			
+			var y = (Math.random() * height/2);
+			rgb = color.toRgb();
+			var c = [rgb.r,rgb.g,rgb.b];
+
+			c.push(opacity);
+			stroke(c);
+			bezier(x1, height, x1, y, x2, y, x2, height);
+		}
+
+
+	}
+
+
+}
+
+function draw_veg(){
+
+	var veg_colors = {};
+	veg_colors[0] = "#BBE00E";
+	veg_colors[1] = "#008E83";
+
+	for (var i2 = 0, l2 = Math.random() * 40 + 5; i2 < l2; i2++) {
+		var opacity2 = Math.random() * 100;
+		var x = Math.random() * width;
+		var d = Math.random() * 20;
+		var y = height - Math.random() * 60; //Math.random() * Math.random() * 175 + 25;
+
+		var col = Math.floor(Math.random() * 2);
+		noStroke();
+
+		var lighten = Math.random() * 20;
+		var darken = Math.random() * 30;
+		var desaturate = Math.random() * 50;
+		var saturate = Math.random() * 5;
+
+		var color2 = tinycolor(veg_colors[col]).darken(darken).lighten(lighten).desaturate(desaturate).saturate(saturate);
+		var rgb2 = color2.toRgb();
+		var c2 = [rgb2.r,rgb2.g,rgb2.b];
+		//fill(19, 67, 146, opacity);
+		//var c2 = veg_colors[col];
+		c2.push(opacity2 + 100);
+		fill(c2);
+		rect(x,y,d,d);
+		//ellipse(x, y ,d, d);
+
+		//var opacity = Math.random() * 10;
+		//fill(0,0,0,125);
+		//rect(bl+bw, height, 2, -bh);
+
+	}
+}
+
+
+function draw_ground(){
+
+	var veg_colors = {};
+	veg_colors[0] = "#A12012";
+	veg_colors[1] = "#DB642A";
+
+	for (var i2 = 0, l2 = Math.random() * 100 + 5; i2 < l2; i2++) {
+		var opacity2 = Math.random() * 100;
+		var x = Math.random() * width;
+		var d = Math.random() * 20;
+		var y = height - Math.random() * 10; //Math.random() * Math.random() * 175 + 25;
+
+		var col = Math.floor(Math.random() * 2);
+		noStroke();
+
+		var lighten = Math.random() * 20;
+		var darken = Math.random() * 30;
+		var desaturate = Math.random() * 50;
+		var saturate = Math.random() * 5;
+
+		var color2 = tinycolor(veg_colors[col]).darken(darken).lighten(lighten).desaturate(desaturate).saturate(saturate);
+		var rgb2 = color2.toRgb();
+		var c2 = [rgb2.r,rgb2.g,rgb2.b];
+		//fill(19, 67, 146, opacity);
+		//var c2 = veg_colors[col];
+		c2.push(opacity2 + 100);
+		fill(c2);
+		rect(x,y,d,d);
+		//ellipse(x, y ,d, d);
+
+		//var opacity = Math.random() * 10;
+		//fill(0,0,0,125);
+		//rect(bl+bw, height, 2, -bh);
+
+	}
+}
+
+function draw_sky(){
+
+	var veg_colors = {};
+	veg_colors[0] = "#024394";
+
+
+	for (var i2 = 0, l2 = Math.random() * 100 + 300; i2 < l2; i2++) {
+		var opacity2 = Math.random() * 100;
+		var h = Math.random() * 20;
+		var d = Math.random() * 20;
+		var y = Math.random() * height; //Math.random() * Math.random() * 175 + 25;
+
+		var col = Math.floor(Math.random() * 1);
+		noStroke();
+
+		var lighten = y/4 + 50;
+		var desaturate = Math.random() * 50 +20;
+		var saturate = Math.random() * 5;
+
+		var color2 = tinycolor(veg_colors[col]).lighten(lighten);
+		var rgb2 = color2.toRgb();
+		var c2 = [rgb2.r,rgb2.g,rgb2.b];
+		//fill(19, 67, 146, opacity);
+		//var c2 = veg_colors[col];
+		c2.push(opacity2 + y);
+		fill(c2);
+		rect(0,y,width,h);
+		//ellipse(x, y ,d, d);
+
+		//var opacity = Math.random() * 10;
+		//fill(0,0,0,125);
+		//rect(bl+bw, height, 2, -bh);
+
+	}
+}
+
+</script>
+</html>

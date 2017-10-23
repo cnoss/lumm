@@ -1,0 +1,31 @@
+Title: Flex-o-Struk
+
+----
+
+Subheadline: 2005, Universität Duisburg Essen / Klickmeister GmbH
+
+----
+
+Text: 
+
+In diesem vom BMWA geförderten Projekt entwickelt das Institut für Ergonomie und Designforschung(IED) zusammen mit dem Fraunhofer Institut, der RWTH Aachen und sieben Partnern aus der Industrie eine neuartige Fertigungszelle und Prozesskette zur schnellen und flexiblen Herstellung von Designstrukturen auf Werkzeugoberflächen. Das Entwicklungsergebnis wird der Branche Werkzeug- und Formenbau neue Fertigungsmöglichkeiten und eine Erweiterung ihres Produktspektrums eröffnen. Das IED erarbeitet im Rahmen dieses Projekts neue Oberflächendesignstrukturen, erstellt 3D-Texturen in 3D-CAD-Programmen und entwickelt mit den Partnern eine durchgängige Prozesskette von der Entwicklung neuer Strukturen bis hin zur Herstellung auf Werkzeugoberflächen
+
+----
+
+Tags: Web, 3D
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-04-16
+
+----
+
+Layout: article
+
+----
+
+Home: false

@@ -3,6 +3,8 @@
 	background-color: #fff;
 	margin-bottom: @custom-basefontsize /2;
 	padding: @custom-basefontsize;
+
+	line-height: 130%;
 	
 	.head{ margin-bottom: @custom-basefontsize /2; }
 	.body{ margin-bottom: @custom-basefontsize; }
@@ -29,6 +31,30 @@
 	
 	p a{
 		border-bottom: 1px solid @gray-light;
+	}
+
+}
+
+.blogentry--longtext{
+	padding: @custom-basefontsize * 2;
+	
+	p, li, td, th{
+		line-height: 140%;
+	}
+	
+	h2{
+		padding-top: @custom-basefontsize * 3;
+		padding-bottom: @custom-basefontsize;
+		font-weight: 500;
+	}
+	
+	h3{
+		padding-top: @custom-basefontsize * 1.5;
+		padding-bottom: @custom-basefontsize ;
+	}
+	
+	.foot{
+		margin-top: @custom-basefontsize *3;
 	}
 
 }

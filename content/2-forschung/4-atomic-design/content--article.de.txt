@@ -1,0 +1,42 @@
+Title: Atomic Design
+
+----
+
+Subheadline: Wie bekommen wir diesen Ansatz schlau in unsere Workflows und Systeme?
+
+----
+
+Text: 
+
+Mit der Methodologie Atomic Design (link: http://bit.ly/1NwIXRa text: Atomic Design) hat (link: http://bit.ly/1hvNu7L text: Brad Frost) zwar keine wirklich neue Herangehensweise an das Thema Webdesign/-development entwickelt, aber er hat den Grundgedanken der Modularität in ein sehr schönes und hilfreiches Bild überführt. Danke dafür.
+
+In den letzten Monaten bin ich diesem Grundgedanken in verschiedenen Projekten gefolgt, und bin immer wieder überrascht wir gut und sauber die daraus resultierenden Designimplementierungen sind. Ich habe den Ansatz bislang im CMS (link: http://bit.ly/1hvNFQu text: Kirby) und zum Einsatz in Web-Apps und Hybriden Apps in (link: http://bit.ly/1hvNKUh text: Ractive.js) implementiert und werde demnächst mehr von den Erfahrungen berichten. Aber es gibt noch eine Menge zu tun. Daraus bilden sich eine Reihe von sehr interessanten Fragestellungen für Abschlussarbeiten aller Art. Hier mal ein paar Beispiele:
+
+* (Wie) lassen sich die Atomic Design und der Responsive Design Workflow von (link: http://bit.ly/1hvNTHz text: Stephan Hay) verbinden? 
+* Wie lassen sich Atomic Design und Living Styleguide clever kombinieren?
+* Wie könnte Atomic Templates in anderen CMS und JS Frameworks funktionieren?
+* Wie lassen sich Dateistrukturen von Atomic Templates möglichst übersichtlich gestalten?
+* Lassen sich Atomic Design Templates, (link: http://bit.ly/1hvO2uD text: Content Inventories) und Living Styleguides verbinden?
+* Wie sieht eine sinnvolle Kombination von Atomic Design und verschiedenen modularen CSS Ansätzen aus?
+
+Wer also Lust hat hier mitzuwirken, möge mich ansprechen :)
+
+----
+
+Tags: Atomic Design,TH Köln,Medieninformatik,CSS,Design,Development
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2015-10-10
+
+----
+
+Layout: article article--focussed
+
+----
+
+Home: false
