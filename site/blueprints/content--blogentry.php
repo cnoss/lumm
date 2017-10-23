@@ -44,7 +44,9 @@ fields:
     width: 1/2
     options:
       blogentry: Standard
+      blogentry blogentry--longtext: Viel Text
       blogentry blogentry--focussed: Hervorgehoben
+      
   home:
     label: Sichtbar auf Startseite
     type: radio
