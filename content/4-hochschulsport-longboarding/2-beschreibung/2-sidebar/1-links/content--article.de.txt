@@ -24,6 +24,7 @@ Layout: article
 
 ----
 
+<<<<<<< HEAD
 Home: false
 
 ----
@@ -33,3 +34,5 @@ Subheadline:
 ----
 
 Tags: 
+=======
+Home: false

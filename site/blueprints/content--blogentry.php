@@ -46,7 +46,6 @@ fields:
       blogentry: Standard
       blogentry blogentry--longtext: Viel Text
       blogentry blogentry--focussed: Hervorgehoben
-      
   home:
     label: Sichtbar auf Startseite
     type: radio

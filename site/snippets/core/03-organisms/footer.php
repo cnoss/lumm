@@ -19,13 +19,13 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="copyright">
+
 				<p><?php echo $site->copyright() ?>
 				<a class="pull-right" href="http://christiannoss.de/de/sonstiges/impressum">Impressum</a>
 				</p>
 			</div>
 		</div>
 
-			 
 	</div>
 </footer>
 
