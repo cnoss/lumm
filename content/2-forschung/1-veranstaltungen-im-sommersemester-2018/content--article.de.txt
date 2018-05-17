@@ -1,0 +1,39 @@
+Title: Veranstaltungen Sommersemester 2018
+
+----
+
+Subheadline: 
+
+----
+
+Text: 
+
+<br>
+#### Bachelor: Grundlagen der visuellen Kommunikation … 
+… wird im Sommersemester nicht angeboten.  Mit der neuen Prüfungsordnung (BPO4) wandert das Modul ins dritte Fachsemester und heißt jetzt «Screendesig». Alle die nicht in der BPO3 sind und das Modul «Grundlagen der visuellen Kommunikation» bitte ich im nächsten Wintersemester 2018/19 das Modul «Screendesign» zu besuchen.
+<br>
+#### Bachelor: Praxisprojekt Seminar …
+… wird wie üblich jedes Semester angeboten.  Alle Informationen dazu finden sich in [Medieninformatik Wiki](https://www.medieninformatik.th-koeln.de/w/Praxisprojekt).
+<br>
+#### Master: Web-Technologien …
+… wird in diesem Semester von mir angeboten. Die erste Veranstaltung startet am 10. April um 13:00 Uhr.  Weitere Infos folgen.
+
+----
+
+Tags: 
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2018-03-28
+
+----
+
+Layout: article
+
+----
+
+Home: true
