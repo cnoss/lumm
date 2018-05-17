@@ -24,7 +24,7 @@
   "dependencies": {
     "underscore": "~1.5.1",
     "express": "~2.5.9",
-    "mustache": "~0.7.2",
+    "mustache": "~2.2.1",
     "socket.io": "~0.9.16"
   },
   "devDependencies": {
@@ -40,6 +40,6 @@
     "grunt": "~0.4.0",
     "node-sass": "~0.9.3"
   },
-  
+
   "license": "MIT"
 }
