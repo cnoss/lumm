@@ -78,14 +78,14 @@
 		toggleMedia();
 		return ss;
 	}
-  loadCSS('/assets/css/main-css.php');
+  loadCSS('/assets/css/main-css.min.css');
   loadCSS('http://fast.fonts.net/cssapi/623ba3ce-fb0b-4a1a-844a-15c8a59662f9.css');
   
   
 </script>
 <noscript>
 	<!-- Let's not assume anything -->
-	<link rel="stylesheet" href="/assets/css/main-css.php">
+	<link rel="stylesheet" href="/assets/css/main-css.min.css">
 </noscript>
 <script type="text/javascript">
 	// Picture element HTML5 shiv
