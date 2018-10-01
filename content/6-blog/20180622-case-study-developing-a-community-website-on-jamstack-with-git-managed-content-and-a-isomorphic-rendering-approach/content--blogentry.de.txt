@@ -1,0 +1,54 @@
+Title: Case Study: Developing a Community Website on JAMstack with GIT Managed Content and a Isomorphic Rendering Approach
+
+----
+
+Text: 
+
+"Static is the new dynamic", ist einer der Slogans, der in den letzten Monaten immer wieder vom JAMstack Lager in der Web-Developer Gemeinde widerhallt. Tatsächlich bietet JAMstack als Architekturansatz und die damit verbundenen Technologien und Konzepte einige wirklich interessante Möglichkeiten. Im Rahmen des Moduls "Web-Technologien" im Medieninformatik Master der TH Köln wurden verschiedene Ansätze am Beispiel eines Community Website Projekts implementiert und bewertet. Dabei wurde versucht folgende Ziele zu erreichen:
+- GIT Managed Content
+- Reusable, Structured Content
+- Meaningful URL for every Page (or Piece) of Content
+- Curlable & Crawlable URLs 
+- Isomorphic Rendering: HTML can be rendered on client- and serverside with the same engine
+- Thrifty Data Transfer
+- Good Perceived Performance
+- Minimal Hosting Complexity
+
+Der Beitrag erläutert, in wie weit die gesteckten Ziele erreicht werden konnten, welche Konzepte, Ansätze und Technologien im JAMstack Kosmos interessant sein könnten und welche Fallstricke das Architekturmodell bereit hält.
+
+<a href="http://www.christiannoss.de/talks/2018-jam-stack/#/" class="link--hero">Zum Slidedeck</a>
+
+## Links
+- [The Sweetness of JAMstack: JavaScript, APIs and Markup - The New Stack](https://thenewstack.io/the-sweetness-of-jamstack-javascript-apis-and-markup/)
+- [An Incremental Approach to Content Management Using Git](https://www.thoughtworks.com/insights/blog/incremental-approach-content-management-using-git)
+- [JAMstack vs Isomorphic Server Side Rendering](https://www.netlify.com/blog/2017/06/06/jamstack-vs-isomorphic-server-side-rendering/)
+- [Static Site Generatoren im Überblick](https://cmsstash.de/empfehlungen/static-site-generatoren)
+- [A JAMstack-ready CMS](https://www.contentful.com/r/knowledgebase/jamstack-cms/)
+
+----
+
+Tags: 
+
+----
+
+Autor: Christian
+
+----
+
+Date: 2018-06-22
+
+----
+
+Keywords: 
+
+----
+
+Desc: 
+
+----
+
+Layout: blogentry
+
+----
+
+Home: true

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<style>
+		
+		body{
+			background-color: #ededed;
+		}
+		
+		.teaser{
+			position: relative;
+			height:300px;
+			background-color: #fff;
+		}
+		
+		.holder{
+			margin: 0;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		
+		.of{
+			width:100%;
+			height:100%;
+			object-fit:cover;
+		}
+		
+		.teaserContent{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			padding: 20px;
+			color: #fff; 
+		}
+		
+		.grid { 
+			display: grid; 
+			grid-template-columns:1fr 1fr;
+			grid-column-gap: 10px; 
+		}
+	</style>
+</head>
+
+<body>
+
+<div class="grid">
+	<div class="teaser" >
+		<figure class="holder">
+			<picture>
+				<source media="(max-width: 800px)" srcset="image-dummy-small.jpg">
+				<source srcset="image-dummy-large.jpg">
+				<img class="of" src="image-dummy-small.jpg">
+			</picture>
+	  	
+	  	<figcaption class="teaserContent">
+	  		<h2>Super Headline</h2>
+	  		<p>Und ein toller Text</p>
+			</figcaption>
+		</figure>
+	</div>
+	
+	<div class="teaser" >
+		<figure class="holder">
+			<picture>
+				<source media="(max-width: 800px)" srcset="image-dummy-small.jpg">
+				<source srcset="image-dummy-large.jpg">
+				<img class="of" src="image-dummy-small.jpg">
+			</picture>
+	  	
+	  	<figcaption class="teaserContent">
+	  		<h2>Super Headline</h2>
+	  		<p>Und ein toller Text</p>
+			</figcaption>
+		</figure>
+	</div>
+</div>
+</body>
+</html>

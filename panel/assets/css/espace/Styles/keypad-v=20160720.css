@@ -1,0 +1,88 @@
+/*** PIN KEYPAD ***/
+.keypad-popup 
+{ 
+    width:310px;
+    margin:auto;
+    /*margin-top:10px;*/
+    /*background-color: #ddd;*/
+    padding:10px 0 10px 10px;
+} 
+
+.nickelKeypad .keypad-row 
+{
+    padding:0;
+    margin:0;
+}
+
+.nickelKeypad .keypad-key 
+{ 
+    background-color:#fff; 
+    border:2px solid #fff;
+    border-radius:4px;
+    box-shadow: 0px 0px 5px #a9a9a9;
+}
+.nickelKeypad .keypad-key:active {
+    box-shadow: none;
+    box-shadow: 0px 0px 0px 3px #FF5F00;
+}
+.nickelKeypad .keypad-key:hover, .nickelKeypad .keypad-special:hover {
+    cursor:pointer;
+}
+.nickelKeypad .keypad-back
+{
+    display:none;
+}
+
+.nickelKeypad .keypad-correct
+{
+    background-color: #ffed00;
+    background-image: url('Img/correct-btn.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #ffed00;
+    top:13px;
+}
+
+.nickelKeypad .keypad-close
+{
+    background-image: url('Img/validate-btn.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #94ba1e;
+    border:2px solid #94ba1e;
+    top:13px;
+}
+ 
+.nickelKeypad .keypad-special
+{
+    width: 55px; 
+    height: 55px;
+    border-radius:4px;
+    box-shadow: 0px 0px 5px #a9a9a9;
+    padding:0;
+}
+ 
+.nickelKeypad .keypad-special
+{
+    width: 55px; 
+    height: 55px;
+    border-radius:4px;
+    box-shadow: 0px 0px 5px #a9a9a9;
+    padding:0;
+}
+.nickelKeypad .keypad-special:active {
+    box-shadow: none;
+    box-shadow: 0px 0px 0px 3px #FF5F00;
+}
+
+.nickelKeypad .keypad-key-down 
+{
+    border-color:#FF5F00;
+} 
+.nickelKeypad .keypad-space 
+{ 
+    background-color:#fff; 
+    width: 52px; 
+    height: 8px; 
+}
+/*** FIN PIN KEYPAD ***/

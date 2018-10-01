@@ -1,0 +1,34 @@
+/* ----------------------------------------------------------------------------
+components.css                                                                  
+Enthält alle Regeln zu Komponenten.  
+
+Wer es noch schöner möchte, möge sich mal https://cssguidelin.es/ anschauen.
+----------------------------------------------------------------------------*/
+
+
+/* Site-Header
+----------------------------------------------------------------------------*/
+
+.site-header {
+    background-color: rgb(52, 79, 143);
+    text-align: center;
+}
+
+.site-header__logo {
+    width: 120px;
+}
+
+.navigation__item {
+    display: inline-block;
+    padding: 10px;
+    border-right: 1px solid white;
+}
+
+.navigation__item:last-child {
+    border: none;
+}
+
+.navigation__item a {
+    color: #fff;
+    text-decoration: none;
+}
