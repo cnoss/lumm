@@ -21,7 +21,7 @@
 			<div class="copyright">
 
 				<p><?php echo $site->copyright() ?>
-				<a class="pull-right" href="http://christiannoss.de/de/sonstiges/impressum">Impressum</a>
+				 // <a href="http://christiannoss.de/de/sonstiges/impressum">Impressum</a> // <a href="http://christiannoss.de/de/sonstiges/datenschutzerklaerung">Datenschutz</a>
 				</p>
 			</div>
 		</div>

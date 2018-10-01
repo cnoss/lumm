@@ -1,0 +1,88 @@
+Title: Datenschutzerklärung
+
+----
+
+Subheadline: 
+
+----
+
+Text: 
+
+## A. Name und Anschrift des verantwortlichen Betreibers
+Verantwortlicher im Sinne der EU-Datenschutzgrundverordnung (DS-GVO) und anderer nationaler Datenschutzgesetze sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
+
+Prof. Christian Noss
+TH Köln // Campus Gummersbach
+Steinmüllerallee 1
+51643 Gummersbach
++49 2261 819 664 12
+
+## B. Grundlegendes
+
+Diese Datenschutzerklärung soll die Nutzer dieser Website über die Art, den Umfang und den Zweck der Erhebung und Verwendung personenbezogener Daten durch den Websitebetreiber informieren.
+
+Der Websitebetreiber nimmt Ihren Datenschutz sehr ernst und behandelt Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Vorschriften. Da durch neue Technologien und die ständige Weiterentwicklung dieser Webseite Änderungen an dieser Datenschutzerklärung vorgenommen werden können, empfehlen wir Ihnen sich die Datenschutzerklärung in regelmäßigen Abständen wieder durchzulesen.
+
+Definitionen der verwendeten Begriffe (z.B. “personenbezogene Daten” oder “Verarbeitung”) finden Sie in Art. 4 DSGVO.
+
+## C. Zugriffsdaten
+
+Wir, der Websitebetreiber bzw. Seitenprovider, erheben aufgrund unseres berechtigten Interesses (s. Art. 6 Abs. 1 lit. f. DSGVO) Daten über Zugriffe auf die Website und speichern diese als „Server-Logfiles“ auf dem Server der Website ab. Folgende Daten werden so protokolliert:
+
+•	Besuchte Website
+•	Uhrzeit zum Zeitpunkt des Zugriffes
+•	Menge der gesendeten Daten in Byte
+•	Quelle/Verweis, von welchem Sie auf die Seite gelangten
+•	Verwendeter Browser
+•	Verwendetes Betriebssystem
+•	Verwendete IP-Adresse
+
+Die Server-Logfiles werden für maximal 3 Monate gespeichert und anschließend gelöscht. Die Speicherung der Daten erfolgt aus Sicherheitsgründen, um z. B. Missbrauchsfälle aufklären zu können. Müssen Daten aus Beweisgründen aufgehoben werden, sind sie solange von der Löschung ausgenommen bis der Vorfall endgültig geklärt ist.
+
+## D. Verwendung von Cookies
+
+Diese Webseite verwendet Cookies. Bei Cookies handelt es sich um Textdateien, die im Internetbrowser bzw. vom Internetbrowser auf dem Computersystem der Nutzenden gespeichert werden. Rufen Nutzende eine Webseite auf, so kann ein Cookie auf dem Betriebssystem der Nutzenden gespeichert werden. Dieser Cookie enthält eine charakteristische Zeichenfolge, die eine eindeutige Identifizierung des Browsers beim erneuten Aufrufen der Webseite ermöglicht.
+
+Die Website verwendet Session-Cookies, um die Funktionsfähigkeit der Webseite zu gewährleisten, für die Dauer der Sitzung. Die Cookies ermöglichen die Wiedererkennung des Internetbrowsers.
+
+In diesen Zwecken liegt auch unser berechtigtes Interesse in der Verarbeitung der Daten nach Art. 6 Abs. 1 lit. f DS-GVO.
+
+## E. Nutzung des externen Dienstes Instagram
+
+Diese Website nutzt den externen Dienst Instagram, angeboten durch die Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA integriert. Wenn Sie in Ihrem Instagram-Account eingeloggt sind können Sie durch Anklicken des Instagram-Buttons die Inhalte unserer Seiten mit Ihrem Instagram-Profil verlinken. Dadurch kann Instagram den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Instagram erhalten.
+
+Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Instagram: http://instagram.com/about/legal/privacy/
+
+## F. Rechte des Nutzers
+
+Sie haben als Nutzer das Recht, auf Antrag eine kostenlose Auskunft darüber zu erhalten, welche personenbezogenen Daten über Sie gespeichert wurden. Sie haben außerdem das Recht auf Berichtigung falscher Daten und auf die Verarbeitungseinschränkung oder Löschung Ihrer personenbezogenen Daten. Falls zutreffend, können Sie auch Ihr Recht auf Datenportabilität geltend machen. Sollten Sie annehmen, dass Ihre Daten unrechtmäßig verarbeitet wurden, können Sie eine Beschwerde bei der zuständigen Aufsichtsbehörde einreichen.
+
+## G. Löschung von Daten
+
+Sofern Ihr Wunsch nicht mit einer gesetzlichen Pflicht zur Aufbewahrung von Daten (z. B. Vorratsdatenspeicherung) kollidiert, haben Sie ein Anrecht auf Löschung Ihrer Daten. Von uns gespeicherte Daten werden, sollten sie für ihre Zweckbestimmung nicht mehr vonnöten sein und es keine gesetzlichen Aufbewahrungsfristen geben, gelöscht. Falls eine Löschung nicht durchgeführt werden kann, da die Daten für zulässige gesetzliche Zwecke erforderlich sind, erfolgt eine Einschränkung der Datenverarbeitung. In diesem Fall werden die Daten gesperrt und nicht für andere Zwecke verarbeitet.
+
+## H. Widerspruchsrecht
+
+Nutzer dieser Webseite können von ihrem Widerspruchsrecht Gebrauch machen und der Verarbeitung ihrer personenbezogenen Daten zu jeder Zeit widersprechen. 
+
+Wenn Sie eine Berichtigung, Sperrung, Löschung oder Auskunft über die zu Ihrer Person gespeicherten personenbezogenen Daten wünschen oder Fragen bzgl. der Erhebung, Verarbeitung oder Verwendung Ihrer personenbezogenen Daten haben oder erteilte Einwilligungen widerrufen möchten, wenden Sie sich bitte an den Betreiber.
+
+----
+
+Tags: 
+
+----
+
+Autor: 
+
+----
+
+Date: 
+
+----
+
+Layout: article
+
+----
+
+Home: false
