@@ -2,7 +2,7 @@ Title: Die neuesten Blogeinträge
 
 ----
 
-Anzahl: 3
+Anzahl: 8
 
 ----
 
@@ -23,3 +23,7 @@ Layout: part-of-content
 ----
 
 Ruler: ruler
+
+----
+
+Filter: 

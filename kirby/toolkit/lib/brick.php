@@ -2,7 +2,7 @@
 
 class Brick {
 
-  static public $bricks = array();
+  public static $bricks = array();
 
   public $tag    = null;
   public $attr   = array();
@@ -184,14 +184,18 @@ class Brick {
   }
 
   public function __toString() {
-    return $this->toString();
+    try {
+      return $this->toString();      
+    } catch(Exception $e) {
+      return 'Error: ' . $e->getMessage();
+    }
   }
 
-  static public function make($id, $callback) {
+  public static function make($id, $callback) {
     static::$bricks[$id] = $callback;
   }
 
-  static public function get($id) {
+  public static function get($id) {
     if(!isset(static::$bricks[$id])) return false;
     $args = array_slice(func_get_args(), 1);
     return call_user_func_array(static::$bricks[$id], $args);

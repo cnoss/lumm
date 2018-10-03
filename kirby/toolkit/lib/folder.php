@@ -21,7 +21,7 @@ class Folder {
    * Constructor
    */
   public function __construct($root) {
-    if(file_exists($root) and is_file($root)) throw new Exception('Invalid folder: ' . $root);
+    if(file_exists($root) && is_file($root)) throw new Exception('Invalid folder: ' . $root);
     $this->root = $root;
   }
 
@@ -148,7 +148,7 @@ class Folder {
    * 
    * @param array $ignore
    * @param boolean $plain
-   * @return Collection
+   * @return mixed When $plain is true an array will be returned. Otherwise a Collection
    */
   public function files($ignore = null, $plain = false) {
 
@@ -183,7 +183,7 @@ class Folder {
    * 
    * @param array $ignore
    * @param boolean $plain
-   * @return Collection
+   * @return mixed If $plain is true an array will be returned. Otherwise a Collection
    */
   public function children($ignore = null, $plain = false) {
 
@@ -346,19 +346,25 @@ class Folder {
    * 
    * @return  int  
    */  
-  public function modified($format = null) {
+  public function modified($format = null, $handler = 'date') {
 
     $modified = filemtime($this->root); 
     $items    = $this->scan(array('.', '..'));
 
     foreach($items AS $item) {      
-      if(!is_dir($this->root . DS . $item)) continue;
-      $object      = new static($this->root . DS . $item);
-      $newModified = $object->modified();
-      $modified    = ($newModified > $modified) ? $newModified : $modified;
+
+      if(is_file($this->root . DS . $item)) {
+        $newModified = filemtime($this->root . DS . $item);
+      } else {      
+        $object      = new static($this->root . DS . $item);
+        $newModified = $object->modified();
+      }
+      
+      $modified = ($newModified > $modified) ? $newModified : $modified;
+
     }
     
-    return !is_null($format) ? date($format, $modified) : $modified;
+    return !is_null($format) ? $handler($format, $modified) : $modified;
 
   }
 

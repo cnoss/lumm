@@ -14,10 +14,10 @@
  */
 class Database {
 
-  static public $connectors = array();
+  public static $connectors = array();
 
   // a global array of started connections
-  static public $connections = array();
+  public static $connections = array();
 
   // the established connection
   protected $connection;
@@ -28,11 +28,18 @@ class Database {
   // the database type (mysql, sqlite)
   protected $type;
 
+  // the connection id
+  protected $id;
+
   // the optional prefix for table names
   protected $prefix;
 
   // the PDO query statement
   protected $statement;
+
+  // whitelists for tables and their columns
+  protected $tableWhitelist;
+  protected $columnWhitelist = array();
 
   // the number of affected rows for the last query
   protected $affected;
@@ -68,7 +75,7 @@ class Database {
    * @param string $id
    * @return object
    */
-  static public function instance($id = null) {
+  public static function instance($id = null) {
     return (is_null($id)) ? a::last(static::$connections) : a::get(static::$connections, $id);
   }
 
@@ -77,7 +84,7 @@ class Database {
    *
    * @return array
    */
-  static public function instances() {
+  public static function instances() {
     return static::$connections;
   }
 
@@ -90,6 +97,7 @@ class Database {
   public function connect($params = null) {
 
     $defaults = array(
+      'database' => null,
       'type'     => 'mysql',
       'prefix'   => null,
       'user'     => null,
@@ -99,10 +107,11 @@ class Database {
 
     $options = array_merge($defaults, $params);
 
-    // store the type and prefix
-    $this->type   = $options['type'];
-    $this->prefix = $options['prefix'];
-    $this->id     = $options['id'];
+    // store the database information
+    $this->database = $options['database'];
+    $this->type     = $options['type'];
+    $this->prefix   = $options['prefix'];
+    $this->id       = $options['id'];
 
     if(!isset(static::$connectors[$this->type])) {
       throw new Exception('Invalid database connector: ' . $this->type);
@@ -114,6 +123,7 @@ class Database {
     // try to connect
     $this->connection = new PDO($this->dsn, $options['user'], $options['password']);
     $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $this->connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
     // store the connection
     static::$connections[$this->id] = $this;
@@ -162,6 +172,7 @@ class Database {
 
   /**
    * Escapes a value to be used for a safe query
+   * NOTE: Prepared statements using bound parameters are more secure and solid
    *
    * @param string $value
    * @return string
@@ -312,7 +323,7 @@ class Database {
     }
 
     // fetch that stuff
-    $results = $this->statement->$options['method']();
+    $results = $this->statement->{$options['method']}();
 
     if($options['iterator'] == 'array') return $this->lastResult = $results;
     return $this->lastResult = new $options['iterator']($results);
@@ -341,6 +352,58 @@ class Database {
   }
 
   /**
+   * Checks if a table exists in the current database
+   *
+   * @param string $table
+   * @return boolean
+   */
+  public function validateTable($table) {
+    if(!$this->tableWhitelist) {
+      // Get the table whitelist from the database
+      $sql     = new SQL($this);
+      $query   = $sql->tableList($this->database);
+      $results = $this->query($query, $sql->bindings($query));
+      
+      if($results) {
+        $this->tableWhitelist = $results->pluck('name');
+      } else {
+        return false;
+      }
+    }
+    
+    return in_array($table, $this->tableWhitelist);
+  }
+  
+  /**
+   * Checks if a column exists in a specified table
+   *
+   * @param string $table
+   * @param string $column
+   * @return boolean
+   */
+  public function validateColumn($table, $column) {
+    if(!isset($this->columnWhitelist[$table])) {
+      if(!$this->validateTable($table)) {
+        $this->columnWhitelist[$table] = array();
+        return false;
+      }
+      
+      // Get the column whitelist from the database
+      $sql     = new SQL($this);
+      $query   = $sql->columnList($this->database, $table);
+      $results = $this->query($query, $sql->bindings($query));
+      
+      if($results) {
+        $this->columnWhitelist[$table] = $results->pluck('name');
+      } else {
+        return false;
+      }
+    }
+    
+    return in_array($column, $this->columnWhitelist[$table]);
+  }
+
+  /**
    * Creates a new table
    *
    * @param string $table
@@ -353,7 +416,9 @@ class Database {
     $queries = str::split($query, ';');
 
     foreach($queries as $query) {
-      if(!$this->execute($query)) return false;
+      $query = trim($query);
+      
+      if(!$this->execute($query, $sql->bindings($query))) return false;
     }
 
     return true;
@@ -366,9 +431,10 @@ class Database {
    * @param string $table
    * @return boolean
    */
-  static public function dropTable($table) {
-    $sql = new SQL($this);
-    return $this->execute($sql->dropTable());
+  public function dropTable($table) {
+    $sql   = new SQL($this);
+    $query = $sql->dropTable($table);
+    return $this->execute($query, $sql->bindings($query));
   }
 
   /**
@@ -387,9 +453,37 @@ class Database {
  * MySQL database connector
  */
 database::$connectors['mysql'] = function($params) {
-  if(!isset($params['host']))     throw new Error('The mysql connection requires a "host" parameter');
-  if(!isset($params['database'])) throw new Error('The mysql connection requires a "database" parameter');
-  return 'mysql:host=' . $params['host'] . ';dbname=' . $params['database'] . ';charset=' . a::get($params, 'charset', 'utf8');
+
+  if(!isset($params['host']) && !isset($params['socket'])) {
+    throw new Error('The mysql connection requires either a "host" or a "socket" parameter');
+  } 
+  
+  if(!isset($params['database'])) {
+    throw new Error('The mysql connection requires a "database" parameter');
+  }
+
+  $parts = array();
+
+  if(!empty($params['host'])) {
+    $parts[] = 'host=' . $params['host'];
+  }
+
+  if(!empty($params['port'])) {
+    $parts[] = 'port=' . $params['port'];
+  }
+
+  if(!empty($params['socket'])) {
+    $parts[] = 'unix_socket=' . $params['socket'];
+  }
+
+  if(!empty($params['database'])) {
+    $parts[] = 'dbname=' . $params['database'];
+  }
+
+  $parts[] = 'charset=' . a::get($params, 'charset', 'utf8');
+
+  return 'mysql:' . implode(';', $parts);
+
 };
 
 

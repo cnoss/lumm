@@ -26,14 +26,20 @@ abstract class FieldAbstract {
   public function page() {
     return $this->page;
   }
+  public function exists() {
+    return $this->page->content()->has($this->key);
+  }
   public function key() {
     return $this->key;
   }
   public function value() {
     return $this->value;
   }
+  public function isTranslated($lang = null) {
+    return true;
+  }
   public function __toString() {
-    return $this->value;
+    return (string)$this->value;
   }
   public function toString() {
     return $this->value;

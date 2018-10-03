@@ -65,7 +65,11 @@ class Dimensions {
    * @return float
    */
   public function ratio() {
-    return ($this->width / $this->height);
+    if($this->width && $this->height) {
+      return ($this->width / $this->height);      
+    } else {
+      return 0;
+    }
   }
 
   /**
@@ -91,7 +95,7 @@ class Dimensions {
    */
   public function fit($box, $force = false) {
 
-    if($this->width == 0 or $this->height == 0) {
+    if($this->width == 0 || $this->height == 0) {
       $this->width  = $box;
       $this->height = $box;
       return $this;
@@ -100,10 +104,10 @@ class Dimensions {
     $ratio = $this->ratio();
 
     if($this->width > $this->height) {
-      if($this->width > $box || $force == true) $this->width = $box;
+      if($this->width > $box || $force === true) $this->width = $box;
       $this->height = round($this->width / $ratio);
     } elseif($this->height > $this->width) {
-      if($this->height > $box || $force == true) $this->height = $box;
+      if($this->height > $box || $force === true) $this->height = $box;
       $this->width = round($this->height * $ratio);
     } elseif($this->width > $box) {
       $this->width  = $box;
@@ -131,7 +135,7 @@ class Dimensions {
    *
    * </code>
    *
-   * @param int $width the max width
+   * @param int $fit the max width
    * @param boolean $force If true, the dimensions will be upscaled to fit the width if smaller
    * @return object returns this object with recalculated dimensions
    */
@@ -139,7 +143,7 @@ class Dimensions {
 
     if(!$fit) return $this;
 
-    if($this->width <= $fit and !$force) return $this;
+    if($this->width <= $fit && !$force) return $this;
 
     $ratio = $this->ratio();
 
@@ -167,7 +171,7 @@ class Dimensions {
    *
    * </code>
    *
-   * @param int $height the max height
+   * @param int $fit the max height
    * @param boolean $force If true, the dimensions will be upscaled to fit the height if smaller
    * @return object returns this object with recalculated dimensions
    */
@@ -175,7 +179,7 @@ class Dimensions {
 
     if(!$fit) return $this;
 
-    if($this->height <= $fit and !$force) return $this;
+    if($this->height <= $fit && !$force) return $this;
 
     $ratio = $this->ratio();
 
@@ -216,11 +220,43 @@ class Dimensions {
   }
 
   /**
+   * @param int $width
+   * @param int $height
+   * @param boolean $force
+   * @return Dimensions
+   */
+  public function resize($width, $height, $force = false) {
+    $this->fitWidthAndHeight($width, $height, $force);
+    return $this;
+  }
+
+  /**
+   * Crops the dimensions by width and height
+   * 
+   * @param int $width
+   * @param int $height
+   * @return object
+   */
+  public function crop($width, $height = null) {
+
+    $this->width  = $width;
+    $this->height = $width;
+
+    if($height) {
+      $this->height = $height;
+    }
+
+    return $this;
+
+  }
+
+  /**
    * Returns a string representation of the orientation
    *
    * @return string
    */
   public function orientation() {
+    if(!$this->ratio())    return false;
     if($this->portrait())  return 'portrait';
     if($this->landscape()) return 'landscape';
     if($this->square())    return 'square';
@@ -254,12 +290,27 @@ class Dimensions {
   }
 
   /**
-   * Echos the dimensions as width x height
+   * Converts the dimensions object 
+   * to a plain PHP array
+   * 
+   * @return array
+   */
+  public function toArray() {
+    return array(
+      'width'       => $this->width(),
+      'height'      => $this->height(),
+      'ratio'       => $this->ratio(),
+      'orientation' => $this->orientation(),
+    );
+  }
+
+  /**
+   * Echos the dimensions as width × height
    *
    * @return string
    */
   public function __toString() {
-    return $this->width . ' x ' . $this->height;
+    return $this->width . ' × ' . $this->height;
   }
 
 }

@@ -14,24 +14,26 @@ class Thumb extends Obj {
   const ERROR_INVALID_IMAGE  = 0;
   const ERROR_INVALID_DRIVER = 1;
 
-  static public $drivers = array();
+  public static $drivers = array();
 
-  static public $defaults = array(
-    'filename'   => '{safeName}-{hash}.{extension}',
-    'url'        => '/thumbs',
-    'root'       => '/thumbs',
-    'driver'     => 'im',
-    'memory'     => '128M',
-    'quality'    => 100,
-    'blur'       => false,
-    'blurpx'     => 10,
-    'width'      => null,
-    'height'     => null,
-    'upscale'    => false,
-    'crop'       => false,
-    'grayscale'  => false,
-    'overwrite'  => false,
-    'autoOrient' => false,
+  public static $defaults = array(
+    'destination' => false,
+    'filename'    => '{safeName}-{hash}.{extension}',
+    'url'         => '/thumbs',
+    'root'        => '/thumbs',
+    'driver'      => 'im',
+    'memory'      => '128M',
+    'quality'     => 90,
+    'blur'        => false,
+    'blurpx'      => 10,
+    'width'       => null,
+    'height'      => null,
+    'upscale'     => false,
+    'crop'        => false,
+    'grayscale'   => false,
+    'overwrite'   => false,
+    'autoOrient'  => false,
+    'interlace'   => false
   );
 
   public $source      = null;
@@ -48,23 +50,9 @@ class Thumb extends Obj {
    */
   public function __construct($source, $params = array()) {
 
-    $this->source  = $this->result = is_a($source, 'Media') ? $source : new Media($source);
-    $this->options = array_merge(static::$defaults, $this->params($params));
-
-    $this->destination = new Obj();
-    $this->destination->filename = str::template($this->options['filename'], array(
-      'extension'    => $this->source->extension(),
-      'name'         => $this->source->name(),
-      'filename'     => $this->source->filename(),
-      'safeName'     => f::safeName($this->source->name()),
-      'safeFilename' => f::safeName($this->source->name()) . '.' . $this->extension(),
-      'width'        => $this->options['width'],
-      'height'       => $this->options['height'],
-      'hash'         => md5($this->source->root() . $this->settingsIdentifier()),
-    ));
-
-    $this->destination->url  = $this->options['url'] . '/' . $this->destination->filename;
-    $this->destination->root = $this->options['root'] . DS . $this->destination->filename;
+    $this->source      = $this->result = is_a($source, 'Media') ? $source : new Media($source);
+    $this->options     = array_merge(static::$defaults, $this->params($params));
+    $this->destination = $this->destination();
 
     // don't create the thumbnail if it's not necessary
     if($this->isObsolete()) return;
@@ -72,8 +60,11 @@ class Thumb extends Obj {
     // don't create the thumbnail if it exists
     if(!$this->isThere()) {
 
+      // try to create the thumb folder if it is not there yet
+      dir::make(dirname($this->destination->root));
+
       // check for a valid image
-      if(!$this->source->exists() or $this->source->type() != 'image') {
+      if(!$this->source->exists() || $this->source->type() != 'image') {
         throw new Error('The given image is invalid', static::ERROR_INVALID_IMAGE);
       }
 
@@ -92,6 +83,40 @@ class Thumb extends Obj {
 
     // create the result object
     $this->result = new Media($this->destination->root, $this->destination->url);
+
+  }
+
+  /**
+   * Build the destination object
+   * 
+   * @return Obj
+   */
+  public function destination() {
+
+    if(is_callable($this->options['destination'])) {
+      return call($this->options['destination'], $this);
+    } else {
+
+      $destination = new Obj();      
+      $safeName    = f::safeName($this->source->name());
+
+      $destination->filename = str::template($this->options['filename'], array(
+        'extension'    => $this->source->extension(),
+        'name'         => $this->source->name(),
+        'filename'     => $this->source->filename(),
+        'safeName'     => $safeName,
+        'safeFilename' => $safeName . '.' . $this->extension(),
+        'width'        => $this->options['width'],
+        'height'       => $this->options['height'],
+        'hash'         => md5($this->source->root() . $this->settingsIdentifier()),
+      ));
+
+      $destination->url  = $this->options['url'] . '/' . $destination->filename;
+      $destination->root = $this->options['root'] . DS . $destination->filename;
+
+      return $destination;
+
+    }
 
   }
 
@@ -164,7 +189,7 @@ class Thumb extends Obj {
 
     // if the thumb already exists and the source hasn't been updated
     // we don't need to generate a new thumbnail
-    if(file_exists($this->destination->root) and f::modified($this->destination->root) >= $this->source->modified()) return true;
+    if(file_exists($this->destination->root) && f::modified($this->destination->root) >= $this->source->modified()) return true;
 
     return false;
 
@@ -181,10 +206,10 @@ class Thumb extends Obj {
     if($this->options['overwrite'] === true) return false;
 
     // try to use the original if resizing is not necessary
-    if($this->options['width']   >= $this->source->width()  and
-       $this->options['height']  >= $this->source->height() and
-       $this->options['crop']    == false                   and
-       $this->options['blur']    == false                   and
+    if($this->options['width']   >= $this->source->width()  &&
+       $this->options['height']  >= $this->source->height() &&
+       $this->options['crop']    == false                   &&
+       $this->options['blur']    == false                   &&
        $this->options['upscale'] == false) return true;
 
     return false;
@@ -227,7 +252,7 @@ class Thumb extends Obj {
     if(!$this->result->url()) return false;
 
     return html::img($this->result->url(), array_merge(array(
-      'alt'    => isset($this->options['alt'])   ? $this->options['alt']   : $this->result->name(),
+      'alt'    => isset($this->options['alt'])   ? $this->options['alt']   : ' ',
       'class'  => isset($this->options['class']) ? $this->options['class'] : null,
     ), $attr));
 
@@ -255,6 +280,14 @@ thumb::$drivers['im'] = function($thumb) {
   $command[] = '"' . $thumb->source->root() . '"';
   $command[] = '-strip';
 
+  if($thumb->options['interlace']) {
+    $command[] = '-interlace line';
+  }
+
+  if($thumb->source->extension() === 'gif') {
+    $command[] = '-coalesce';
+  }
+
   if($thumb->options['grayscale']) {
     $command[] = '-colorspace gray';
   }
@@ -280,6 +313,7 @@ thumb::$drivers['im'] = function($thumb) {
     $command[] = '-blur 0x' . $thumb->options['blurpx'];
   }
 
+  $command[] = '-limit thread 1';
   $command[] = '"' . $thumb->destination->root . '"';
 
   exec(implode(' ', $command));

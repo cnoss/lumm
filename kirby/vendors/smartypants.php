@@ -15,9 +15,6 @@
 define( 'SMARTYPANTS_VERSION',  "1.5.1f" ); # Sun 23 Jan 2013
 define( 'SMARTYPANTSTYPOGRAPHER_VERSION',  "1.0.1" ); # Sun 23 Jan 2013
 
-
-
-
 #
 # Default configuration:
 #
@@ -26,10 +23,10 @@ define( 'SMARTYPANTSTYPOGRAPHER_VERSION',  "1.0.1" ); # Sun 23 Jan 2013
 #  3  ->  "--" for em-dashes; "---" for en-dashes  
 #  See docs for more configuration options.
 #
-define( 'SMARTYPANTS_ATTR',    c::get('smartypants.attr', 1) );
+define( 'SMARTYPANTS_ATTR', c::get('smartypants.attr', 1) );
 
 # Openning and closing smart double-quotes.
-define( 'SMARTYPANTS_SMART_DOUBLEQUOTE_OPEN',  c::get('smartypants.doublequote.open', '&#8220;') );
+define( 'SMARTYPANTS_SMART_DOUBLEQUOTE_OPEN', c::get('smartypants.doublequote.open', '&#8220;') );
 define( 'SMARTYPANTS_SMART_DOUBLEQUOTE_CLOSE', c::get('smartypants.doublequote.close', '&#8221;') );
 
 # Space around em-dashes.  "He_—_or she_—_should change that."
@@ -60,59 +57,6 @@ define( 'SMARTYPANTS_SPACE_UNIT', c::get('smartypants.space.unit', '&#160;') );
 define( 'SMARTYPANTS_TAGS_TO_SKIP', c::get('smartypants.skip', 'pre|code|kbd|script|style|math') );
 
 
-
-
-
-### Standard Function Interface ###
-
-define( 'SMARTYPANTS_PARSER_CLASS', 'SmartyPantsTypographer_Parser' );
-
-function SmartyPants($text, $attr = SMARTYPANTS_ATTR) {
-#
-# Initialize the parser and return the result of its transform method.
-#
-	# Setup static parser array.
-	static $parser = array();
-	if (!isset($parser[$attr])) {
-		$parser_class = SMARTYPANTS_PARSER_CLASS;
-		$parser[$attr] = new $parser_class($attr);
-	}
-
-	# Transform text using parser.
-	return $parser[$attr]->transform($text);
-}
-
-function SmartQuotes($text, $attr = 1) {
-	switch ($attr) {
-		case 0:  return $text;
-		case 2:  $attr = 'qb'; break;
-		default: $attr = 'q'; break;
-	}
-	return SmartyPants($text, $attr);
-}
-
-function SmartDashes($text, $attr = 1) {
-	switch ($attr) {
-		case 0:  return $text;
-		case 2:  $attr = 'D'; break;
-		case 3:  $attr = 'i'; break;
-		default: $attr = 'd'; break;
-	}
-	return SmartyPants($text, $attr);
-}
-
-function SmartEllipsis($text, $attr = 1) {
-	switch ($attr) {
-		case 0:  return $text;
-		default: $attr = 'e'; break;
-	}
-	return SmartyPants($text, $attr);
-}
-
-
-
-
-
 #
 # SmartyPants Parser Class
 #
@@ -128,7 +72,7 @@ class SmartyPants_Parser {
 	var $do_stupefy   = 0;
 	var $convert_quot = 0; # should we translate &quot; entities into normal quotes?
 
-	function SmartyPants_Parser($attr = SMARTYPANTS_ATTR) {
+	function __construct($attr = SMARTYPANTS_ATTR) {
 	#
 	# Initialize a SmartyPants_Parser with certain attributes.
 	#
@@ -598,7 +542,7 @@ class SmartyPantsTypographer_Parser extends SmartyPants_Parser {
 
 	
 
-	function SmartyPantsTypographer_Parser($attr = SMARTYPANTS_ATTR) {
+	function __construct($attr = SMARTYPANTS_ATTR) {
 	#
 	# Initialize a SmartyPantsTypographer_Parser with certain attributes.
 	#
@@ -634,8 +578,8 @@ class SmartyPantsTypographer_Parser extends SmartyPants_Parser {
 	#    sign to completly remove any space present)
 	#
 		# Initialize inherited SmartyPants parser.
-		parent::SmartyPants_Parser($attr);
 				
+		parent::__construct($attr);
 		if ($attr == "1" || $attr == "2" || $attr == "3") {
 			# Do everything, turn all options on.
 			$this->do_comma_quotes      = 1;

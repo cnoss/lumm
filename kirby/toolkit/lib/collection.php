@@ -1,7 +1,5 @@
 <?php
 
-if(!defined('SORT_NATURAL')) define('SORT_NATURAL', 'natural');
-
 /**
  * Collection
  *
@@ -11,10 +9,9 @@ if(!defined('SORT_NATURAL')) define('SORT_NATURAL', 'natural');
  * @copyright Bastian Allgeier
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  */
-class Collection extends I {
+class Collection extends I implements Countable {
 
-  static public $filters = array();
-
+  public static $filters = array();
 
   protected $pagination;
 
@@ -26,9 +23,21 @@ class Collection extends I {
    * @return Collection
    */
   public function slice($offset = null, $limit = null) {
-    if($offset === null and $limit === null) return $this;
+    if($offset === null && $limit === null) return $this;
     $collection = clone $this;
     $collection->data = array_slice($collection->data, $offset, $limit);
+    return $collection;
+  }
+
+  /**
+   * Returns a new combined collection
+   *
+   * @return Collection
+   */
+
+  public function merge($collection2) {
+    $collection = clone $this;
+    $collection->data = a::merge($collection->data, $collection2->data);
     return $collection;
   }
 
@@ -80,6 +89,16 @@ class Collection extends I {
   public function first() {
     $array = $this->data;
     return array_shift($array);
+  }
+
+  /**
+   * Checks if an element is in the collection by key. 
+   * 
+   * @param string $key
+   * @return boolean
+   */
+  public function has($key) {
+    return isset($this->data[$key]);
   }
 
   /**
@@ -175,10 +194,15 @@ class Collection extends I {
    * @return object a new shuffled collection
    */
   public function shuffle() {
-    $collection = clone $this;
-    $keys = array_keys($collection->data);
+    $keys = array_keys($this->data);
     shuffle($keys);
-    $collection->data = array_merge(array_flip($keys), $collection->data);
+    
+    $collection = clone $this;
+    $collection->data = array();
+    foreach($keys as $key) {
+      $collection->data[$key] = $this->data[$key];
+    }
+    
     return $collection;
   }
 
@@ -250,10 +274,14 @@ class Collection extends I {
     $split      = @$args[2];
     $collection = clone $this;
 
-    if(is_string($value) and array_key_exists($value, static::$filters)) {
+    if(is_string($value) && array_key_exists($value, static::$filters)) {
       $operator = $value;
       $value    = @$args[2];
       $split    = @$args[3];
+    }
+
+    if(is_object($value)) {
+      $value = (string)$value;
     }
 
     if(array_key_exists($operator, static::$filters)) {
@@ -280,7 +308,7 @@ class Collection extends I {
    * @return mixed
    */
   static public function extractValue($item, $field) {
-    if(is_array($item) and isset($item[$field])) {
+    if(is_array($item) && isset($item[$field])) {
       return $item[$field];
     } else if(is_object($item)) {
       return $item->$field();
@@ -312,7 +340,7 @@ class Collection extends I {
         } else {
           ${"param_$i"} = array();
           foreach($array as $index => $row) {
-            ${"param_$i"}[$index] = is_array($row) ? str::lower($row[$param]) : str::lower($row->$param());
+            ${"param_$i"}[$index] = str::ascii(is_array($row) ? str::lower($row[$param]) : str::lower($row->$param()));
           }
         }
       } else {
@@ -404,28 +432,35 @@ class Collection extends I {
   }
 
   /**
-   * Groups the collection by a given field
+   * Groups the collection by a given callback
    *
-   * @param string $field
+   * @param callable $callback
    * @return object A new collection with an item for each group and a subcollection in each group
    */
-  public function groupBy($field, $i = true) {
+  public function group($callback) {
+
+    if (!is_callable($callback)) throw new Exception($callback . ' is not callable. Did you mean to use groupBy()?');
 
     $groups = array();
 
     foreach($this->data as $key => $item) {
 
       // get the value to group by
-      $value = $this->extractValue($item, $field);
+      $value = call_user_func($callback, $item);
 
       // make sure that there's always a proper value to group by
       if(!$value) throw new Exception('Invalid grouping value for key: ' . $key);
 
       // make sure we have a proper key for each group
-      if(is_object($value) or is_array($value)) throw new Exception('You cannot group by arrays or objects');
-
-      // ignore upper/lowercase for group names
-      if($i) $value = str::lower($value);
+      if(is_array($value)) {
+        throw new Exception('You cannot group by arrays or objects');
+      } else if(is_object($value)) {
+        if(!method_exists($value, '__toString')) {
+          throw new Exception('You cannot group by arrays or objects');
+        } else {
+          $value = (string)$value;
+        }
+      }
 
       if(!isset($groups[$value])) {
         // create a new entry for the group if it does not exist yet
@@ -437,7 +472,56 @@ class Collection extends I {
 
     }
 
-    return new static($groups);
+    return new Collection($groups);
+
+  }
+
+  /**
+   * Groups the collection by a given field
+   *
+   * @param string $field
+   * @return object A new collection with an item for each group and a subcollection in each group
+   */
+  public function groupBy($field, $i = true) {
+
+    if (!is_string($field)) throw new Exception('Cannot group by non-string values. Did you mean to call group()?');
+
+    return $this->group(function($item) use ($field, $i) {
+
+      $value = $this->extractValue($item, $field);
+
+      // ignore upper/lowercase for group names
+      return ($i == true) ? str::lower($value) : $value;
+
+    });
+
+  }
+
+  /**
+   * Creates chunks of the same size
+   * The last chunk may be smaller
+   *
+   * @param int $size Number of items per chunk
+   * @return object A new collection with an item for each chunk and a subcollection in each chunk
+   */
+  public function chunk($size) {
+
+    // create a multidimensional array that is chunked with the given chunk size
+    // keep keys of the items
+    $chunks = array_chunk($this->data, $size, true);
+
+    // convert each subcollection to a collection object
+    $chunkCollections = array();
+    foreach($chunks as $items) {
+      // we clone $this instead of creating a new object because
+      // different collections may have different constructors
+      $collection = clone $this;
+      $collection->data = $items;
+      $chunkCollections[] = $collection;
+    }
+
+    // convert the array of chunks to a collection object
+    return new Collection($chunkCollections);
 
   }
 
@@ -455,7 +539,16 @@ class Collection extends I {
   }
 
   public function get($key, $default = null) {
-    return isset($this->data[$key]) ? $this->data[$key] : $default;
+    if(isset($this->data[$key])) {
+      return $this->data[$key];
+    } else {
+      $lowerkeys = array_change_key_case($this->data, CASE_LOWER);
+      if(isset($lowerkeys[strtolower($key)])) {
+        return $lowerkeys[$key];
+      } else {
+        return $default;
+      }
+    }
   }
 
   public function __get($key) {
@@ -506,6 +599,30 @@ collection::$filters['=='] = function($collection, $field, $value, $split = fals
 
 };
 
+// take all elements that match one element from the passed array
+collection::$filters['in'] = function($collection, $field, $value, $split = false) {
+  if(!is_array($value)) $value = [$value];
+
+  foreach($collection->data as $key => $item) {
+
+    if($split) {
+      $values = str::split((string)collection::extractValue($item, $field), $split);
+
+      $match = false;
+      foreach($value as $v) {
+        if(in_array($v, $values)) $match = true;
+      }
+      if(!$match) unset($collection->$key);
+    } else if(!in_array(collection::extractValue($item, $field), $value)) {
+      unset($collection->$key);
+    }
+
+  }
+
+  return $collection;
+
+};
+
 // take all elements that won't match
 collection::$filters['!='] = function($collection, $field, $value, $split = false) {
 
@@ -516,6 +633,31 @@ collection::$filters['!='] = function($collection, $field, $value, $split = fals
     } else if(collection::extractValue($item, $field) == $value) {
       unset($collection->$key);
     }
+  }
+
+  return $collection;
+
+};
+
+// take all elements that don't match an element from the passed array
+collection::$filters['not in'] = function($collection, $field, $value, $split = false) {
+  if(!is_array($value)) $value = [$value];
+
+  foreach($collection->data as $key => $item) {
+
+    if($split) {
+      $values = str::split((string)collection::extractValue($item, $field), $split);
+
+      foreach($value as $v) {
+        if(in_array($v, $values)) {
+          unset($collection->$key);
+          break;
+        }
+      }
+    } else if(in_array(collection::extractValue($item, $field), $value)) {
+      unset($collection->$key);
+    }
+
   }
 
   return $collection;
@@ -544,7 +686,7 @@ collection::$filters['*='] = function($collection, $field, $value, $split = fals
 };
 
 // greater than
-collection::$filters['>'] = function($collection, $field, $value, $split = false) {
+collection::$filters['>'] = function($collection, $field, $value) {
 
   foreach($collection->data as $key => $item) {
     if(collection::extractValue($item, $field) > $value) continue;
@@ -556,7 +698,7 @@ collection::$filters['>'] = function($collection, $field, $value, $split = false
 };
 
 // greater and equals
-collection::$filters['>='] = function($collection, $field, $value, $split = false) {
+collection::$filters['>='] = function($collection, $field, $value) {
 
   foreach($collection->data as $key => $item) {
     if(collection::extractValue($item, $field) >= $value) continue;
@@ -568,7 +710,7 @@ collection::$filters['>='] = function($collection, $field, $value, $split = fals
 };
 
 // less than
-collection::$filters['<'] = function($collection, $field, $value, $split = false) {
+collection::$filters['<'] = function($collection, $field, $value) {
 
   foreach($collection->data as $key => $item) {
     if(collection::extractValue($item, $field) < $value) continue;
@@ -580,7 +722,7 @@ collection::$filters['<'] = function($collection, $field, $value, $split = false
 };
 
 // less and equals
-collection::$filters['<='] = function($collection, $field, $value, $split = false) {
+collection::$filters['<='] = function($collection, $field, $value) {
 
   foreach($collection->data as $key => $item) {
     if(collection::extractValue($item, $field) <= $value) continue;

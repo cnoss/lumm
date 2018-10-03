@@ -18,7 +18,7 @@ function get_container($site, $pages, $page) {
 	
 function get_blog_container($site, $pages, $page, $limit) {
 
-	$containers = $pages->find("blog")->children()->visible()->flip()->limit($limit)->sortBy('date', 'desc');//->visible();
+	$containers = $pages->find("blog")->children()->visible()->flip()->sortBy('date', 'desc')->limit($limit);//->visible();
 	return $containers; 
 
 
